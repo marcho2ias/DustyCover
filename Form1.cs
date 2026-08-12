@@ -17,7 +17,7 @@ namespace DustyCover
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+            label3.Text = "The Courage to Be Disliked";
         {
 
         }
