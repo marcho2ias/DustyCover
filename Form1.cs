@@ -10,19 +10,14 @@ using System.Windows.Forms;
 
 namespace DustyCover
 {
-    public partial class User_Account : Form
+    public partial class Form1 : Form
     {
-        public User_Account()
+        public Form1()
         {
             InitializeComponent();
         }
 
         private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }
@@ -37,67 +32,97 @@ namespace DustyCover
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void panel3_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void label4_Click(object sender, EventArgs e)
+        private void panel4_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void label4_Click_2(object sender, EventArgs e)
         {
 
         }
 
-        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
+        private void emaillogo_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void label3_Click_1(object sender, EventArgs e)
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void listBox3_SelectedIndexChanged(object sender, EventArgs e)
+        private void panel5_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void label4_Click_1(object sender, EventArgs e)
+        private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void listBox4_SelectedIndexChanged(object sender, EventArgs e)
+        private void panel6_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void Borrowing_Click(object sender, EventArgs e)
+        private void pictureBox3_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void panel7_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
         {
 
         }
