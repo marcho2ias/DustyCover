@@ -8,8 +8,8 @@ namespace DustyCover
 {
     internal class CurrentUser
     {
-        public static class CurrentUser
-        {
+        
+        
             public static User LoggedInUser;
 
             public static bool IsLoggedIn()
@@ -21,6 +21,6 @@ namespace DustyCover
             {
                 LoggedInUser = null;
             }
-        }
+        
     }
 }
