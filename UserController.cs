@@ -20,7 +20,7 @@ namespace DustyCover
         private void LoadHardcodedUsers()
         {
             users.Add(new User("dhruv@email.com", "password123", "Dhruv"));
-            users.Add(new User("jeet@email.com", "password123", "Jeet"));
+            users.Add(new User("jeet@email.com", "password123", "Jeet"));               // example data
             users.Add(new User("krupa@email.com", "password123", "Krupa"));
             users.Add(new User("kit@email.com", "password123", "Kit"));
         }
