@@ -1,4 +1,4 @@
-﻿namespace DustyCover
+﻿namespace BookStoreProj
 {
     partial class Form1
     {
@@ -15,7 +15,7 @@
         {
             if (disposing && (components != null))
             {
-                components.Dispose(); //sample test
+                components.Dispose();
             }
             base.Dispose(disposing);
         }
@@ -28,314 +28,430 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.Panel panel_f;
+            this.Cart = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.Allbtn = new System.Windows.Forms.Button();
-            this.Activebtn = new System.Windows.Forms.Button();
-            this.Duebtn = new System.Windows.Forms.Button();
-            this.Returnedbtn = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.Borrowbtn = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.Status3 = new System.Windows.Forms.TextBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.Returnbtn = new System.Windows.Forms.Button();
+            this.Panel_Genre = new System.Windows.Forms.Panel();
+            this.panel_cart1 = new System.Windows.Forms.Panel();
+            this.listBox_Cart = new System.Windows.Forms.ListBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.Status2 = new System.Windows.Forms.TextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Panel_faitytale = new System.Windows.Forms.Panel();
+            this.button6 = new System.Windows.Forms.Button();
+            this.label2_fairybook1 = new System.Windows.Forms.Label();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.label_descBookF = new System.Windows.Forms.Label();
+            this.btn_Rent1 = new System.Windows.Forms.Button();
+            this.btn_buy1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label_fairyNameB1 = new System.Windows.Forms.Label();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Renewbtn = new System.Windows.Forms.Button();
-            this.Status1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.Displaytext = new System.Windows.Forms.TextBox();
-            this.panel1.SuspendLayout();
-            this.groupBox3.SuspendLayout();
+            this.btn_clear = new System.Windows.Forms.Button();
+            this.label_Total = new System.Windows.Forms.Label();
+            this.label_cart = new System.Windows.Forms.Label();
+            this.btn_Delete = new System.Windows.Forms.Button();
+            panel_f = new System.Windows.Forms.Panel();
+            panel_f.SuspendLayout();
+            this.Panel_Genre.SuspendLayout();
+            this.panel_cart1.SuspendLayout();
+            this.Panel_faitytale.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // panel_f
+            // 
+            panel_f.BackColor = System.Drawing.Color.SaddleBrown;
+            panel_f.Controls.Add(this.label_cart);
+            panel_f.Controls.Add(this.Cart);
+            panel_f.Controls.Add(this.label1);
+            panel_f.Location = new System.Drawing.Point(-18, 0);
+            panel_f.Name = "panel_f";
+            panel_f.Size = new System.Drawing.Size(1282, 71);
+            panel_f.TabIndex = 1;
+            // 
+            // Cart
+            // 
+            this.Cart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.Cart.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cart.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.Cart.Location = new System.Drawing.Point(862, 17);
+            this.Cart.Name = "Cart";
+            this.Cart.Size = new System.Drawing.Size(168, 44);
+            this.Cart.TabIndex = 1;
+            this.Cart.Text = "Cart";
+            this.Cart.UseVisualStyleBackColor = false;
+            this.Cart.Click += new System.EventHandler(this.button5_Click_1);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(30, 9);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(30, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(229, 38);
+            this.label1.Size = new System.Drawing.Size(110, 37);
             this.label1.TabIndex = 0;
-            this.label1.Text = "My Borrowing";
+            this.label1.Text = "Genre";
             // 
-            // Allbtn
+            // Panel_Genre
             // 
-            this.Allbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Allbtn.Location = new System.Drawing.Point(37, 101);
-            this.Allbtn.Name = "Allbtn";
-            this.Allbtn.Size = new System.Drawing.Size(131, 37);
-            this.Allbtn.TabIndex = 1;
-            this.Allbtn.Text = "All";
-            this.Allbtn.UseVisualStyleBackColor = true;
-            this.Allbtn.Click += new System.EventHandler(this.Allbtn_Click);
+            this.Panel_Genre.BackgroundImage = global::BookStoreProj.Properties.Resources.photo_2026_08_09_20_37_46;
+            this.Panel_Genre.Controls.Add(this.Panel_faitytale);
+            this.Panel_Genre.Controls.Add(this.button1);
+            this.Panel_Genre.Controls.Add(this.pictureBox6);
+            this.Panel_Genre.Controls.Add(this.pictureBox5);
+            this.Panel_Genre.Controls.Add(this.pictureBox4);
+            this.Panel_Genre.Controls.Add(this.pictureBox3);
+            this.Panel_Genre.Controls.Add(this.pictureBox2);
+            this.Panel_Genre.Controls.Add(this.pictureBox1);
+            this.Panel_Genre.Location = new System.Drawing.Point(-18, 67);
+            this.Panel_Genre.Name = "Panel_Genre";
+            this.Panel_Genre.Size = new System.Drawing.Size(1294, 811);
+            this.Panel_Genre.TabIndex = 0;
+            this.Panel_Genre.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel_Genre_Paint);
             // 
-            // Activebtn
+            // panel_cart1
             // 
-            this.Activebtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Activebtn.Location = new System.Drawing.Point(219, 101);
-            this.Activebtn.Name = "Activebtn";
-            this.Activebtn.Size = new System.Drawing.Size(130, 37);
-            this.Activebtn.TabIndex = 2;
-            this.Activebtn.Text = "Active";
-            this.Activebtn.UseVisualStyleBackColor = true;
-            this.Activebtn.Click += new System.EventHandler(this.Activebtn_Click);
+            this.panel_cart1.BackColor = System.Drawing.Color.Tan;
+            this.panel_cart1.Controls.Add(this.btn_Delete);
+            this.panel_cart1.Controls.Add(this.btn_clear);
+            this.panel_cart1.Controls.Add(this.listBox_Cart);
+            this.panel_cart1.Controls.Add(this.button4);
+            this.panel_cart1.Controls.Add(this.button3);
+            this.panel_cart1.Controls.Add(this.label_Total);
+            this.panel_cart1.Controls.Add(this.label3);
+            this.panel_cart1.Location = new System.Drawing.Point(51, 34);
+            this.panel_cart1.Name = "panel_cart1";
+            this.panel_cart1.Size = new System.Drawing.Size(898, 771);
+            this.panel_cart1.TabIndex = 7;
             // 
-            // Duebtn
+            // listBox_Cart
             // 
-            this.Duebtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Duebtn.Location = new System.Drawing.Point(407, 101);
-            this.Duebtn.Name = "Duebtn";
-            this.Duebtn.Size = new System.Drawing.Size(127, 37);
-            this.Duebtn.TabIndex = 3;
-            this.Duebtn.Text = "Due";
-            this.Duebtn.UseVisualStyleBackColor = true;
-            this.Duebtn.Click += new System.EventHandler(this.Duebtn_Click);
+            this.listBox_Cart.FormattingEnabled = true;
+            this.listBox_Cart.ItemHeight = 20;
+            this.listBox_Cart.Location = new System.Drawing.Point(197, 3);
+            this.listBox_Cart.Name = "listBox_Cart";
+            this.listBox_Cart.Size = new System.Drawing.Size(421, 524);
+            this.listBox_Cart.TabIndex = 13;
             // 
-            // Returnedbtn
+            // button4
             // 
-            this.Returnedbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Returnedbtn.Location = new System.Drawing.Point(607, 101);
-            this.Returnedbtn.Name = "Returnedbtn";
-            this.Returnedbtn.Size = new System.Drawing.Size(146, 37);
-            this.Returnedbtn.TabIndex = 4;
-            this.Returnedbtn.Text = "Returned";
-            this.Returnedbtn.UseVisualStyleBackColor = true;
-            this.Returnedbtn.Click += new System.EventHandler(this.Returnedbtn_Click);
+            this.button4.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button4.Location = new System.Drawing.Point(3, -3);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 55);
+            this.button4.TabIndex = 12;
+            this.button4.Text = "X";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // panel1
+            // button3
             // 
-            this.panel1.Controls.Add(this.groupBox3);
-            this.panel1.Controls.Add(this.groupBox2);
-            this.panel1.Controls.Add(this.groupBox1);
-            this.panel1.Location = new System.Drawing.Point(37, 172);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(794, 476);
-            this.panel1.TabIndex = 5;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.pictureBox3);
-            this.groupBox3.Controls.Add(this.Borrowbtn);
-            this.groupBox3.Controls.Add(this.label4);
-            this.groupBox3.Controls.Add(this.Status3);
-            this.groupBox3.Location = new System.Drawing.Point(36, 313);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(704, 142);
-            this.groupBox3.TabIndex = 2;
-            this.groupBox3.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.pictureBox3.Image = global::DustyCover.Properties.Resources.TAOWCover;
-            this.pictureBox3.Location = new System.Drawing.Point(6, 13);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(96, 123);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 5;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
-            // 
-            // Borrowbtn
-            // 
-            this.Borrowbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Borrowbtn.Location = new System.Drawing.Point(525, 63);
-            this.Borrowbtn.Name = "Borrowbtn";
-            this.Borrowbtn.Size = new System.Drawing.Size(138, 36);
-            this.Borrowbtn.TabIndex = 4;
-            this.Borrowbtn.Text = "Borrow Again";
-            this.Borrowbtn.UseVisualStyleBackColor = true;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(148, 22);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(272, 32);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "The Art Of Winning";
-            // 
-            // Status3
-            // 
-            this.Status3.Location = new System.Drawing.Point(148, 77);
-            this.Status3.Name = "Status3";
-            this.Status3.Size = new System.Drawing.Size(178, 22);
-            this.Status3.TabIndex = 2;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.pictureBox2);
-            this.groupBox2.Controls.Add(this.Returnbtn);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.Status2);
-            this.groupBox2.Location = new System.Drawing.Point(36, 166);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(704, 141);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.pictureBox2.Image = global::DustyCover.Properties.Resources.CTBDCover;
-            this.pictureBox2.Location = new System.Drawing.Point(6, 12);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(96, 123);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 4;
-            this.pictureBox2.TabStop = false;
-            // 
-            // Returnbtn
-            // 
-            this.Returnbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Returnbtn.Location = new System.Drawing.Point(525, 61);
-            this.Returnbtn.Name = "Returnbtn";
-            this.Returnbtn.Size = new System.Drawing.Size(138, 36);
-            this.Returnbtn.TabIndex = 3;
-            this.Returnbtn.Text = "Return";
-            this.Returnbtn.UseVisualStyleBackColor = true;
+            this.button3.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(293, 645);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(249, 98);
+            this.button3.TabIndex = 11;
+            this.button3.Text = "Check Out";
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(141, 18);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(172, 30);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(346, 29);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "The Courage To Be Disliked";
+            this.label3.Size = new System.Drawing.Size(0, 32);
+            this.label3.TabIndex = 7;
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // Status2
+            // Panel_faitytale
             // 
-            this.Status2.Location = new System.Drawing.Point(148, 75);
-            this.Status2.Name = "Status2";
-            this.Status2.Size = new System.Drawing.Size(178, 22);
-            this.Status2.TabIndex = 2;
+            this.Panel_faitytale.BackColor = System.Drawing.Color.Tan;
+            this.Panel_faitytale.Controls.Add(this.panel_cart1);
+            this.Panel_faitytale.Controls.Add(this.button6);
+            this.Panel_faitytale.Controls.Add(this.label2_fairybook1);
+            this.Panel_faitytale.Controls.Add(this.pictureBox8);
+            this.Panel_faitytale.Controls.Add(this.label_descBookF);
+            this.Panel_faitytale.Controls.Add(this.btn_Rent1);
+            this.Panel_faitytale.Controls.Add(this.btn_buy1);
+            this.Panel_faitytale.Controls.Add(this.button2);
+            this.Panel_faitytale.Controls.Add(this.label_fairyNameB1);
+            this.Panel_faitytale.Controls.Add(this.pictureBox7);
+            this.Panel_faitytale.Location = new System.Drawing.Point(226, 10);
+            this.Panel_faitytale.Name = "Panel_faitytale";
+            this.Panel_faitytale.Size = new System.Drawing.Size(1011, 805);
+            this.Panel_faitytale.TabIndex = 2;
+            this.Panel_faitytale.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel_faitytale_Paint);
             // 
-            // groupBox1
+            // button6
             // 
-            this.groupBox1.Controls.Add(this.pictureBox1);
-            this.groupBox1.Controls.Add(this.Renewbtn);
-            this.groupBox1.Controls.Add(this.Status1);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(36, 19);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(704, 141);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
+            this.button6.Location = new System.Drawing.Point(60, 710);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(127, 60);
+            this.button6.TabIndex = 11;
+            this.button6.Text = "button6";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // label2_fairybook1
+            // 
+            this.label2_fairybook1.AutoSize = true;
+            this.label2_fairybook1.Location = new System.Drawing.Point(111, 672);
+            this.label2_fairybook1.Name = "label2_fairybook1";
+            this.label2_fairybook1.Size = new System.Drawing.Size(51, 20);
+            this.label2_fairybook1.TabIndex = 9;
+            this.label2_fairybook1.Text = "label2";
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::BookStoreProj.Properties.Resources.images__7_;
+            this.pictureBox8.InitialImage = global::BookStoreProj.Properties.Resources.images__7_;
+            this.pictureBox8.Location = new System.Drawing.Point(68, 468);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(204, 185);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 8;
+            this.pictureBox8.TabStop = false;
+            // 
+            // label_descBookF
+            // 
+            this.label_descBookF.AutoSize = true;
+            this.label_descBookF.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_descBookF.Location = new System.Drawing.Point(63, 359);
+            this.label_descBookF.Name = "label_descBookF";
+            this.label_descBookF.Size = new System.Drawing.Size(246, 25);
+            this.label_descBookF.TabIndex = 7;
+            this.label_descBookF.Text = "Price: Buy $25 Rent $15";
+            // 
+            // btn_Rent1
+            // 
+            this.btn_Rent1.Location = new System.Drawing.Point(194, 387);
+            this.btn_Rent1.Name = "btn_Rent1";
+            this.btn_Rent1.Size = new System.Drawing.Size(102, 46);
+            this.btn_Rent1.TabIndex = 6;
+            this.btn_Rent1.Text = "RENT";
+            this.btn_Rent1.UseVisualStyleBackColor = true;
+            // 
+            // btn_buy1
+            // 
+            this.btn_buy1.Location = new System.Drawing.Point(60, 387);
+            this.btn_buy1.Name = "btn_buy1";
+            this.btn_buy1.Size = new System.Drawing.Size(102, 46);
+            this.btn_buy1.TabIndex = 2;
+            this.btn_buy1.Text = "BUY";
+            this.btn_buy1.UseVisualStyleBackColor = true;
+            this.btn_buy1.Click += new System.EventHandler(this.btn_buy1_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.button2.Location = new System.Drawing.Point(0, 0);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 55);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "X";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // label_fairyNameB1
+            // 
+            this.label_fairyNameB1.AutoSize = true;
+            this.label_fairyNameB1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_fairyNameB1.Location = new System.Drawing.Point(54, 306);
+            this.label_fairyNameB1.Name = "label_fairyNameB1";
+            this.label_fairyNameB1.Size = new System.Drawing.Size(267, 32);
+            this.label_fairyNameB1.TabIndex = 3;
+            this.label_fairyNameB1.Text = "The Little Mermaid";
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::BookStoreProj.Properties.Resources.images__7_;
+            this.pictureBox7.InitialImage = global::BookStoreProj.Properties.Resources.images__7_;
+            this.pictureBox7.Location = new System.Drawing.Point(68, 3);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(248, 300);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 2;
+            this.pictureBox7.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(193, 350);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(195, 66);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Fairytale";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Location = new System.Drawing.Point(901, 420);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(242, 313);
+            this.pictureBox6.TabIndex = 5;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Location = new System.Drawing.Point(539, 437);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(242, 313);
+            this.pictureBox5.TabIndex = 5;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Location = new System.Drawing.Point(193, 437);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(242, 296);
+            this.pictureBox4.TabIndex = 4;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Location = new System.Drawing.Point(539, 22);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(242, 284);
+            this.pictureBox3.TabIndex = 3;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(892, 22);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(242, 312);
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.pictureBox1.Image = global::DustyCover.Properties.Resources.AHCover;
-            this.pictureBox1.Location = new System.Drawing.Point(6, 12);
+            this.pictureBox1.Image = global::BookStoreProj.Properties.Resources.optimized_product_thumb_stage;
+            this.pictureBox1.InitialImage = global::BookStoreProj.Properties.Resources.optimized_product_thumb_stage;
+            this.pictureBox1.Location = new System.Drawing.Point(179, 44);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(96, 123);
+            this.pictureBox1.Size = new System.Drawing.Size(242, 300);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // Renewbtn
+            // btn_clear
             // 
-            this.Renewbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Renewbtn.Location = new System.Drawing.Point(525, 49);
-            this.Renewbtn.Name = "Renewbtn";
-            this.Renewbtn.Size = new System.Drawing.Size(138, 36);
-            this.Renewbtn.TabIndex = 2;
-            this.Renewbtn.Text = "Renew";
-            this.Renewbtn.UseVisualStyleBackColor = true;
+            this.btn_clear.Location = new System.Drawing.Point(450, 575);
+            this.btn_clear.Name = "btn_clear";
+            this.btn_clear.Size = new System.Drawing.Size(168, 44);
+            this.btn_clear.TabIndex = 2;
+            this.btn_clear.Text = "Clear";
+            this.btn_clear.UseVisualStyleBackColor = true;
+            this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click);
             // 
-            // Status1
+            // label_Total
             // 
-            this.Status1.Location = new System.Drawing.Point(148, 63);
-            this.Status1.Name = "Status1";
-            this.Status1.Size = new System.Drawing.Size(178, 22);
-            this.Status1.TabIndex = 1;
+            this.label_Total.AutoSize = true;
+            this.label_Total.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Total.ForeColor = System.Drawing.Color.Red;
+            this.label_Total.Location = new System.Drawing.Point(459, 530);
+            this.label_Total.Name = "label_Total";
+            this.label_Total.Size = new System.Drawing.Size(142, 32);
+            this.label_Total.TabIndex = 10;
+            this.label_Total.Text = "Total $10";
             // 
-            // label2
+            // label_cart
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(142, 18);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(202, 32);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Atomic Habits";
+            this.label_cart.AutoSize = true;
+            this.label_cart.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_cart.ForeColor = System.Drawing.Color.Red;
+            this.label_cart.Location = new System.Drawing.Point(979, 26);
+            this.label_cart.Name = "label_cart";
+            this.label_cart.Size = new System.Drawing.Size(25, 26);
+            this.label_cart.TabIndex = 2;
+            this.label_cart.Text = "0";
             // 
-            // Displaytext
+            // btn_Delete
             // 
-            this.Displaytext.Location = new System.Drawing.Point(37, 63);
-            this.Displaytext.Name = "Displaytext";
-            this.Displaytext.Size = new System.Drawing.Size(288, 22);
-            this.Displaytext.TabIndex = 6;
+            this.btn_Delete.Location = new System.Drawing.Point(227, 575);
+            this.btn_Delete.Name = "btn_Delete";
+            this.btn_Delete.Size = new System.Drawing.Size(184, 44);
+            this.btn_Delete.TabIndex = 14;
+            this.btn_Delete.Text = "Delete";
+            this.btn_Delete.UseVisualStyleBackColor = true;
+            this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1087, 772);
-            this.Controls.Add(this.Displaytext);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.Returnedbtn);
-            this.Controls.Add(this.Duebtn);
-            this.Controls.Add(this.Activebtn);
-            this.Controls.Add(this.Allbtn);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(1265, 890);
+            this.Controls.Add(panel_f);
+            this.Controls.Add(this.Panel_Genre);
             this.Name = "Form1";
-            this.Text = "Borrowing/History";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            this.panel1.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            this.Text = "Form1";
+            panel_f.ResumeLayout(false);
+            panel_f.PerformLayout();
+            this.Panel_Genre.ResumeLayout(false);
+            this.panel_cart1.ResumeLayout(false);
+            this.panel_cart1.PerformLayout();
+            this.Panel_faitytale.ResumeLayout(false);
+            this.Panel_faitytale.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
+        private System.Windows.Forms.Panel Panel_Genre;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button Allbtn;
-        private System.Windows.Forms.Button Activebtn;
-        private System.Windows.Forms.Button Duebtn;
-        private System.Windows.Forms.Button Returnedbtn;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox Status1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox Status3;
-        private System.Windows.Forms.TextBox Status2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button Renewbtn;
-        private System.Windows.Forms.Button Borrowbtn;
-        private System.Windows.Forms.Button Returnbtn;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox Displaytext;
+        private System.Windows.Forms.Panel Panel_faitytale;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label_fairyNameB1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_Rent1;
+        private System.Windows.Forms.Panel panel_cart1;
+        private System.Windows.Forms.Label label_descBookF;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Label label2_fairybook1;
+        private System.Windows.Forms.Button btn_buy1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button Cart;
+        private System.Windows.Forms.ListBox listBox_Cart;
+        private System.Windows.Forms.Button btn_clear;
+        private System.Windows.Forms.Label label_Total;
+        private System.Windows.Forms.Label label_cart;
+        private System.Windows.Forms.Button btn_Delete;
     }
 }
 

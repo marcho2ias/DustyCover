@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Plugin.Iconize.FontAwesome</name>
+    </assembly>
+    <members>
+        <member name="T:Plugin.Iconize.Fonts.FontAwesomeBrandsModule">
+            <summary>
+            Defines the <see cref="T:Plugin.Iconize.Fonts.FontAwesomeBrandsModule" /> icon module.
+            </summary>
+            <seealso cref="T:Plugin.Iconize.IconModule" />
+        </member>
+        <member name="M:Plugin.Iconize.Fonts.FontAwesomeBrandsModule.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Plugin.Iconize.Fonts.FontAwesomeBrandsModule" /> class.
+            </summary>
+        </member>
+        <member name="T:Plugin.Iconize.Fonts.FontAwesomeCollection">
+            <summary>
+            Defines the <see cref="T:Plugin.Iconize.Fonts.FontAwesomeCollection" /> icon collection.
+            </summary>
+        </member>
+        <member name="P:Plugin.Iconize.Fonts.FontAwesomeCollection.SolidIcons">
+            <summary>
+            Gets the SolidIcons.
+            </summary>
+            <value>The SolidIcons.</value>
+        </member>
+        <member name="P:Plugin.Iconize.Fonts.FontAwesomeCollection.RegularIcons">
+            <summary>
+            Gets the SolidIcons.
+            </summary>
+            <value>The SolidIcons.</value>
+        </member>
+        <member name="P:Plugin.Iconize.Fonts.FontAwesomeCollection.BrandIcons">
+            <summary>
+            Gets the SolidIcons.
+            </summary>
+            <value>The SolidIcons.</value>
+        </member>
+        <member name="M:Plugin.Iconize.Fonts.FontAwesomeCollection.#cctor">
+            <summary>
+            Initializes the <see cref="T:Plugin.Iconize.Fonts.FontAwesomeCollection" /> class.
+            </summary>
+        </member>
+        <member name="T:Plugin.Iconize.Fonts.FontAwesomeRegularModule">
+            <summary>
+            Defines the <see cref="T:Plugin.Iconize.Fonts.FontAwesomeRegularModule" /> icon module.
+            </summary>
+            <seealso cref="T:Plugin.Iconize.IconModule" />
+        </member>
+        <member name="M:Plugin.Iconize.Fonts.FontAwesomeRegularModule.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Plugin.Iconize.Fonts.FontAwesomeRegularModule" /> class.
+            </summary>
+        </member>
+        <member name="T:Plugin.Iconize.Fonts.FontAwesomeSolidModule">
+            <summary>
+            Defines the <see cref="T:Plugin.Iconize.Fonts.FontAwesomeSolidModule" /> icon module.
+            </summary>
+            <seealso cref="T:Plugin.Iconize.IconModule" />
+        </member>
+        <member name="M:Plugin.Iconize.Fonts.FontAwesomeSolidModule.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Plugin.Iconize.Fonts.FontAwesomeSolidModule" /> class.
+            </summary>
+        </member>
+    </members>
+</doc>
