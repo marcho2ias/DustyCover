@@ -2,385 +2,579 @@
 {
     partial class Form1
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        private System.Windows.Forms.Panel leftPanel;
+        private System.Windows.Forms.Panel rightPanel;
+
+        private System.Windows.Forms.Panel borrowingCard;
+        private System.Windows.Forms.Panel readsCard;
+        private System.Windows.Forms.Panel paymentCard;
+        private System.Windows.Forms.Panel booksPanel;
+
+        private System.Windows.Forms.Label borrowingIcon;
+        private System.Windows.Forms.Label borrowingTitle;
+        private System.Windows.Forms.Label borrowingValue;
+
+        private System.Windows.Forms.Label readsIcon;
+        private System.Windows.Forms.Label readsTitle;
+        private System.Windows.Forms.Label readsValue;
+
+        private System.Windows.Forms.Label paymentIcon;
+        private System.Windows.Forms.Label paymentTitle;
+        private System.Windows.Forms.Label paymentValue;
+
+        private System.Windows.Forms.Label booksTitle;
+        private System.Windows.Forms.DataGridView booksGrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BookName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ReturnDue;
+
+        private System.Windows.Forms.Label userNameLabel;
+        private System.Windows.Forms.Label welcomeLabel;
+        private System.Windows.Forms.Button logoutButton;
+
+        private System.Windows.Forms.Label emailLabel;
+        private System.Windows.Forms.Panel emailIconPanel;
+        private System.Windows.Forms.Label emailIcon;
+        private System.Windows.Forms.TextBox emailTextBox;
+
+        private System.Windows.Forms.Label phoneLabel;
+        private System.Windows.Forms.Panel phoneIconPanel;
+        private System.Windows.Forms.Label phoneIcon;
+        private System.Windows.Forms.TextBox phoneTextBox;
+
+        private System.Windows.Forms.Button historyButton;
+        private System.Windows.Forms.Button editButton;
+
+
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
             {
                 components.Dispose();
             }
+
             base.Dispose(disposing);
         }
 
+
         #region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.label3 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.emaillogo = new System.Windows.Forms.PictureBox();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.listView2 = new System.Windows.Forms.ListView();
-            this.listView3 = new System.Windows.Forms.ListView();
-            this.button2 = new System.Windows.Forms.Button();
-            this.listView4 = new System.Windows.Forms.ListView();
-            this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.emaillogo)).BeginInit();
-            this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.leftPanel = new System.Windows.Forms.Panel();
+            this.borrowingCard = new System.Windows.Forms.Panel();
+            this.borrowingIcon = new System.Windows.Forms.Label();
+            this.borrowingTitle = new System.Windows.Forms.Label();
+            this.borrowingValue = new System.Windows.Forms.Label();
+            this.readsCard = new System.Windows.Forms.Panel();
+            this.readsIcon = new System.Windows.Forms.Label();
+            this.readsTitle = new System.Windows.Forms.Label();
+            this.readsValue = new System.Windows.Forms.Label();
+            this.paymentCard = new System.Windows.Forms.Panel();
+            this.paymentIcon = new System.Windows.Forms.Label();
+            this.paymentTitle = new System.Windows.Forms.Label();
+            this.paymentValue = new System.Windows.Forms.Label();
+            this.booksPanel = new System.Windows.Forms.Panel();
+            this.booksTitle = new System.Windows.Forms.Label();
+            this.booksGrid = new System.Windows.Forms.DataGridView();
+            this.BookName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ReturnDue = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rightPanel = new System.Windows.Forms.Panel();
+            this.userNameLabel = new System.Windows.Forms.Label();
+            this.welcomeLabel = new System.Windows.Forms.Label();
+            this.logoutButton = new System.Windows.Forms.Button();
+            this.emailLabel = new System.Windows.Forms.Label();
+            this.emailIconPanel = new System.Windows.Forms.Panel();
+            this.emailIcon = new System.Windows.Forms.Label();
+            this.emailTextBox = new System.Windows.Forms.TextBox();
+            this.phoneLabel = new System.Windows.Forms.Label();
+            this.phoneIconPanel = new System.Windows.Forms.Panel();
+            this.phoneIcon = new System.Windows.Forms.Label();
+            this.phoneTextBox = new System.Windows.Forms.TextBox();
+            this.historyButton = new System.Windows.Forms.Button();
+            this.editButton = new System.Windows.Forms.Button();
+            this.leftPanel.SuspendLayout();
+            this.borrowingCard.SuspendLayout();
+            this.readsCard.SuspendLayout();
+            this.paymentCard.SuspendLayout();
+            this.booksPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.booksGrid)).BeginInit();
+            this.rightPanel.SuspendLayout();
+            this.emailIconPanel.SuspendLayout();
+            this.phoneIconPanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label3
+            // leftPanel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Georgia", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(37, 270);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(135, 21);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Account Details";
+            this.leftPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(238)))), ((int)(((byte)(226)))));
+            this.leftPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.leftPanel.Controls.Add(this.borrowingCard);
+            this.leftPanel.Controls.Add(this.readsCard);
+            this.leftPanel.Controls.Add(this.paymentCard);
+            this.leftPanel.Controls.Add(this.booksPanel);
+            this.leftPanel.Location = new System.Drawing.Point(-4, -2);
+            this.leftPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.leftPanel.Name = "leftPanel";
+            this.leftPanel.Size = new System.Drawing.Size(399, 604);
+            this.leftPanel.TabIndex = 0;
             // 
-            // panel5
+            // borrowingCard
             // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(56)))), ((int)(((byte)(32)))));
-            this.panel5.Controls.Add(this.textBox1);
-            this.panel5.Controls.Add(this.label4);
-            this.panel5.Location = new System.Drawing.Point(41, 306);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(440, 60);
-            this.panel5.TabIndex = 5;
-            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
+            this.borrowingCard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(252)))), ((int)(((byte)(248)))));
+            this.borrowingCard.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.borrowingCard.Controls.Add(this.borrowingIcon);
+            this.borrowingCard.Controls.Add(this.borrowingTitle);
+            this.borrowingCard.Controls.Add(this.borrowingValue);
+            this.borrowingCard.Location = new System.Drawing.Point(19, 28);
+            this.borrowingCard.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.borrowingCard.Name = "borrowingCard";
+            this.borrowingCard.Size = new System.Drawing.Size(358, 85);
+            this.borrowingCard.TabIndex = 0;
             // 
-            // textBox1
+            // borrowingIcon
             // 
-            this.textBox1.BackColor = System.Drawing.Color.Snow;
-            this.textBox1.Location = new System.Drawing.Point(75, 23);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(316, 22);
-            this.textBox1.TabIndex = 8;
-            this.textBox1.Text = "e-mail";
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.borrowingIcon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(225)))), ((int)(((byte)(198)))));
+            this.borrowingIcon.Font = new System.Drawing.Font("Segoe UI Symbol", 28F);
+            this.borrowingIcon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(39)))), ((int)(((byte)(18)))));
+            this.borrowingIcon.Location = new System.Drawing.Point(15, 16);
+            this.borrowingIcon.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.borrowingIcon.Name = "borrowingIcon";
+            this.borrowingIcon.Size = new System.Drawing.Size(49, 53);
+            this.borrowingIcon.TabIndex = 0;
+            this.borrowingIcon.Text = "📖";
+            this.borrowingIcon.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label4
+            // borrowingTitle
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.Control;
-            this.label4.Location = new System.Drawing.Point(71, 0);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 20);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "E-Mail";
-            this.label4.Click += new System.EventHandler(this.label4_Click_2);
+            this.borrowingTitle.AutoSize = true;
+            this.borrowingTitle.Font = new System.Drawing.Font("Georgia", 17F, System.Drawing.FontStyle.Bold);
+            this.borrowingTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(39)))), ((int)(((byte)(18)))));
+            this.borrowingTitle.Location = new System.Drawing.Point(79, 31);
+            this.borrowingTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.borrowingTitle.Name = "borrowingTitle";
+            this.borrowingTitle.Size = new System.Drawing.Size(140, 27);
+            this.borrowingTitle.TabIndex = 1;
+            this.borrowingTitle.Text = "Borrowing";
             // 
-            // emaillogo
+            // borrowingValue
             // 
-            this.emaillogo.BackColor = System.Drawing.Color.SaddleBrown;
-            this.emaillogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("emaillogo.BackgroundImage")));
-            this.emaillogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.emaillogo.Location = new System.Drawing.Point(41, 306);
-            this.emaillogo.Margin = new System.Windows.Forms.Padding(4);
-            this.emaillogo.Name = "emaillogo";
-            this.emaillogo.Size = new System.Drawing.Size(63, 60);
-            this.emaillogo.TabIndex = 6;
-            this.emaillogo.TabStop = false;
-            this.emaillogo.Click += new System.EventHandler(this.emaillogo_Click);
+            this.borrowingValue.AutoSize = true;
+            this.borrowingValue.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.borrowingValue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(39)))), ((int)(((byte)(18)))));
+            this.borrowingValue.Location = new System.Drawing.Point(303, 31);
+            this.borrowingValue.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.borrowingValue.Name = "borrowingValue";
+            this.borrowingValue.Size = new System.Drawing.Size(39, 25);
+            this.borrowingValue.TabIndex = 2;
+            this.borrowingValue.Text = "07";
+            this.borrowingValue.Click += new System.EventHandler(this.borrowingValue_Click);
             // 
-            // panel6
+            // readsCard
             // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(56)))), ((int)(((byte)(32)))));
-            this.panel6.Controls.Add(this.textBox2);
-            this.panel6.Controls.Add(this.pictureBox3);
-            this.panel6.Controls.Add(this.label5);
-            this.panel6.Location = new System.Drawing.Point(553, 306);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(440, 60);
-            this.panel6.TabIndex = 7;
-            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
+            this.readsCard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(252)))), ((int)(((byte)(248)))));
+            this.readsCard.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.readsCard.Controls.Add(this.readsIcon);
+            this.readsCard.Controls.Add(this.readsTitle);
+            this.readsCard.Controls.Add(this.readsValue);
+            this.readsCard.Location = new System.Drawing.Point(19, 126);
+            this.readsCard.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.readsCard.Name = "readsCard";
+            this.readsCard.Size = new System.Drawing.Size(358, 85);
+            this.readsCard.TabIndex = 1;
             // 
-            // textBox2
+            // readsIcon
             // 
-            this.textBox2.BackColor = System.Drawing.Color.Snow;
-            this.textBox2.Location = new System.Drawing.Point(75, 23);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(316, 22);
-            this.textBox2.TabIndex = 9;
-            this.textBox2.Text = "Phone";
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.readsIcon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(225)))), ((int)(((byte)(198)))));
+            this.readsIcon.Font = new System.Drawing.Font("Segoe UI Symbol", 27F);
+            this.readsIcon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(39)))), ((int)(((byte)(18)))));
+            this.readsIcon.Location = new System.Drawing.Point(15, 16);
+            this.readsIcon.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.readsIcon.Name = "readsIcon";
+            this.readsIcon.Size = new System.Drawing.Size(49, 53);
+            this.readsIcon.TabIndex = 0;
+            this.readsIcon.Text = "📕";
+            this.readsIcon.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox3
+            // readsTitle
             // 
-            this.pictureBox3.BackColor = System.Drawing.Color.SaddleBrown;
-            this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(63, 60);
-            this.pictureBox3.TabIndex = 8;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            this.readsTitle.AutoSize = true;
+            this.readsTitle.Font = new System.Drawing.Font("Georgia", 17F, System.Drawing.FontStyle.Bold);
+            this.readsTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(39)))), ((int)(((byte)(18)))));
+            this.readsTitle.Location = new System.Drawing.Point(79, 31);
+            this.readsTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.readsTitle.Name = "readsTitle";
+            this.readsTitle.Size = new System.Drawing.Size(152, 27);
+            this.readsTitle.TabIndex = 1;
+            this.readsTitle.Text = "Total Reads";
             // 
-            // label5
+            // readsValue
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(71, 0);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(56, 20);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Phone";
+            this.readsValue.AutoSize = true;
+            this.readsValue.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.readsValue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(39)))), ((int)(((byte)(18)))));
+            this.readsValue.Location = new System.Drawing.Point(295, 31);
+            this.readsValue.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.readsValue.Name = "readsValue";
+            this.readsValue.Size = new System.Drawing.Size(39, 25);
+            this.readsValue.TabIndex = 2;
+            this.readsValue.Text = "24";
             // 
-            // label6
+            // paymentCard
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(37, 416);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(172, 24);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "Currently Borrowed";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
+            this.paymentCard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(252)))), ((int)(((byte)(248)))));
+            this.paymentCard.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.paymentCard.Controls.Add(this.paymentIcon);
+            this.paymentCard.Controls.Add(this.paymentTitle);
+            this.paymentCard.Controls.Add(this.paymentValue);
+            this.paymentCard.Location = new System.Drawing.Point(19, 223);
+            this.paymentCard.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.paymentCard.Name = "paymentCard";
+            this.paymentCard.Size = new System.Drawing.Size(358, 85);
+            this.paymentCard.TabIndex = 2;
             // 
-            // button1
+            // paymentIcon
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button1.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(533, 613);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(145, 46);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Edit";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.paymentIcon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(225)))), ((int)(((byte)(198)))));
+            this.paymentIcon.Font = new System.Drawing.Font("Georgia", 31F);
+            this.paymentIcon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(39)))), ((int)(((byte)(18)))));
+            this.paymentIcon.Location = new System.Drawing.Point(15, 16);
+            this.paymentIcon.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.paymentIcon.Name = "paymentIcon";
+            this.paymentIcon.Size = new System.Drawing.Size(49, 53);
+            this.paymentIcon.TabIndex = 0;
+            this.paymentIcon.Text = "$";
+            this.paymentIcon.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button3
+            // paymentTitle
             // 
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button3.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(881, 613);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(145, 46);
-            this.button3.TabIndex = 12;
-            this.button3.Text = "Log Out";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.paymentTitle.AutoSize = true;
+            this.paymentTitle.Font = new System.Drawing.Font("Georgia", 16F, System.Drawing.FontStyle.Bold);
+            this.paymentTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(39)))), ((int)(((byte)(18)))));
+            this.paymentTitle.Location = new System.Drawing.Point(79, 32);
+            this.paymentTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.paymentTitle.Name = "paymentTitle";
+            this.paymentTitle.Size = new System.Drawing.Size(163, 27);
+            this.paymentTitle.TabIndex = 1;
+            this.paymentTitle.Text = "Payment Due";
             // 
-            // label1
+            // paymentValue
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.label1.Location = new System.Drawing.Point(37, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(176, 32);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "@UserName";
-            this.label1.Click += new System.EventHandler(this.label1_Click_1);
+            this.paymentValue.AutoSize = true;
+            this.paymentValue.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.paymentValue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(39)))), ((int)(((byte)(18)))));
+            this.paymentValue.Location = new System.Drawing.Point(256, 32);
+            this.paymentValue.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.paymentValue.Name = "paymentValue";
+            this.paymentValue.Size = new System.Drawing.Size(88, 25);
+            this.paymentValue.TabIndex = 2;
+            this.paymentValue.Text = "$35.00";
             // 
-            // label2
+            // booksPanel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.label2.Location = new System.Drawing.Point(46, 53);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(365, 22);
-            this.label2.TabIndex = 14;
-            this.label2.Text = "Welcome, @user to your user account page!";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.booksPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(252)))), ((int)(((byte)(248)))));
+            this.booksPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.booksPanel.Controls.Add(this.booksTitle);
+            this.booksPanel.Controls.Add(this.booksGrid);
+            this.booksPanel.Location = new System.Drawing.Point(19, 321);
+            this.booksPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.booksPanel.Name = "booksPanel";
+            this.booksPanel.Size = new System.Drawing.Size(358, 279);
+            this.booksPanel.TabIndex = 3;
             // 
-            // label7
+            // booksTitle
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.label7.Location = new System.Drawing.Point(112, 221);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(91, 22);
-            this.label7.TabIndex = 16;
-            this.label7.Text = "Borrowing";
+            this.booksTitle.AutoSize = true;
+            this.booksTitle.Font = new System.Drawing.Font("Georgia", 15F, System.Drawing.FontStyle.Bold);
+            this.booksTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(39)))), ((int)(((byte)(18)))));
+            this.booksTitle.Location = new System.Drawing.Point(14, 12);
+            this.booksTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.booksTitle.Name = "booksTitle";
+            this.booksTitle.Size = new System.Drawing.Size(285, 24);
+            this.booksTitle.TabIndex = 0;
+            this.booksTitle.Text = "Currently Borrowed Books";
             // 
-            // label8
+            // booksGrid
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.label8.Location = new System.Drawing.Point(457, 221);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(101, 22);
-            this.label8.TabIndex = 17;
-            this.label8.Text = "Total reads";
+            this.booksGrid.AllowUserToAddRows = false;
+            this.booksGrid.AllowUserToDeleteRows = false;
+            this.booksGrid.AllowUserToResizeRows = false;
+            this.booksGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(252)))), ((int)(((byte)(248)))));
+            this.booksGrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.booksGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.booksGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(225)))), ((int)(((byte)(198)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(39)))), ((int)(((byte)(18)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.booksGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.booksGrid.ColumnHeadersHeight = 38;
+            this.booksGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.BookName,
+            this.ReturnDue});
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(225)))), ((int)(((byte)(198)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(39)))), ((int)(((byte)(18)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.booksGrid.DefaultCellStyle = dataGridViewCellStyle4;
+            this.booksGrid.EnableHeadersVisualStyles = false;
+            this.booksGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(215)))), ((int)(((byte)(195)))));
+            this.booksGrid.Location = new System.Drawing.Point(24, 38);
+            this.booksGrid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.booksGrid.MultiSelect = false;
+            this.booksGrid.Name = "booksGrid";
+            this.booksGrid.ReadOnly = true;
+            this.booksGrid.RowHeadersVisible = false;
+            this.booksGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.booksGrid.Size = new System.Drawing.Size(310, 220);
+            this.booksGrid.TabIndex = 1;
             // 
-            // label9
+            // BookName
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.label9.Location = new System.Drawing.Point(805, 221);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(89, 22);
-            this.label9.TabIndex = 18;
-            this.label9.Text = "Fines due";
+            this.BookName.HeaderText = "Book Name";
+            this.BookName.Name = "BookName";
+            this.BookName.ReadOnly = true;
+            this.BookName.Width = 205;
             // 
-            // listView1
+            // ReturnDue
             // 
-            this.listView1.BackColor = System.Drawing.Color.Bisque;
-            this.listView1.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(87, 119);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(150, 86);
-            this.listView1.TabIndex = 19;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.ReturnDue.HeaderText = "Return Due";
+            this.ReturnDue.Name = "ReturnDue";
+            this.ReturnDue.ReadOnly = true;
+            this.ReturnDue.Width = 155;
             // 
-            // listView2
+            // rightPanel
             // 
-            this.listView2.BackColor = System.Drawing.Color.Bisque;
-            this.listView2.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.listView2.HideSelection = false;
-            this.listView2.Location = new System.Drawing.Point(432, 119);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(150, 86);
-            this.listView2.TabIndex = 20;
-            this.listView2.UseCompatibleStateImageBehavior = false;
+            this.rightPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(39)))), ((int)(((byte)(18)))));
+            this.rightPanel.Controls.Add(this.userNameLabel);
+            this.rightPanel.Controls.Add(this.welcomeLabel);
+            this.rightPanel.Controls.Add(this.logoutButton);
+            this.rightPanel.Controls.Add(this.emailLabel);
+            this.rightPanel.Controls.Add(this.emailIconPanel);
+            this.rightPanel.Controls.Add(this.emailTextBox);
+            this.rightPanel.Controls.Add(this.phoneLabel);
+            this.rightPanel.Controls.Add(this.phoneIconPanel);
+            this.rightPanel.Controls.Add(this.phoneTextBox);
+            this.rightPanel.Controls.Add(this.historyButton);
+            this.rightPanel.Controls.Add(this.editButton);
+            this.rightPanel.Location = new System.Drawing.Point(391, -2);
+            this.rightPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rightPanel.Name = "rightPanel";
+            this.rightPanel.Size = new System.Drawing.Size(482, 604);
+            this.rightPanel.TabIndex = 1;
             // 
-            // listView3
+            // userNameLabel
             // 
-            this.listView3.BackColor = System.Drawing.Color.Bisque;
-            this.listView3.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.listView3.HideSelection = false;
-            this.listView3.Location = new System.Drawing.Point(779, 119);
-            this.listView3.Name = "listView3";
-            this.listView3.Size = new System.Drawing.Size(150, 86);
-            this.listView3.TabIndex = 21;
-            this.listView3.UseCompatibleStateImageBehavior = false;
+            this.userNameLabel.AutoSize = true;
+            this.userNameLabel.Font = new System.Drawing.Font("Georgia", 29F, System.Drawing.FontStyle.Bold);
+            this.userNameLabel.ForeColor = System.Drawing.Color.White;
+            this.userNameLabel.Location = new System.Drawing.Point(32, 23);
+            this.userNameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.userNameLabel.Name = "userNameLabel";
+            this.userNameLabel.Size = new System.Drawing.Size(281, 45);
+            this.userNameLabel.TabIndex = 0;
+            this.userNameLabel.Text = "@User Name";
             // 
-            // button2
+            // welcomeLabel
             // 
-            this.button2.BackColor = System.Drawing.Color.PeachPuff;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(685, 613);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(189, 46);
-            this.button2.TabIndex = 22;
-            this.button2.Text = "Borrowing/History";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            this.welcomeLabel.AutoSize = true;
+            this.welcomeLabel.Font = new System.Drawing.Font("Georgia", 13F);
+            this.welcomeLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(248)))), ((int)(((byte)(238)))));
+            this.welcomeLabel.Location = new System.Drawing.Point(33, 72);
+            this.welcomeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.welcomeLabel.Name = "welcomeLabel";
+            this.welcomeLabel.Size = new System.Drawing.Size(360, 21);
+            this.welcomeLabel.TabIndex = 1;
+            this.welcomeLabel.Text = "Welcome, @user to your user account page!";
             // 
-            // listView4
+            // logoutButton
             // 
-            this.listView4.BackColor = System.Drawing.Color.SaddleBrown;
-            this.listView4.ForeColor = System.Drawing.Color.Bisque;
-            this.listView4.HideSelection = false;
-            this.listView4.Location = new System.Drawing.Point(41, 443);
-            this.listView4.Name = "listView4";
-            this.listView4.Size = new System.Drawing.Size(952, 135);
-            this.listView4.TabIndex = 24;
-            this.listView4.UseCompatibleStateImageBehavior = false;
+            this.logoutButton.BackColor = System.Drawing.Color.Transparent;
+            this.logoutButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.logoutButton.FlatAppearance.BorderSize = 0;
+            this.logoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.logoutButton.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logoutButton.ForeColor = System.Drawing.Color.White;
+            this.logoutButton.Location = new System.Drawing.Point(353, 7);
+            this.logoutButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.logoutButton.Name = "logoutButton";
+            this.logoutButton.Size = new System.Drawing.Size(118, 47);
+            this.logoutButton.TabIndex = 2;
+            this.logoutButton.Text = "↪ Log Out";
+            this.logoutButton.UseVisualStyleBackColor = false;
+            this.logoutButton.Click += new System.EventHandler(this.logoutButton_Click);
+            // 
+            // emailLabel
+            // 
+            this.emailLabel.AutoSize = true;
+            this.emailLabel.Font = new System.Drawing.Font("Georgia", 16F, System.Drawing.FontStyle.Bold);
+            this.emailLabel.ForeColor = System.Drawing.Color.White;
+            this.emailLabel.Location = new System.Drawing.Point(32, 134);
+            this.emailLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.emailLabel.Name = "emailLabel";
+            this.emailLabel.Size = new System.Drawing.Size(88, 27);
+            this.emailLabel.TabIndex = 3;
+            this.emailLabel.Text = "E-Mail";
+            // 
+            // emailIconPanel
+            // 
+            this.emailIconPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(239)))), ((int)(((byte)(225)))));
+            this.emailIconPanel.Controls.Add(this.emailIcon);
+            this.emailIconPanel.Location = new System.Drawing.Point(32, 167);
+            this.emailIconPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.emailIconPanel.Name = "emailIconPanel";
+            this.emailIconPanel.Size = new System.Drawing.Size(49, 53);
+            this.emailIconPanel.TabIndex = 4;
+            // 
+            // emailIcon
+            // 
+            this.emailIcon.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.emailIcon.Font = new System.Drawing.Font("Segoe UI Symbol", 24F);
+            this.emailIcon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(39)))), ((int)(((byte)(18)))));
+            this.emailIcon.Location = new System.Drawing.Point(0, 0);
+            this.emailIcon.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.emailIcon.Name = "emailIcon";
+            this.emailIcon.Size = new System.Drawing.Size(49, 53);
+            this.emailIcon.TabIndex = 0;
+            this.emailIcon.Text = "✉";
+            this.emailIcon.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.emailIcon.Click += new System.EventHandler(this.emailIcon_Click);
+            // 
+            // emailTextBox
+            // 
+            this.emailTextBox.BackColor = System.Drawing.Color.White;
+            this.emailTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.emailTextBox.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.emailTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.emailTextBox.Location = new System.Drawing.Point(92, 177);
+            this.emailTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.emailTextBox.Name = "emailTextBox";
+            this.emailTextBox.ReadOnly = true;
+            this.emailTextBox.Size = new System.Drawing.Size(376, 27);
+            this.emailTextBox.TabIndex = 5;
+            // 
+            // phoneLabel
+            // 
+            this.phoneLabel.AutoSize = true;
+            this.phoneLabel.Font = new System.Drawing.Font("Georgia", 16F, System.Drawing.FontStyle.Bold);
+            this.phoneLabel.ForeColor = System.Drawing.Color.White;
+            this.phoneLabel.Location = new System.Drawing.Point(32, 248);
+            this.phoneLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.phoneLabel.Name = "phoneLabel";
+            this.phoneLabel.Size = new System.Drawing.Size(84, 27);
+            this.phoneLabel.TabIndex = 6;
+            this.phoneLabel.Text = "Phone";
+            // 
+            // phoneIconPanel
+            // 
+            this.phoneIconPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(239)))), ((int)(((byte)(225)))));
+            this.phoneIconPanel.Controls.Add(this.phoneIcon);
+            this.phoneIconPanel.Location = new System.Drawing.Point(32, 280);
+            this.phoneIconPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.phoneIconPanel.Name = "phoneIconPanel";
+            this.phoneIconPanel.Size = new System.Drawing.Size(49, 53);
+            this.phoneIconPanel.TabIndex = 7;
+            // 
+            // phoneIcon
+            // 
+            this.phoneIcon.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.phoneIcon.Font = new System.Drawing.Font("Segoe UI Symbol", 24F);
+            this.phoneIcon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(39)))), ((int)(((byte)(18)))));
+            this.phoneIcon.Location = new System.Drawing.Point(0, 0);
+            this.phoneIcon.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.phoneIcon.Name = "phoneIcon";
+            this.phoneIcon.Size = new System.Drawing.Size(49, 53);
+            this.phoneIcon.TabIndex = 0;
+            this.phoneIcon.Text = "☎";
+            this.phoneIcon.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // phoneTextBox
+            // 
+            this.phoneTextBox.BackColor = System.Drawing.Color.White;
+            this.phoneTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.phoneTextBox.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.phoneTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.phoneTextBox.Location = new System.Drawing.Point(92, 291);
+            this.phoneTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.phoneTextBox.Name = "phoneTextBox";
+            this.phoneTextBox.ReadOnly = true;
+            this.phoneTextBox.Size = new System.Drawing.Size(376, 27);
+            this.phoneTextBox.TabIndex = 8;
+            // 
+            // historyButton
+            // 
+            this.historyButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(239)))), ((int)(((byte)(225)))));
+            this.historyButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.historyButton.FlatAppearance.BorderSize = 0;
+            this.historyButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.historyButton.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.historyButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(39)))), ((int)(((byte)(18)))));
+            this.historyButton.Location = new System.Drawing.Point(32, 459);
+            this.historyButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.historyButton.Name = "historyButton";
+            this.historyButton.Size = new System.Drawing.Size(262, 53);
+            this.historyButton.TabIndex = 9;
+            this.historyButton.Text = "◷   Borrowing / History";
+            this.historyButton.UseVisualStyleBackColor = false;
+            this.historyButton.Click += new System.EventHandler(this.historyButton_Click);
+            // 
+            // editButton
+            // 
+            this.editButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(248)))), ((int)(((byte)(238)))));
+            this.editButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.editButton.FlatAppearance.BorderSize = 0;
+            this.editButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.editButton.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(39)))), ((int)(((byte)(18)))));
+            this.editButton.Location = new System.Drawing.Point(326, 459);
+            this.editButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.editButton.Name = "editButton";
+            this.editButton.Size = new System.Drawing.Size(113, 53);
+            this.editButton.TabIndex = 10;
+            this.editButton.Text = "✎   Edit";
+            this.editButton.UseVisualStyleBackColor = false;
+            this.editButton.Click += new System.EventHandler(this.editButton_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(228)))), ((int)(((byte)(210)))));
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(1039, 672);
-            this.Controls.Add(this.listView4);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.listView3);
-            this.Controls.Add(this.listView2);
-            this.Controls.Add(this.listView1);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.panel6);
-            this.Controls.Add(this.emaillogo);
-            this.Controls.Add(this.panel5);
-            this.Controls.Add(this.label3);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(235)))), ((int)(((byte)(220)))));
+            this.ClientSize = new System.Drawing.Size(873, 602);
+            this.Controls.Add(this.leftPanel);
+            this.Controls.Add(this.rightPanel);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MaximumSize = new System.Drawing.Size(889, 641);
+            this.MinimumSize = new System.Drawing.Size(889, 641);
             this.Name = "Form1";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.emaillogo)).EndInit();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "DustyCover - User Account";
+            this.leftPanel.ResumeLayout(false);
+            this.borrowingCard.ResumeLayout(false);
+            this.borrowingCard.PerformLayout();
+            this.readsCard.ResumeLayout(false);
+            this.readsCard.PerformLayout();
+            this.paymentCard.ResumeLayout(false);
+            this.paymentCard.PerformLayout();
+            this.booksPanel.ResumeLayout(false);
+            this.booksPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.booksGrid)).EndInit();
+            this.rightPanel.ResumeLayout(false);
+            this.rightPanel.PerformLayout();
+            this.emailIconPanel.ResumeLayout(false);
+            this.phoneIconPanel.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.PictureBox emaillogo;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ListView listView2;
-        private System.Windows.Forms.ListView listView3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ListView listView4;
     }
 }

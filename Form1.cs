@@ -1,223 +1,223 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
+using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DustyCover
 {
     public partial class Form1 : Form
     {
-        // Tracks whether the contact fields are currently editable
-        private bool isEditingContactInfo = false;
+        // Username of the currently logged-in user
+        private string loggedInUsername;
 
-        // Remembers the values before an edit, so we can restore them if needed
-        private string savedEmail = string.Empty;
-        private string savedPhone = string.Empty;
+        // CSV file location
+        private string csvFile;
 
-        public Form1()
+        public Form1(string username)
         {
             InitializeComponent();
 
-            // Wire up the button clicks here in case they aren't
-            // already hooked up in Form1.Designer.cs.
-            // (If double-clicking the buttons in the designer already
-            // created handlers with different names, delete these three
-            // lines and just rename the methods below to match.)
-            this.button1.Click += new EventHandler(this.button1_Click);   // Edit
-            this.button2.Click += new EventHandler(this.button2_Click);   // Borrowing/History
-            this.button3.Click += new EventHandler(this.button3_Click);   // Log Out
+            loggedInUsername = username;
+
+            csvFile = Path.Combine(
+                Application.StartupPath,
+                "users.csv"
+            );
+
+            LoadUserData();
+            LoadBorrowedBooks();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            // Start with contact fields locked (view-only) until Edit is pressed
-            SetContactFieldsEditable(false);
 
-            // TODO: replace with real data loaded from your user/account source
-            // textBox1.Text = currentUser.Email;
-            // textBox2.Text = currentUser.Phone;
-            // textBox3.Text = currentUser.BorrowedCount.ToString();
-            // textBox4.Text = currentUser.TotalReads.ToString();
-            // textBox5.Text = currentUser.FinesDue.ToString("C");
-        }
+        // =========================================================
+        // LOAD USER DATA FROM CSV
+        // =========================================================
 
-        // ---------- EDIT BUTTON ----------
-        private void button1_Click(object sender, EventArgs e)
+        private void LoadUserData()
         {
-            if (!isEditingContactInfo)
+            if (!File.Exists(csvFile))
             {
-                // Entering edit mode: remember current values, unlock the boxes
-                savedEmail = textBox1.Text;
-                savedPhone = textBox2.Text;
+                MessageBox.Show(
+                    "users.csv could not be found.",
+                    "File Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error
+                );
 
-                SetContactFieldsEditable(true);
-                button1.Text = "Save";
-                isEditingContactInfo = true;
+                return;
             }
-            else
+
+            string[] lines = File.ReadAllLines(csvFile);
+
+            if (lines.Length <= 1)
             {
-                // Leaving edit mode: validate, then save
-                if (!IsValidEmail(textBox1.Text))
+                MessageBox.Show(
+                    "There are no users in the CSV file.",
+                    "CSV Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+
+                return;
+            }
+
+            foreach (string line in lines.Skip(1))
+            {
+                if (string.IsNullOrWhiteSpace(line))
+                    continue;
+
+                string[] data = line.Split(',');
+
+                if (data.Length < 4)
+                    continue;
+
+                string username = data[0].Trim();
+
+                if (username.Equals(
+                    loggedInUsername,
+                    StringComparison.OrdinalIgnoreCase))
                 {
-                    MessageBox.Show("Please enter a valid e-mail address.", "Invalid Email",
-                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    textBox1.Focus();
+                    string email = data[1].Trim();
+                    string phone = data[2].Trim();
+
+                    // Display user information
+                    userNameLabel.Text =
+                        "@" + username;
+
+                    welcomeLabel.Text =
+                        "Welcome, @" + username +
+                        " to your user account page!";
+
+                    emailTextBox.Text = email;
+
+                    phoneTextBox.Text = phone;
+
                     return;
                 }
-
-                if (!IsValidPhone(textBox2.Text))
-                {
-                    MessageBox.Show("Please enter a valid phone number.", "Invalid Phone",
-                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    textBox2.Focus();
-                    return;
-                }
-
-                // TODO: persist textBox1.Text / textBox2.Text to your database or user object
-                // Example:
-                // currentUser.Email = textBox1.Text;
-                // currentUser.Phone = textBox2.Text;
-                // userRepository.Save(currentUser);
-
-                SetContactFieldsEditable(false);
-                button1.Text = "Edit";
-                isEditingContactInfo = false;
-
-                MessageBox.Show("Account details updated.", "Saved",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+
+            MessageBox.Show(
+                "The logged-in user could not be found.",
+                "User Not Found",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Warning
+            );
         }
 
-        // ---------- BORROWING / HISTORY BUTTON ----------
-        private void button2_Click(object sender, EventArgs e)
+
+        // =========================================================
+        // BORROWED BOOKS
+        // =========================================================
+
+        private void LoadBorrowedBooks()
         {
-            // Opens the Borrowing/History form.
-            // Replace "BorrowingHistoryForm" with the actual name of that form in your project.
-            try
+            booksGrid.Rows.Clear();
+
+            booksGrid.Rows.Add(
+                "The Alchemist",
+                "25 Aug 2026"
+            );
+
+            booksGrid.Rows.Add(
+                "Atomic Habits",
+                "28 Aug 2026"
+            );
+
+            booksGrid.Rows.Add(
+                "The 5 AM Club",
+                "02 Sep 2026"
+            );
+
+            booksGrid.Rows.Add(
+                "Rich Dad Poor Dad",
+                "05 Sep 2026"
+            );
+
+            booksGrid.Rows.Add(
+                "Think and Grow Rich",
+                "08 Sep 2026"
+            );
+        }
+
+
+        // =========================================================
+        // EDIT BUTTON
+        // =========================================================
+
+        private void editButton_Click(
+            object sender,
+            EventArgs e)
+        {
+            Form2 editForm =
+                new Form2(loggedInUsername);
+
+            // Show Form2
+            editForm.ShowDialog();
+
+            // Reload information after Form2 closes
+            LoadUserData();
+        }
+
+
+        // =========================================================
+        // BORROWING / HISTORY BUTTON
+        // =========================================================
+
+        private void historyButton_Click(
+            object sender,
+            EventArgs e)
+        {
+            string history =
+                "BORROWING HISTORY\n\n" +
+
+                "Currently Borrowed:\n\n" +
+
+                "• The Alchemist - Due 25 Aug 2026\n" +
+                "• Atomic Habits - Due 28 Aug 2026\n" +
+                "• The 5 AM Club - Due 02 Sep 2026\n" +
+                "• Rich Dad Poor Dad - Due 05 Sep 2026\n" +
+                "• Think and Grow Rich - Due 08 Sep 2026\n\n" +
+
+                "Total Borrowed: 07\n" +
+                "Total Reads: 24";
+
+            MessageBox.Show(
+                history,
+                "Borrowing / History",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information
+            );
+        }
+
+
+        // =========================================================
+        // LOGOUT
+        // =========================================================
+
+        private void logoutButton_Click(
+            object sender,
+            EventArgs e)
+        {
+            DialogResult result =
+                MessageBox.Show(
+                    "Are you sure you want to log out?",
+                    "Log Out",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question
+                );
+
+            if (result == DialogResult.Yes)
             {
-                using (var historyForm = new Form3())
-                {
-                    historyForm.ShowDialog(this);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Could not open Borrowing/History: " + ex.Message,
-                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.Close();
             }
         }
 
-        // ---------- LOG OUT BUTTON ----------
-        private void button3_Click(object sender, EventArgs e)
-        {
-            var confirm = MessageBox.Show("Are you sure you want to log out?", "Log Out",
-                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (confirm == DialogResult.Yes)
-            {
-                // Replace "LoginForm" with the actual name of your login/start-up form
-                var login = new Form();
-                login.Show();
-                this.Hide();     // hide instead of Close() so the app doesn't shut down entirely
-
-                // If Form1 should be fully disposed on logout instead, use:
-                // this.Close();
-            }
-        }
-
-        // ---------- HELPERS ----------
-        private void SetContactFieldsEditable(bool editable)
-        {
-            textBox1.ReadOnly = !editable; // e-mail
-            textBox2.ReadOnly = !editable; // phone
-
-            textBox1.BackColor = editable ? SystemColors.Window : SystemColors.Control;
-            textBox2.BackColor = editable ? SystemColors.Window : SystemColors.Control;
-        }
-
-        private bool IsValidEmail(string email)
-        {
-            if (string.IsNullOrWhiteSpace(email)) return false;
-            try
-            {
-                var addr = new System.Net.Mail.MailAddress(email);
-                return addr.Address == email;
-            }
-            catch
-            {
-                return false;
-            }
-        }
-
-        private bool IsValidPhone(string phone)
-        {
-            if (string.IsNullOrWhiteSpace(phone)) return false;
-            // Allows digits, spaces, +, -, ( ) — adjust to your needs
-            return System.Text.RegularExpressions.Regex.IsMatch(phone, @"^[0-9+\-\s()]{7,15}$");
-        }
-
-        // ---------- EXISTING STUBS (kept as-is / left empty) ----------
-        private void panel1_Paint(object sender, PaintEventArgs e) 
-        {
-
-        }
-        private void label1_Click(object sender, EventArgs e) 
-        {
-
-        }
-        private void pictureBox1_Click(object sender, EventArgs e) 
-        {
-            
-        }
-        private void panel2_Paint(object sender, PaintEventArgs e) 
-        {
-
-        }
-        private void panel3_Paint(object sender, PaintEventArgs e) 
-        {
-
-        }
-        private void panel4_Paint(object sender, PaintEventArgs e) 
-        {
-
-        }
-        private void label4_Click_2(object sender, EventArgs e) 
-        {
-
-        }
-        private void emaillogo_Click(object sender, EventArgs e) 
-        {
-
-        }
-        private void textBox1_TextChanged(object sender, EventArgs e) { }
-        private void panel5_Paint(object sender, PaintEventArgs e) { }
-        private void textBox2_TextChanged(object sender, EventArgs e) { }
-        private void panel6_Paint(object sender, PaintEventArgs e) { }
-        private void pictureBox3_Click(object sender, EventArgs e) { }
-        private void panel7_Paint(object sender, PaintEventArgs e) { }
-        private void textBox3_TextChanged(object sender, EventArgs e) { }
-        private void textBox4_TextChanged(object sender, EventArgs e) { }
-        private void textBox5_TextChanged(object sender, EventArgs e) { }
-        private void label8_Click(object sender, EventArgs e) { }
-        private void label7_Click(object sender, EventArgs e) { }
-        private void label9_Click(object sender, EventArgs e) { }
-        private void label6_Click(object sender, EventArgs e) { }
-
-        private void label2_Click(object sender, EventArgs e)
+        private void emailIcon_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-        private void button2_Click_1(object sender, EventArgs e)
+        private void borrowingValue_Click(object sender, EventArgs e)
         {
 
         }
