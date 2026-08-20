@@ -208,6 +208,21 @@ namespace BookStoreProj
         {
 
         }
+
+        private void panel_cart1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iconPictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     }
 

@@ -63,6 +63,26 @@ namespace BookStoreProj.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap aded1af65adc72f0dfeb9d6d84d2fb01 {
+            get {
+                object obj = ResourceManager.GetObject("aded1af65adc72f0dfeb9d6d84d2fb01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap download__2_ {
+            get {
+                object obj = ResourceManager.GetObject("download (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap images {
             get {
                 object obj = ResourceManager.GetObject("images", resourceCulture);
@@ -76,6 +96,16 @@ namespace BookStoreProj.Properties {
         internal static System.Drawing.Bitmap images__7_ {
             get {
                 object obj = ResourceManager.GetObject("images (7)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Lofi_BGM___winter_library_lofi {
+            get {
+                object obj = ResourceManager.GetObject("Lofi BGM - winter library lofi", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -126,6 +156,16 @@ namespace BookStoreProj.Properties {
         internal static System.Drawing.Bitmap pngtree_shopping_cart_convenient_icon_image_12878071 {
             get {
                 object obj = ResourceManager.GetObject("pngtree-shopping-cart-convenient-icon-image_12878071", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WhatsApp_Image_2026_08_20_at_1_25_45_PM {
+            get {
+                object obj = ResourceManager.GetObject("WhatsApp Image 2026-08-20 at 1.25.45 PM", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
