@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.Panel panel_f;
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.label_cart = new System.Windows.Forms.Label();
             this.Cart = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -66,9 +67,9 @@
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
             panel_f = new System.Windows.Forms.Panel();
             panel_f.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             this.Panel_Genre.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -82,7 +83,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_f
@@ -96,6 +96,14 @@
             panel_f.Name = "panel_f";
             panel_f.Size = new System.Drawing.Size(1282, 71);
             panel_f.TabIndex = 1;
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.Location = new System.Drawing.Point(598, 17);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox11.TabIndex = 3;
+            this.pictureBox11.TabStop = false;
             // 
             // label_cart
             // 
@@ -315,7 +323,7 @@
             this.Panel_faitytale.Controls.Add(this.button2);
             this.Panel_faitytale.Controls.Add(this.label_fairyNameB1);
             this.Panel_faitytale.Controls.Add(this.pictureBox7);
-            this.Panel_faitytale.Location = new System.Drawing.Point(126, 3);
+            this.Panel_faitytale.Location = new System.Drawing.Point(202, 3);
             this.Panel_faitytale.Name = "Panel_faitytale";
             this.Panel_faitytale.Size = new System.Drawing.Size(1011, 805);
             this.Panel_faitytale.TabIndex = 2;
@@ -331,7 +339,7 @@
             this.panel_cart1.Controls.Add(this.button3);
             this.panel_cart1.Controls.Add(this.label_Total);
             this.panel_cart1.Controls.Add(this.label3);
-            this.panel_cart1.Location = new System.Drawing.Point(51, 34);
+            this.panel_cart1.Location = new System.Drawing.Point(608, 83);
             this.panel_cart1.Name = "panel_cart1";
             this.panel_cart1.Size = new System.Drawing.Size(898, 771);
             this.panel_cart1.TabIndex = 7;
@@ -524,14 +532,6 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // pictureBox11
-            // 
-            this.pictureBox11.Location = new System.Drawing.Point(598, 17);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox11.TabIndex = 3;
-            this.pictureBox11.TabStop = false;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -543,6 +543,7 @@
             this.Text = "Form1";
             panel_f.ResumeLayout(false);
             panel_f.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             this.Panel_Genre.ResumeLayout(false);
             this.Panel_Genre.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -560,7 +561,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             this.ResumeLayout(false);
 
         }
