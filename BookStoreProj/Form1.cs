@@ -16,7 +16,7 @@ namespace BookStoreProj
 
     {
         Book book = new Book(15, 25, "The Little Mermaid", "Buy or Rent", "Faitytale");
-        int price = 0;
+       
 
         Book book1 = new Book(15, 25, "The Little Mermaid2", "Buy or Rent", "Faitytale");
        
