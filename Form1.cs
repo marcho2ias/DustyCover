@@ -85,7 +85,7 @@ namespace DustyCover
                         "@" + username;
 
                     welcomeLabel.Text =
-                        "Welcome, @" + username +
+                        "Welcome," + username +
                         " to your user account page!";
 
                     emailTextBox.Text = email;
@@ -114,29 +114,25 @@ namespace DustyCover
             booksGrid.Rows.Clear();
 
             booksGrid.Rows.Add(
-                "The Alchemist",
+                "Fantacy",
                 "25 Aug 2026"
             );
 
             booksGrid.Rows.Add(
-                "Atomic Habits",
+                "Anime",
                 "28 Aug 2026"
             );
 
             booksGrid.Rows.Add(
-                "The 5 AM Club",
+                "Mathematics",
                 "02 Sep 2026"
             );
 
             booksGrid.Rows.Add(
-                "Rich Dad Poor Dad",
+                "Dictionary",
                 "05 Sep 2026"
             );
 
-            booksGrid.Rows.Add(
-                "Think and Grow Rich",
-                "08 Sep 2026"
-            );
         }
 
 
@@ -218,6 +214,26 @@ namespace DustyCover
         }
 
         private void borrowingValue_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void booksGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void rightPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void emailTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
