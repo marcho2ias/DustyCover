@@ -49,7 +49,8 @@
             this.btnSignUp = new System.Windows.Forms.Button();
             this.lblLoginIn = new System.Windows.Forms.Label();
             this.lblLoginIn1 = new System.Windows.Forms.Label();
-            this.lblManage = new System.Windows.Forms.Label();
+            this.lblRJ = new System.Windows.Forms.Label();
+            this.lblError = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -281,16 +282,28 @@
             this.lblLoginIn1.TabIndex = 14;
             this.lblLoginIn1.Text = "Log in";
             // 
-            // lblManage
+            // lblRJ
             // 
-            this.lblManage.AutoSize = true;
-            this.lblManage.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblManage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(138)))), ((int)(((byte)(107)))));
-            this.lblManage.Location = new System.Drawing.Point(449, 41);
-            this.lblManage.Name = "lblManage";
-            this.lblManage.Size = new System.Drawing.Size(279, 20);
-            this.lblManage.TabIndex = 15;
-            this.lblManage.Text = "Sign up to start your reading journey";
+            this.lblRJ.AutoSize = true;
+            this.lblRJ.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRJ.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(138)))), ((int)(((byte)(107)))));
+            this.lblRJ.Location = new System.Drawing.Point(449, 41);
+            this.lblRJ.Name = "lblRJ";
+            this.lblRJ.Size = new System.Drawing.Size(279, 20);
+            this.lblRJ.TabIndex = 15;
+            this.lblRJ.Text = "Sign up to start your reading journey";
+            // 
+            // lblError
+            // 
+            this.lblError.AutoSize = true;
+            this.lblError.Font = new System.Drawing.Font("Georgia", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblError.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(58)))), ((int)(((byte)(42)))));
+            this.lblError.Location = new System.Drawing.Point(449, 70);
+            this.lblError.Name = "lblError";
+            this.lblError.Size = new System.Drawing.Size(281, 20);
+            this.lblError.TabIndex = 16;
+            this.lblError.Text = "Incorrect email or password !!";
+            this.lblError.Visible = false;
             // 
             // SignupForm
             // 
@@ -298,7 +311,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(228)))), ((int)(((byte)(210)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.lblManage);
+            this.Controls.Add(this.lblError);
+            this.Controls.Add(this.lblRJ);
             this.Controls.Add(this.lblLoginIn1);
             this.Controls.Add(this.lblLoginIn);
             this.Controls.Add(this.btnSignUp);
@@ -345,7 +359,8 @@
         private System.Windows.Forms.Button btnSignUp;
         private System.Windows.Forms.Label lblLoginIn;
         private System.Windows.Forms.Label lblLoginIn1;
-        private System.Windows.Forms.Label lblManage;
+        private System.Windows.Forms.Label lblRJ;
+        private System.Windows.Forms.Label lblError;
     }
 }
 
