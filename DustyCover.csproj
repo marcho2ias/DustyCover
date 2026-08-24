@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F13C5399-EBD4-4EA7-851D-603860C731FE}</ProjectGuid>
+    <ProjectGuid>{CABC5FDE-4E97-F601-D1C5-BA9058E62B25}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>DustyCover</RootNamespace>
     <AssemblyName>DustyCover</AssemblyName>
