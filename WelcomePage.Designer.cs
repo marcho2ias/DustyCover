@@ -39,6 +39,8 @@
             this.lblBadge = new System.Windows.Forms.Label();
             this.lblWelcome = new System.Windows.Forms.Label();
             this.lblManage = new System.Windows.Forms.Label();
+            this.btnLogin = new System.Windows.Forms.Button();
+            this.btnSignUp = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -169,12 +171,42 @@
             this.lblManage.TabIndex = 3;
             this.lblManage.Text = "Join or Sign in to manage your borrowing";
             // 
+            // btnLogin
+            // 
+            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(56)))), ((int)(((byte)(32)))));
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogin.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(230)))));
+            this.btnLogin.Location = new System.Drawing.Point(458, 214);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(287, 40);
+            this.btnLogin.TabIndex = 9;
+            this.btnLogin.Text = "Log In";
+            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            // 
+            // btnSignUp
+            // 
+            this.btnSignUp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(56)))), ((int)(((byte)(32)))));
+            this.btnSignUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSignUp.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSignUp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(230)))));
+            this.btnSignUp.Location = new System.Drawing.Point(458, 284);
+            this.btnSignUp.Name = "btnSignUp";
+            this.btnSignUp.Size = new System.Drawing.Size(287, 40);
+            this.btnSignUp.TabIndex = 10;
+            this.btnSignUp.Text = "Create Account";
+            this.btnSignUp.UseVisualStyleBackColor = false;
+            this.btnSignUp.Click += new System.EventHandler(this.btnSignUp_Click);
+            // 
             // WelcomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(228)))), ((int)(((byte)(210)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnSignUp);
+            this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.lblManage);
             this.Controls.Add(this.lblWelcome);
             this.Controls.Add(this.panel1);
@@ -200,6 +232,8 @@
         private System.Windows.Forms.Label lblBadge;
         private System.Windows.Forms.Label lblWelcome;
         private System.Windows.Forms.Label lblManage;
+        private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.Button btnSignUp;
     }
 }
 
