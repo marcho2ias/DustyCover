@@ -22,5 +22,10 @@ namespace DustyCover
         {
 
         }
+
+        private void lblCA_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -37,6 +37,7 @@
             this.lblStoreName1 = new System.Windows.Forms.Label();
             this.lblStoreName = new System.Windows.Forms.Label();
             this.lblBadge = new System.Windows.Forms.Label();
+            this.lblCA = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -145,11 +146,25 @@
             this.lblBadge.TabIndex = 0;
             this.lblBadge.Text = "EST.2026";
             // 
+            // lblCA
+            // 
+            this.lblCA.AutoSize = true;
+            this.lblCA.Font = new System.Drawing.Font("Georgia", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(48)))), ((int)(((byte)(24)))));
+            this.lblCA.Location = new System.Drawing.Point(436, 24);
+            this.lblCA.Name = "lblCA";
+            this.lblCA.Size = new System.Drawing.Size(206, 32);
+            this.lblCA.TabIndex = 2;
+            this.lblCA.Text = "Create Account";
+            this.lblCA.Click += new System.EventHandler(this.lblCA_Click);
+            // 
             // SignupForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(228)))), ((int)(((byte)(210)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblCA);
             this.Controls.Add(this.panel1);
             this.Name = "SignupForm";
             this.Text = "SignupForm";
@@ -157,6 +172,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -171,6 +187,7 @@
         private System.Windows.Forms.Label lblStoreName1;
         private System.Windows.Forms.Label lblStoreName;
         private System.Windows.Forms.Label lblBadge;
+        private System.Windows.Forms.Label lblCA;
     }
 }
 
