@@ -46,6 +46,7 @@
             this.txtCP = new System.Windows.Forms.TextBox();
             this.lblName = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
+            this.btnSignUp = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -171,7 +172,7 @@
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(68)))), ((int)(((byte)(35)))));
-            this.lblEmail.Location = new System.Drawing.Point(449, 159);
+            this.lblEmail.Location = new System.Drawing.Point(449, 152);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(63, 24);
             this.lblEmail.TabIndex = 4;
@@ -179,7 +180,7 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(453, 186);
+            this.txtEmail.Location = new System.Drawing.Point(453, 179);
             this.txtEmail.Multiline = true;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(241, 32);
@@ -190,7 +191,7 @@
             this.lblPassword.AutoSize = true;
             this.lblPassword.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(68)))), ((int)(((byte)(35)))));
-            this.lblPassword.Location = new System.Drawing.Point(449, 222);
+            this.lblPassword.Location = new System.Drawing.Point(449, 214);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(95, 24);
             this.lblPassword.TabIndex = 6;
@@ -198,7 +199,7 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(453, 249);
+            this.txtPassword.Location = new System.Drawing.Point(453, 241);
             this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(241, 32);
@@ -209,7 +210,7 @@
             this.lblCP.AutoSize = true;
             this.lblCP.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(68)))), ((int)(((byte)(35)))));
-            this.lblCP.Location = new System.Drawing.Point(449, 293);
+            this.lblCP.Location = new System.Drawing.Point(449, 276);
             this.lblCP.Name = "lblCP";
             this.lblCP.Size = new System.Drawing.Size(175, 24);
             this.lblCP.TabIndex = 8;
@@ -217,7 +218,7 @@
             // 
             // txtCP
             // 
-            this.txtCP.Location = new System.Drawing.Point(453, 320);
+            this.txtCP.Location = new System.Drawing.Point(453, 303);
             this.txtCP.Multiline = true;
             this.txtCP.Name = "txtCP";
             this.txtCP.Size = new System.Drawing.Size(241, 32);
@@ -228,7 +229,7 @@
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(68)))), ((int)(((byte)(35)))));
-            this.lblName.Location = new System.Drawing.Point(449, 97);
+            this.lblName.Location = new System.Drawing.Point(449, 87);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(63, 24);
             this.lblName.TabIndex = 10;
@@ -236,11 +237,24 @@
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(453, 124);
+            this.txtName.Location = new System.Drawing.Point(453, 114);
             this.txtName.Multiline = true;
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(241, 32);
             this.txtName.TabIndex = 11;
+            // 
+            // btnSignUp
+            // 
+            this.btnSignUp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(56)))), ((int)(((byte)(32)))));
+            this.btnSignUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSignUp.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSignUp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(230)))));
+            this.btnSignUp.Location = new System.Drawing.Point(434, 346);
+            this.btnSignUp.Name = "btnSignUp";
+            this.btnSignUp.Size = new System.Drawing.Size(287, 40);
+            this.btnSignUp.TabIndex = 12;
+            this.btnSignUp.Text = "Sign Up";
+            this.btnSignUp.UseVisualStyleBackColor = false;
             // 
             // SignupForm
             // 
@@ -248,6 +262,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(228)))), ((int)(((byte)(210)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnSignUp);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.txtCP);
@@ -288,6 +303,7 @@
         private System.Windows.Forms.TextBox txtCP;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.Button btnSignUp;
     }
 }
 
