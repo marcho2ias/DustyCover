@@ -7,32 +7,24 @@ namespace DustyCover
 {
     public partial class Form1 : Form
     {
-        // Username of the currently logged-in user
         private string loggedInUsername;
-
-        // CSV file location
         private string csvFile;
 
         public Form1(string username)
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.Sizable;
+            this.MaximizeBox = true;
+            this.MinimizeBox = true;
+            this.StartPosition = FormStartPosition.CenterScreen;
 
             loggedInUsername = username;
 
-            csvFile = Path.Combine(
-                Application.StartupPath,
-                "users.csv"
-            );
+            csvFile = Path.Combine(Application.StartupPath, "users.csv");
 
             LoadUserData();
             LoadBorrowedBooks();
         }
-
-
-        // =========================================================
-        // LOAD USER DATA FROM CSV
-        // =========================================================
-
         private void LoadUserData()
         {
             if (!File.Exists(csvFile))
@@ -60,7 +52,7 @@ namespace DustyCover
 
                 return;
             }
-
+           
             foreach (string line in lines.Skip(1))
             {
                 if (string.IsNullOrWhiteSpace(line))
@@ -78,9 +70,8 @@ namespace DustyCover
                     StringComparison.OrdinalIgnoreCase))
                 {
                     string email = data[1].Trim();
-                    string phone = data[2].Trim();
+                    string password = data[2].Trim();
 
-                    // Display user information
                     userNameLabel.Text =
                         "@" + username;
 
@@ -90,7 +81,7 @@ namespace DustyCover
 
                     emailTextBox.Text = email;
 
-                    phoneTextBox.Text = phone;
+                    psswdTextBox.Text = password;
 
                     return;
                 }
@@ -103,11 +94,6 @@ namespace DustyCover
                 MessageBoxIcon.Warning
             );
         }
-
-
-        // =========================================================
-        // BORROWED BOOKS
-        // =========================================================
 
         private void LoadBorrowedBooks()
         {
@@ -135,11 +121,6 @@ namespace DustyCover
 
         }
 
-
-        // =========================================================
-        // EDIT BUTTON
-        // =========================================================
-
         private void editButton_Click(
             object sender,
             EventArgs e)
@@ -147,17 +128,10 @@ namespace DustyCover
             Form2 editForm =
                 new Form2(loggedInUsername);
 
-            // Show Form2
             editForm.ShowDialog();
 
-            // Reload information after Form2 closes
             LoadUserData();
         }
-
-
-        // =========================================================
-        // BORROWING / HISTORY BUTTON
-        // =========================================================
 
         private void historyButton_Click(
             object sender,
@@ -184,11 +158,6 @@ namespace DustyCover
                 MessageBoxIcon.Information
             );
         }
-
-
-        // =========================================================
-        // LOGOUT
-        // =========================================================
 
         private void logoutButton_Click(
             object sender,
@@ -234,6 +203,21 @@ namespace DustyCover
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void iconButton3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
         {
 
         }
