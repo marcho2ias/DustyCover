@@ -38,6 +38,7 @@
             this.lblStoreName = new System.Windows.Forms.Label();
             this.lblBadge = new System.Windows.Forms.Label();
             this.lblWelcome = new System.Windows.Forms.Label();
+            this.lblManage = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -157,12 +158,24 @@
             this.lblWelcome.TabIndex = 2;
             this.lblWelcome.Text = "Welcome ";
             // 
+            // lblManage
+            // 
+            this.lblManage.AutoSize = true;
+            this.lblManage.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblManage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(138)))), ((int)(((byte)(107)))));
+            this.lblManage.Location = new System.Drawing.Point(440, 144);
+            this.lblManage.Name = "lblManage";
+            this.lblManage.Size = new System.Drawing.Size(314, 20);
+            this.lblManage.TabIndex = 3;
+            this.lblManage.Text = "Join or Sign in to manage your borrowing";
+            // 
             // WelcomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(228)))), ((int)(((byte)(210)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblManage);
             this.Controls.Add(this.lblWelcome);
             this.Controls.Add(this.panel1);
             this.Name = "WelcomePage";
@@ -186,6 +199,7 @@
         private System.Windows.Forms.Label lblStoreName;
         private System.Windows.Forms.Label lblBadge;
         private System.Windows.Forms.Label lblWelcome;
+        private System.Windows.Forms.Label lblManage;
     }
 }
 
