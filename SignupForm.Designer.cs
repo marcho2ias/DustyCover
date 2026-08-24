@@ -189,6 +189,7 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(241, 32);
             this.txtEmail.TabIndex = 5;
+            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
             // 
             // lblPassword
             // 
@@ -208,6 +209,7 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(241, 32);
             this.txtPassword.TabIndex = 7;
+            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             // 
             // lblCP
             // 
@@ -227,6 +229,7 @@
             this.txtCP.Name = "txtCP";
             this.txtCP.Size = new System.Drawing.Size(241, 32);
             this.txtCP.TabIndex = 9;
+            this.txtCP.TextChanged += new System.EventHandler(this.txtCP_TextChanged);
             // 
             // lblName
             // 
@@ -246,6 +249,7 @@
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(241, 32);
             this.txtName.TabIndex = 11;
+            this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
             // 
             // btnSignUp
             // 
@@ -259,6 +263,7 @@
             this.btnSignUp.TabIndex = 12;
             this.btnSignUp.Text = "Sign Up";
             this.btnSignUp.UseVisualStyleBackColor = false;
+            this.btnSignUp.Click += new System.EventHandler(this.btnSignUp_Click);
             // 
             // lblLoginIn
             // 
