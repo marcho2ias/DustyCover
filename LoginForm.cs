@@ -122,5 +122,10 @@ namespace DustyCover
                 lblError.Visible = true;
             }
         }
+
+        private void lblWelcome_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
