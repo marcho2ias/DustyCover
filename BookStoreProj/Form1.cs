@@ -18,7 +18,7 @@ namespace BookStoreProj
 
 
     {
-        public string filePath = @"C:\Users\itsme\Documents\Studio2\Book.Txt";
+       
         List<Book> books = new List<Book>();
 
 
@@ -34,6 +34,7 @@ namespace BookStoreProj
 
             Panel_Genre.Visible = true;
             Panel_faitytale.Visible = false;
+            panel_cart.Visible = false;
 
            
 
@@ -47,17 +48,18 @@ namespace BookStoreProj
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        public void button1_Click(object sender, EventArgs e)
         {
             Panel_Genre.Visible = true;
             Panel_faitytale.Visible = true;
+            panel_cart.Visible = false;
 
 
 
             string filePath = @"C:\Users\itsme\Documents\Studio2\Book1.CSV";
 
             string[] lines = File.ReadAllLines(filePath);
-            List<Book> books = new List<Book>();
+            
 
 
             for (int i = 0; i < lines.Length; i++)
@@ -90,7 +92,7 @@ namespace BookStoreProj
 
 
 
-
+           
 
 
 
@@ -232,6 +234,7 @@ namespace BookStoreProj
         {
             Panel_faitytale.Visible = true;
             Panel_Genre.Visible = true;
+            panel_cart.Visible = true;
             //panel_cart1.Visible = true;
             //panel_cart1.BringToFront();
         }
@@ -310,6 +313,17 @@ namespace BookStoreProj
         private void panel_f_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btn_buy1_Click_1(object sender, EventArgs e)
+        {
+
+            
+           
+            panel_cart.Visible = false;
+
+            listBox_cart.Items.Add(
+                label1_Library.Text);
         }
     }
     }

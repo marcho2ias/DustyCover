@@ -85,6 +85,8 @@
             this.button14 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
+            this.panel_cart = new System.Windows.Forms.Panel();
+            this.listBox_cart = new System.Windows.Forms.ListBox();
             panel_f = new System.Windows.Forms.Panel();
             panel_f.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
@@ -104,6 +106,7 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            this.panel_cart.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_f
@@ -194,6 +197,7 @@
             // Panel_faitytale
             // 
             this.Panel_faitytale.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(228)))), ((int)(((byte)(210)))));
+            this.Panel_faitytale.Controls.Add(this.panel_cart);
             this.Panel_faitytale.Controls.Add(this.button16);
             this.Panel_faitytale.Controls.Add(this.button15);
             this.Panel_faitytale.Controls.Add(this.button14);
@@ -386,6 +390,7 @@
             this.btn_buy1.TabIndex = 2;
             this.btn_buy1.Text = "BUY";
             this.btn_buy1.UseVisualStyleBackColor = true;
+            this.btn_buy1.Click += new System.EventHandler(this.btn_buy1_Click_1);
             // 
             // button2
             // 
@@ -775,6 +780,24 @@
             this.button16.Text = "BUY";
             this.button16.UseVisualStyleBackColor = true;
             // 
+            // panel_cart
+            // 
+            this.panel_cart.BackColor = System.Drawing.Color.White;
+            this.panel_cart.Controls.Add(this.listBox_cart);
+            this.panel_cart.Location = new System.Drawing.Point(211, 33);
+            this.panel_cart.Name = "panel_cart";
+            this.panel_cart.Size = new System.Drawing.Size(518, 458);
+            this.panel_cart.TabIndex = 4;
+            // 
+            // listBox_cart
+            // 
+            this.listBox_cart.FormattingEnabled = true;
+            this.listBox_cart.ItemHeight = 20;
+            this.listBox_cart.Location = new System.Drawing.Point(82, 55);
+            this.listBox_cart.Name = "listBox_cart";
+            this.listBox_cart.Size = new System.Drawing.Size(349, 284);
+            this.listBox_cart.TabIndex = 0;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -806,6 +829,7 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            this.panel_cart.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -868,6 +892,8 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label6_price;
         private System.Windows.Forms.Label label5_price;
+        private System.Windows.Forms.Panel panel_cart;
+        private System.Windows.Forms.ListBox listBox_cart;
     }
 }
 
