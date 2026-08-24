@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DustyCover
 {
-    public partial class Form2 : Form
+    public partial class WelcomePage : Form
     {
-        public Form2()
+        public WelcomePage()
         {
             InitializeComponent();
         }
