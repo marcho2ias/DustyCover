@@ -47,6 +47,8 @@
             this.lblName = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.btnSignUp = new System.Windows.Forms.Button();
+            this.lblLoginIn = new System.Windows.Forms.Label();
+            this.lblLoginIn1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -256,12 +258,36 @@
             this.btnSignUp.Text = "Sign Up";
             this.btnSignUp.UseVisualStyleBackColor = false;
             // 
+            // lblLoginIn
+            // 
+            this.lblLoginIn.AutoSize = true;
+            this.lblLoginIn.Font = new System.Drawing.Font("Georgia", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLoginIn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(68)))), ((int)(((byte)(35)))));
+            this.lblLoginIn.Location = new System.Drawing.Point(465, 393);
+            this.lblLoginIn.Name = "lblLoginIn";
+            this.lblLoginIn.Size = new System.Drawing.Size(229, 20);
+            this.lblLoginIn.TabIndex = 13;
+            this.lblLoginIn.Text = "Already have a account?";
+            // 
+            // lblLoginIn1
+            // 
+            this.lblLoginIn1.AutoSize = true;
+            this.lblLoginIn1.Font = new System.Drawing.Font("Georgia", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLoginIn1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(68)))), ((int)(((byte)(35)))));
+            this.lblLoginIn1.Location = new System.Drawing.Point(540, 413);
+            this.lblLoginIn1.Name = "lblLoginIn1";
+            this.lblLoginIn1.Size = new System.Drawing.Size(65, 20);
+            this.lblLoginIn1.TabIndex = 14;
+            this.lblLoginIn1.Text = "Log in";
+            // 
             // SignupForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(228)))), ((int)(((byte)(210)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblLoginIn1);
+            this.Controls.Add(this.lblLoginIn);
             this.Controls.Add(this.btnSignUp);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.lblName);
@@ -304,6 +330,8 @@
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Button btnSignUp;
+        private System.Windows.Forms.Label lblLoginIn;
+        private System.Windows.Forms.Label lblLoginIn1;
     }
 }
 
