@@ -6,7 +6,6 @@ using System.Data.SqlTypes;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -16,14 +15,13 @@ namespace BookStoreProj
 
 
     {
-        Book book = new Book(15, 25, "The Lord of the rings", "Buy or Rent", "Faitytale");
-       
+        Book book = new Book(15, 25, "The Little Mermaid", "Buy or Rent", "Faitytale");
+        int price = 0;
 
         Book book1 = new Book(15, 25, "The Little Mermaid2", "Buy or Rent", "Faitytale");
        
 
         Order order = new Order();
-          
 
         int cnt = 0;
         int total = 0;
@@ -37,9 +35,7 @@ namespace BookStoreProj
             Panel_Genre.Visible = true;
             Panel_faitytale.Visible = false;
 
-           
-
-           
+            panel_cart1.Visible = false;
 
 
         }
@@ -53,13 +49,13 @@ namespace BookStoreProj
         {
             Panel_Genre.Visible = true;
             Panel_faitytale.Visible = true;
-          
+            panel_cart1.Visible = false;
 
 
 
 
-            label1_Library.Text = book.Name;
-            label_price.Text = "Rent $:" + book.Rentprice + "Buy:" + book.BuyPrice;
+            label_fairyNameB1.Text = book.Name;
+            label_descBookF.Text = "Rent $:" + book.Rentprice + "Buy:" + book.BuyPrice;
 
             label2_fairybook1.Text = book1.Name;
             
@@ -82,48 +78,34 @@ namespace BookStoreProj
         {
             Panel_faitytale.Visible = true;
             Panel_Genre.Visible = true;
-
-
+            panel_cart1.Visible = false;
+            
 
 
             {
-
+              
 
                 // Add 1 book
                 cnt++;
 
                 // Display book name
-                //listBox_Cart.Items.Add((book.Name + "$".PadLeft(20) + book.BuyPrice.ToString()));
+                listBox_Cart.Items.Add((book.Name + "$".PadLeft(20) +book.BuyPrice.ToString()));
 
                 // Display price of one book
                 //listBox_Cart.Items.Add(book.BuyPrice.ToString().PadLeft(80));
 
                 // Calculate total price
-                total = book.BuyPrice * cnt;
+                 total = book.BuyPrice * cnt;
 
-                //// Display total
-                //label_Total.Text = "$" + total;
+                // Display total
+                label_Total.Text = "$" + total;
 
                 label_cart.Text = cnt.ToString();
 
 
+                
 
-                //if (cnt <= 1)
-                //{
-                //    Label_cart_notif.Text = "Cart Successfully Added";
-
-
-
-
-
-                //}
-
-
-
-
-
-
-
+                
             }
         }
 
@@ -141,7 +123,7 @@ namespace BookStoreProj
         {
             Panel_faitytale.Visible = false;
             Panel_Genre.Visible = true;
-            //panel_cart1.Visible = false;
+            panel_cart1.Visible = false;
 
 
 
@@ -152,7 +134,7 @@ namespace BookStoreProj
 
             Panel_faitytale.Visible = true;
             Panel_Genre.Visible = true;
-            //panel_cart1.Visible = false;
+            panel_cart1.Visible = false;
 
         }
 
@@ -169,8 +151,8 @@ namespace BookStoreProj
         {
             Panel_faitytale.Visible = true;
             Panel_Genre.Visible = true;
-            //panel_cart1.Visible = false;
-
+            panel_cart1.Visible = false;
+         
 
 
 
@@ -179,102 +161,50 @@ namespace BookStoreProj
             cnt++;
 
             // Display book name
-            //listBox_Cart.Items.Add(book1.Name);
+            listBox_Cart.Items.Add(book1.Name);
 
-            total = book1.BuyPrice * cnt;
+             total = book1.BuyPrice * cnt;
 
             // Display price of one book
-            //listBox_Cart.Items.Add(book1.BuyPrice.ToString().PadRight(25) + "$" + total);
+            listBox_Cart.Items.Add(book1.BuyPrice.ToString().PadRight(25) + "$" + total);
 
             // Calculate total price
-
+         
 
             // Display total
-
+            
 
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-
+            
         }
 
-
+       
         private void button5_Click_1(object sender, EventArgs e)
         {
             Panel_faitytale.Visible = true;
             Panel_Genre.Visible = true;
-            //panel_cart1.Visible = true;
-            //panel_cart1.BringToFront();
+            panel_cart1.Visible = true;
+            panel_cart1.BringToFront();
         }
 
         private void btn_clear_Click(object sender, EventArgs e)
         {
-          /*  listBox_Cart.Items.Clear();*/
+            listBox_Cart.Items.Clear();
 
             total = 0;
             cnt = 0;
 
 
-            //label_Total.Text = "$" + total;
+            label_Total.Text = "$" + total;
             label_cart.Text = cnt.ToString();
-
+            
 
         }
 
         private void btn_Delete_Click(object sender, EventArgs e)
-        {
-            
-            
-
-        }
-
-        private void panel_cart1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void iconPictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Label_cart_notif_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listBox_Cart_MouseClick(object sender, MouseEventArgs e)
-        {
-           
-        }
-
-        private void panel_cart1_Paint_1(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void button2_Click_1(object sender, EventArgs e)
-        {
-            Panel_faitytale.Visible = false;
-        }
-
-        private void label_Tittle_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictubebox1_library_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox9_Click(object sender, EventArgs e)
         {
 
         }
