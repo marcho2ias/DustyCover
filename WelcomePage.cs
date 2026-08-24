@@ -19,12 +19,12 @@ namespace DustyCover
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btnSignUp_Click(object sender, EventArgs e)
         {
-
+            
         }
     }
 }
