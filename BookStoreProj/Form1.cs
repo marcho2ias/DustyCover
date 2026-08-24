@@ -9,21 +9,19 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace BookStoreProj
 {
+
     public partial class Form1 : Form
 
 
     {
-        Book book = new Book(15, 25, "The Lord of the rings", "Buy or Rent", "Faitytale");
-       
+        public string filePath = @"C:\Users\itsme\Documents\Studio2\Book.Txt";
+        List<Book> books = new List<Book>();
 
-        Book book1 = new Book(15, 25, "The Little Mermaid2", "Buy or Rent", "Faitytale");
-       
 
-        Order order = new Order();
-          
 
         int cnt = 0;
         int total = 0;
@@ -53,16 +51,44 @@ namespace BookStoreProj
         {
             Panel_Genre.Visible = true;
             Panel_faitytale.Visible = true;
-          
 
 
 
+            string filePath = @"C:\Users\itsme\Documents\Studio2\Book1.CSV";
 
-            label1_Library.Text = book.Name;
-            label_price.Text = "Rent $:" + book.Rentprice + "Buy:" + book.BuyPrice;
+            string[] lines = File.ReadAllLines(filePath);
+            List<Book> books = new List<Book>();
 
-            label2_fairybook1.Text = book1.Name;
-            
+
+            for (int i = 0; i < lines.Length; i++)
+            {
+                string[] data = lines[i].Split(',');
+
+                if (data.Length < 6)
+                    continue; // skip malformed/incomplete lines
+
+                Book book = new Book();
+                book.BookID = data[0].Trim();
+                book.Tittle = data[1].Trim();
+                book.Description = data[2].Trim();
+                book.BuyPrice = Convert.ToDouble(data[4].Trim());
+                book.RentPrice = Convert.ToDouble(data[5].Trim());
+
+                books.Add(book);
+            }
+
+
+            label1_Library.Text = books[0].Tittle;
+            label2_Library.Text = books[1].Tittle;
+            label3_Library.Text = books[2].Tittle;
+            label4_Library.Text = books[3].Tittle;
+            label5_Library.Text = books[4].Tittle;
+
+
+            label1_price.Text ="Buy Price:" +  books[0].BuyPrice.ToString() +" Rent Price :" + books[0].RentPrice.ToString();
+
+
+
 
 
 
@@ -70,6 +96,8 @@ namespace BookStoreProj
 
 
         }
+
+        
 
         private void label3_Click(object sender, EventArgs e)
         {
@@ -80,8 +108,8 @@ namespace BookStoreProj
 
 
         {
-            Panel_faitytale.Visible = true;
-            Panel_Genre.Visible = true;
+            //Panel_faitytale.Visible = true;
+            //Panel_Genre.Visible = true;
 
 
 
@@ -99,12 +127,12 @@ namespace BookStoreProj
                 //listBox_Cart.Items.Add(book.BuyPrice.ToString().PadLeft(80));
 
                 // Calculate total price
-                total = book.BuyPrice * cnt;
+                //total = book.BuyPrice * cnt;
 
                 //// Display total
                 //label_Total.Text = "$" + total;
 
-                label_cart.Text = cnt.ToString();
+                //label_cart.Text = cnt.ToString();
 
 
 
@@ -181,7 +209,7 @@ namespace BookStoreProj
             // Display book name
             //listBox_Cart.Items.Add(book1.Name);
 
-            total = book1.BuyPrice * cnt;
+            //total = book1.BuyPrice * cnt;
 
             // Display price of one book
             //listBox_Cart.Items.Add(book1.BuyPrice.ToString().PadRight(25) + "$" + total);
@@ -275,6 +303,11 @@ namespace BookStoreProj
         }
 
         private void pictureBox9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel_f_Paint(object sender, PaintEventArgs e)
         {
 
         }

@@ -29,19 +29,24 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.Panel panel_f;
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.label_cart = new System.Windows.Forms.Label();
             this.Cart = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.Panel_Genre = new System.Windows.Forms.Panel();
             this.Panel_faitytale = new System.Windows.Forms.Panel();
+            this.label6_Library = new System.Windows.Forms.Label();
+            this.label5_Library = new System.Windows.Forms.Label();
+            this.label4_Library = new System.Windows.Forms.Label();
+            this.label3_Library = new System.Windows.Forms.Label();
+            this.label2_Library = new System.Windows.Forms.Label();
             this.pictubebox6_library = new System.Windows.Forms.PictureBox();
             this.pictubebox5_library = new System.Windows.Forms.PictureBox();
             this.pictubebox3_library = new System.Windows.Forms.PictureBox();
             this.pictubebox2_library = new System.Windows.Forms.PictureBox();
             this.pictubebox1_library = new System.Windows.Forms.PictureBox();
             this.pictubebox4_library = new System.Windows.Forms.PictureBox();
-            this.label2_fairybook1 = new System.Windows.Forms.Label();
-            this.label_price = new System.Windows.Forms.Label();
+            this.label1_price = new System.Windows.Forms.Label();
             this.btn_Rent1 = new System.Windows.Forms.Button();
             this.btn_buy1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -49,7 +54,6 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button10 = new System.Windows.Forms.Button();
@@ -64,15 +68,26 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.label2_Library = new System.Windows.Forms.Label();
-            this.label3_Library = new System.Windows.Forms.Label();
-            this.label4_Library = new System.Windows.Forms.Label();
-            this.label5_Library = new System.Windows.Forms.Label();
-            this.label6_Library = new System.Windows.Forms.Label();
+            this.label2_price = new System.Windows.Forms.Label();
+            this.label3_price = new System.Windows.Forms.Label();
+            this.label4_price = new System.Windows.Forms.Label();
+            this.label5_price = new System.Windows.Forms.Label();
+            this.label6_price = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
+            this.button14 = new System.Windows.Forms.Button();
+            this.button15 = new System.Windows.Forms.Button();
+            this.button16 = new System.Windows.Forms.Button();
             panel_f = new System.Windows.Forms.Panel();
             panel_f.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             this.Panel_Genre.SuspendLayout();
             this.Panel_faitytale.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictubebox6_library)).BeginInit();
@@ -84,12 +99,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_f
@@ -104,6 +118,15 @@
             panel_f.Name = "panel_f";
             panel_f.Size = new System.Drawing.Size(1282, 71);
             panel_f.TabIndex = 1;
+            panel_f.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_f_Paint);
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.Location = new System.Drawing.Point(598, 17);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox11.TabIndex = 3;
+            this.pictureBox11.TabStop = false;
             // 
             // label_cart
             // 
@@ -171,6 +194,21 @@
             // Panel_faitytale
             // 
             this.Panel_faitytale.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(228)))), ((int)(((byte)(210)))));
+            this.Panel_faitytale.Controls.Add(this.button16);
+            this.Panel_faitytale.Controls.Add(this.button15);
+            this.Panel_faitytale.Controls.Add(this.button14);
+            this.Panel_faitytale.Controls.Add(this.button13);
+            this.Panel_faitytale.Controls.Add(this.button12);
+            this.Panel_faitytale.Controls.Add(this.button11);
+            this.Panel_faitytale.Controls.Add(this.button6);
+            this.Panel_faitytale.Controls.Add(this.button5);
+            this.Panel_faitytale.Controls.Add(this.button4);
+            this.Panel_faitytale.Controls.Add(this.button3);
+            this.Panel_faitytale.Controls.Add(this.label6_price);
+            this.Panel_faitytale.Controls.Add(this.label5_price);
+            this.Panel_faitytale.Controls.Add(this.label4_price);
+            this.Panel_faitytale.Controls.Add(this.label3_price);
+            this.Panel_faitytale.Controls.Add(this.label2_price);
             this.Panel_faitytale.Controls.Add(this.label6_Library);
             this.Panel_faitytale.Controls.Add(this.label5_Library);
             this.Panel_faitytale.Controls.Add(this.label4_Library);
@@ -182,16 +220,65 @@
             this.Panel_faitytale.Controls.Add(this.pictubebox2_library);
             this.Panel_faitytale.Controls.Add(this.pictubebox1_library);
             this.Panel_faitytale.Controls.Add(this.pictubebox4_library);
-            this.Panel_faitytale.Controls.Add(this.label2_fairybook1);
-            this.Panel_faitytale.Controls.Add(this.label_price);
+            this.Panel_faitytale.Controls.Add(this.label1_price);
             this.Panel_faitytale.Controls.Add(this.btn_Rent1);
             this.Panel_faitytale.Controls.Add(this.btn_buy1);
             this.Panel_faitytale.Controls.Add(this.button2);
             this.Panel_faitytale.Controls.Add(this.label1_Library);
-            this.Panel_faitytale.Location = new System.Drawing.Point(152, 6);
+            this.Panel_faitytale.Location = new System.Drawing.Point(269, 10);
             this.Panel_faitytale.Name = "Panel_faitytale";
             this.Panel_faitytale.Size = new System.Drawing.Size(1059, 838);
             this.Panel_faitytale.TabIndex = 3;
+            // 
+            // label6_Library
+            // 
+            this.label6_Library.AutoSize = true;
+            this.label6_Library.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6_Library.Location = new System.Drawing.Point(749, 649);
+            this.label6_Library.Name = "label6_Library";
+            this.label6_Library.Size = new System.Drawing.Size(115, 20);
+            this.label6_Library.TabIndex = 24;
+            this.label6_Library.Text = "Sample Book";
+            // 
+            // label5_Library
+            // 
+            this.label5_Library.AutoSize = true;
+            this.label5_Library.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5_Library.Location = new System.Drawing.Point(419, 649);
+            this.label5_Library.Name = "label5_Library";
+            this.label5_Library.Size = new System.Drawing.Size(115, 20);
+            this.label5_Library.TabIndex = 23;
+            this.label5_Library.Text = "Sample Book";
+            // 
+            // label4_Library
+            // 
+            this.label4_Library.AutoSize = true;
+            this.label4_Library.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4_Library.Location = new System.Drawing.Point(73, 649);
+            this.label4_Library.Name = "label4_Library";
+            this.label4_Library.Size = new System.Drawing.Size(115, 20);
+            this.label4_Library.TabIndex = 22;
+            this.label4_Library.Text = "Sample Book";
+            // 
+            // label3_Library
+            // 
+            this.label3_Library.AutoSize = true;
+            this.label3_Library.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3_Library.Location = new System.Drawing.Point(735, 280);
+            this.label3_Library.Name = "label3_Library";
+            this.label3_Library.Size = new System.Drawing.Size(115, 20);
+            this.label3_Library.TabIndex = 21;
+            this.label3_Library.Text = "Sample Book";
+            // 
+            // label2_Library
+            // 
+            this.label2_Library.AutoSize = true;
+            this.label2_Library.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2_Library.Location = new System.Drawing.Point(419, 280);
+            this.label2_Library.Name = "label2_Library";
+            this.label2_Library.Size = new System.Drawing.Size(115, 20);
+            this.label2_Library.TabIndex = 20;
+            this.label2_Library.Text = "Sample Book";
             // 
             // pictubebox6_library
             // 
@@ -201,7 +288,7 @@
             this.pictubebox6_library.InitialImage = global::BookStoreProj.Properties.Resources.images__7_;
             this.pictubebox6_library.Location = new System.Drawing.Point(716, 447);
             this.pictubebox6_library.Name = "pictubebox6_library";
-            this.pictubebox6_library.Size = new System.Drawing.Size(197, 232);
+            this.pictubebox6_library.Size = new System.Drawing.Size(186, 177);
             this.pictubebox6_library.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictubebox6_library.TabIndex = 19;
             this.pictubebox6_library.TabStop = false;
@@ -212,9 +299,9 @@
             this.pictubebox5_library.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictubebox5_library.Image = global::BookStoreProj.Properties.Resources.download__8_;
             this.pictubebox5_library.InitialImage = global::BookStoreProj.Properties.Resources.images__7_;
-            this.pictubebox5_library.Location = new System.Drawing.Point(376, 447);
+            this.pictubebox5_library.Location = new System.Drawing.Point(376, 435);
             this.pictubebox5_library.Name = "pictubebox5_library";
-            this.pictubebox5_library.Size = new System.Drawing.Size(197, 232);
+            this.pictubebox5_library.Size = new System.Drawing.Size(199, 189);
             this.pictubebox5_library.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictubebox5_library.TabIndex = 18;
             this.pictubebox5_library.TabStop = false;
@@ -227,7 +314,7 @@
             this.pictubebox3_library.InitialImage = global::BookStoreProj.Properties.Resources.images__7_;
             this.pictubebox3_library.Location = new System.Drawing.Point(695, 33);
             this.pictubebox3_library.Name = "pictubebox3_library";
-            this.pictubebox3_library.Size = new System.Drawing.Size(197, 232);
+            this.pictubebox3_library.Size = new System.Drawing.Size(193, 235);
             this.pictubebox3_library.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictubebox3_library.TabIndex = 17;
             this.pictubebox3_library.TabStop = false;
@@ -240,7 +327,7 @@
             this.pictubebox2_library.InitialImage = global::BookStoreProj.Properties.Resources.images__7_;
             this.pictubebox2_library.Location = new System.Drawing.Point(376, 33);
             this.pictubebox2_library.Name = "pictubebox2_library";
-            this.pictubebox2_library.Size = new System.Drawing.Size(197, 232);
+            this.pictubebox2_library.Size = new System.Drawing.Size(186, 217);
             this.pictubebox2_library.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictubebox2_library.TabIndex = 16;
             this.pictubebox2_library.TabStop = false;
@@ -253,7 +340,7 @@
             this.pictubebox1_library.InitialImage = global::BookStoreProj.Properties.Resources.images__7_;
             this.pictubebox1_library.Location = new System.Drawing.Point(77, 33);
             this.pictubebox1_library.Name = "pictubebox1_library";
-            this.pictubebox1_library.Size = new System.Drawing.Size(197, 232);
+            this.pictubebox1_library.Size = new System.Drawing.Size(189, 217);
             this.pictubebox1_library.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictubebox1_library.TabIndex = 15;
             this.pictubebox1_library.TabStop = false;
@@ -265,35 +352,26 @@
             this.pictubebox4_library.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictubebox4_library.Image = global::BookStoreProj.Properties.Resources.download__6_;
             this.pictubebox4_library.InitialImage = global::BookStoreProj.Properties.Resources.images__7_;
-            this.pictubebox4_library.Location = new System.Drawing.Point(60, 460);
+            this.pictubebox4_library.Location = new System.Drawing.Point(60, 434);
             this.pictubebox4_library.Name = "pictubebox4_library";
-            this.pictubebox4_library.Size = new System.Drawing.Size(197, 232);
+            this.pictubebox4_library.Size = new System.Drawing.Size(191, 190);
             this.pictubebox4_library.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictubebox4_library.TabIndex = 14;
             this.pictubebox4_library.TabStop = false;
             // 
-            // label2_fairybook1
+            // label1_price
             // 
-            this.label2_fairybook1.AutoSize = true;
-            this.label2_fairybook1.Location = new System.Drawing.Point(111, 672);
-            this.label2_fairybook1.Name = "label2_fairybook1";
-            this.label2_fairybook1.Size = new System.Drawing.Size(51, 20);
-            this.label2_fairybook1.TabIndex = 9;
-            this.label2_fairybook1.Text = "label2";
-            // 
-            // label_price
-            // 
-            this.label_price.AutoSize = true;
-            this.label_price.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_price.Location = new System.Drawing.Point(63, 359);
-            this.label_price.Name = "label_price";
-            this.label_price.Size = new System.Drawing.Size(246, 25);
-            this.label_price.TabIndex = 7;
-            this.label_price.Text = "Price: Buy $25 Rent $15";
+            this.label1_price.AutoSize = true;
+            this.label1_price.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1_price.Location = new System.Drawing.Point(62, 311);
+            this.label1_price.Name = "label1_price";
+            this.label1_price.Size = new System.Drawing.Size(218, 21);
+            this.label1_price.TabIndex = 7;
+            this.label1_price.Text = "Price: Buy $25 Rent $15";
             // 
             // btn_Rent1
             // 
-            this.btn_Rent1.Location = new System.Drawing.Point(194, 387);
+            this.btn_Rent1.Location = new System.Drawing.Point(185, 339);
             this.btn_Rent1.Name = "btn_Rent1";
             this.btn_Rent1.Size = new System.Drawing.Size(102, 46);
             this.btn_Rent1.TabIndex = 6;
@@ -302,7 +380,7 @@
             // 
             // btn_buy1
             // 
-            this.btn_buy1.Location = new System.Drawing.Point(60, 387);
+            this.btn_buy1.Location = new System.Drawing.Point(60, 339);
             this.btn_buy1.Name = "btn_buy1";
             this.btn_buy1.Size = new System.Drawing.Size(102, 46);
             this.btn_buy1.TabIndex = 2;
@@ -323,10 +401,11 @@
             // label1_Library
             // 
             this.label1_Library.AutoSize = true;
-            this.label1_Library.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1_Library.Location = new System.Drawing.Point(54, 306);
+            this.label1_Library.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1_Library.ForeColor = System.Drawing.Color.DarkRed;
+            this.label1_Library.Location = new System.Drawing.Point(86, 280);
             this.label1_Library.Name = "label1_Library";
-            this.label1_Library.Size = new System.Drawing.Size(194, 32);
+            this.label1_Library.Size = new System.Drawing.Size(115, 20);
             this.label1_Library.TabIndex = 3;
             this.label1_Library.Text = "Sample Book";
             this.label1_Library.Click += new System.EventHandler(this.label_Tittle_Click);
@@ -363,17 +442,6 @@
             this.pictureBox2.Size = new System.Drawing.Size(195, 187);
             this.pictureBox2.TabIndex = 25;
             this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.BackgroundImage = global::BookStoreProj.Properties.Resources.book;
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox4.Location = new System.Drawing.Point(906, 21);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(195, 187);
-            this.pictureBox4.TabIndex = 24;
-            this.pictureBox4.TabStop = false;
             // 
             // pictureBox3
             // 
@@ -546,6 +614,17 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.BackgroundImage = global::BookStoreProj.Properties.Resources.book;
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox4.Location = new System.Drawing.Point(906, 21);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(195, 187);
+            this.pictureBox4.TabIndex = 24;
+            this.pictureBox4.TabStop = false;
+            // 
             // pictureBox9
             // 
             this.pictureBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(66)))), ((int)(((byte)(32)))));
@@ -556,63 +635,145 @@
             this.pictureBox9.TabStop = false;
             this.pictureBox9.Click += new System.EventHandler(this.pictureBox9_Click);
             // 
-            // pictureBox11
+            // label2_price
             // 
-            this.pictureBox11.Location = new System.Drawing.Point(598, 17);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox11.TabIndex = 3;
-            this.pictureBox11.TabStop = false;
+            this.label2_price.AutoSize = true;
+            this.label2_price.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2_price.Location = new System.Drawing.Point(371, 311);
+            this.label2_price.Name = "label2_price";
+            this.label2_price.Size = new System.Drawing.Size(246, 25);
+            this.label2_price.TabIndex = 25;
+            this.label2_price.Text = "Price: Buy $25 Rent $15";
             // 
-            // label2_Library
+            // label3_price
             // 
-            this.label2_Library.AutoSize = true;
-            this.label2_Library.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2_Library.Location = new System.Drawing.Point(379, 296);
-            this.label2_Library.Name = "label2_Library";
-            this.label2_Library.Size = new System.Drawing.Size(194, 32);
-            this.label2_Library.TabIndex = 20;
-            this.label2_Library.Text = "Sample Book";
+            this.label3_price.AutoSize = true;
+            this.label3_price.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3_price.Location = new System.Drawing.Point(667, 311);
+            this.label3_price.Name = "label3_price";
+            this.label3_price.Size = new System.Drawing.Size(246, 25);
+            this.label3_price.TabIndex = 26;
+            this.label3_price.Text = "Price: Buy $25 Rent $15";
             // 
-            // label3_Library
+            // label4_price
             // 
-            this.label3_Library.AutoSize = true;
-            this.label3_Library.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3_Library.Location = new System.Drawing.Point(710, 290);
-            this.label3_Library.Name = "label3_Library";
-            this.label3_Library.Size = new System.Drawing.Size(194, 32);
-            this.label3_Library.TabIndex = 21;
-            this.label3_Library.Text = "Sample Book";
+            this.label4_price.AutoSize = true;
+            this.label4_price.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4_price.Location = new System.Drawing.Point(20, 684);
+            this.label4_price.Name = "label4_price";
+            this.label4_price.Size = new System.Drawing.Size(246, 25);
+            this.label4_price.TabIndex = 27;
+            this.label4_price.Text = "Price: Buy $25 Rent $15";
             // 
-            // label4_Library
+            // label5_price
             // 
-            this.label4_Library.AutoSize = true;
-            this.label4_Library.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4_Library.Location = new System.Drawing.Point(63, 713);
-            this.label4_Library.Name = "label4_Library";
-            this.label4_Library.Size = new System.Drawing.Size(194, 32);
-            this.label4_Library.TabIndex = 22;
-            this.label4_Library.Text = "Sample Book";
+            this.label5_price.AutoSize = true;
+            this.label5_price.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5_price.Location = new System.Drawing.Point(343, 669);
+            this.label5_price.Name = "label5_price";
+            this.label5_price.Size = new System.Drawing.Size(246, 25);
+            this.label5_price.TabIndex = 28;
+            this.label5_price.Text = "Price: Buy $25 Rent $15";
             // 
-            // label5_Library
+            // label6_price
             // 
-            this.label5_Library.AutoSize = true;
-            this.label5_Library.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5_Library.Location = new System.Drawing.Point(379, 699);
-            this.label5_Library.Name = "label5_Library";
-            this.label5_Library.Size = new System.Drawing.Size(194, 32);
-            this.label5_Library.TabIndex = 23;
-            this.label5_Library.Text = "Sample Book";
+            this.label6_price.AutoSize = true;
+            this.label6_price.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6_price.Location = new System.Drawing.Point(667, 684);
+            this.label6_price.Name = "label6_price";
+            this.label6_price.Size = new System.Drawing.Size(246, 25);
+            this.label6_price.TabIndex = 29;
+            this.label6_price.Text = "Price: Buy $25 Rent $15";
             // 
-            // label6_Library
+            // button3
             // 
-            this.label6_Library.AutoSize = true;
-            this.label6_Library.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6_Library.Location = new System.Drawing.Point(719, 699);
-            this.label6_Library.Name = "label6_Library";
-            this.label6_Library.Size = new System.Drawing.Size(194, 32);
-            this.label6_Library.TabIndex = 24;
-            this.label6_Library.Text = "Sample Book";
+            this.button3.Location = new System.Drawing.Point(362, 339);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(102, 46);
+            this.button3.TabIndex = 30;
+            this.button3.Text = "BUY";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(505, 335);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(102, 46);
+            this.button4.TabIndex = 31;
+            this.button4.Text = "RENT";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(695, 339);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(102, 46);
+            this.button5.TabIndex = 32;
+            this.button5.Text = "BUY";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(811, 339);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(102, 46);
+            this.button6.TabIndex = 33;
+            this.button6.Text = "RENT";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // button11
+            // 
+            this.button11.Location = new System.Drawing.Point(25, 712);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(102, 46);
+            this.button11.TabIndex = 34;
+            this.button11.Text = "BUY";
+            this.button11.UseVisualStyleBackColor = true;
+            // 
+            // button12
+            // 
+            this.button12.Location = new System.Drawing.Point(164, 715);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(102, 46);
+            this.button12.TabIndex = 35;
+            this.button12.Text = "RENT";
+            this.button12.UseVisualStyleBackColor = true;
+            // 
+            // button13
+            // 
+            this.button13.Location = new System.Drawing.Point(348, 715);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(102, 46);
+            this.button13.TabIndex = 36;
+            this.button13.Text = "BUY";
+            this.button13.UseVisualStyleBackColor = true;
+            // 
+            // button14
+            // 
+            this.button14.Location = new System.Drawing.Point(811, 715);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(102, 46);
+            this.button14.TabIndex = 37;
+            this.button14.Text = "RENT";
+            this.button14.UseVisualStyleBackColor = true;
+            // 
+            // button15
+            // 
+            this.button15.Location = new System.Drawing.Point(487, 712);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(102, 46);
+            this.button15.TabIndex = 38;
+            this.button15.Text = "RENT";
+            this.button15.UseVisualStyleBackColor = true;
+            // 
+            // button16
+            // 
+            this.button16.Location = new System.Drawing.Point(695, 715);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(102, 46);
+            this.button16.TabIndex = 39;
+            this.button16.Text = "BUY";
+            this.button16.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -625,6 +786,7 @@
             this.Text = "Form1";
             panel_f.ResumeLayout(false);
             panel_f.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             this.Panel_Genre.ResumeLayout(false);
             this.Panel_Genre.PerformLayout();
             this.Panel_faitytale.ResumeLayout(false);
@@ -638,13 +800,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -676,8 +837,7 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel Panel_faitytale;
-        private System.Windows.Forms.Label label2_fairybook1;
-        private System.Windows.Forms.Label label_price;
+        private System.Windows.Forms.Label label1_price;
         private System.Windows.Forms.Button btn_Rent1;
         private System.Windows.Forms.Button btn_buy1;
         private System.Windows.Forms.Button button2;
@@ -693,6 +853,21 @@
         private System.Windows.Forms.Label label6_Library;
         private System.Windows.Forms.Label label5_Library;
         private System.Windows.Forms.Label label4_Library;
+        private System.Windows.Forms.Label label4_price;
+        private System.Windows.Forms.Label label3_price;
+        private System.Windows.Forms.Label label2_price;
+        private System.Windows.Forms.Button button16;
+        private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label6_price;
+        private System.Windows.Forms.Label label5_price;
     }
 }
 
