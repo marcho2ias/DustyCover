@@ -24,12 +24,6 @@ namespace DustyCover
 
             LoadUserData();
         }
-
-
-        // =========================================================
-        // LOAD USER INFORMATION
-        // =========================================================
-
         private void LoadUserData()
         {
             if (!File.Exists(csvFile))
@@ -71,19 +65,12 @@ namespace DustyCover
                     phoneTextBox.Text =
                         data[2].Trim();
 
-                    // Don't allow username changes
                     usernameTextBox.ReadOnly = true;
 
                     return;
                 }
             }
         }
-
-
-        // =========================================================
-        // SAVE CHANGES
-        // =========================================================
-
         private void saveButton_Click(
             object sender,
             EventArgs e)
@@ -93,11 +80,6 @@ namespace DustyCover
 
             string newPhone =
                 phoneTextBox.Text.Trim();
-
-
-            // -------------------------
-            // Validation
-            // -------------------------
 
             if (string.IsNullOrWhiteSpace(newEmail))
             {
@@ -143,11 +125,6 @@ namespace DustyCover
                 return;
             }
 
-
-            // -------------------------
-            // Read CSV
-            // -------------------------
-
             string[] lines =
                 File.ReadAllLines(csvFile);
 
@@ -167,16 +144,13 @@ namespace DustyCover
                     loggedInUsername,
                     StringComparison.OrdinalIgnoreCase))
                 {
-                    // Keep username
+                   
                     string username =
                         data[0].Trim();
 
-                    // Keep password
                     string password =
                         data[3].Trim();
 
-
-                    // Create updated CSV line
                     lines[i] =
                         username + "," +
                         newEmail + "," +
@@ -186,11 +160,6 @@ namespace DustyCover
                     break;
                 }
             }
-
-
-            // -------------------------
-            // Save CSV
-            // -------------------------
 
             File.WriteAllLines(
                 csvFile,
@@ -205,21 +174,20 @@ namespace DustyCover
                 MessageBoxIcon.Information
             );
 
-
-            // Close Form2
             this.Close();
         }
-
-
-        // =========================================================
-        // CANCEL
-        // =========================================================
-
         private void cancelButton_Click(
             object sender,
             EventArgs e)
         {
             this.Close();
+        }
+
+        private void Form2_Load(object sender, EventArgs e){}
+        private void button1_Click(object sender, EventArgs e){}
+        private void phoneLabel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
