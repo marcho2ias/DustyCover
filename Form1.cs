@@ -191,5 +191,15 @@ namespace DustyCover
         {
 
         }
+
+        private void emaitextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
