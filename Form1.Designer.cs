@@ -68,6 +68,8 @@
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.booksGrid)).BeginInit();
             this.leftPanel.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // rightPanel
@@ -236,7 +238,7 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(156, 30);
             this.panel4.TabIndex = 18;
-            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
+           // this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // editButton
             // 
@@ -460,7 +462,7 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DustyCover - User Account";
-            this.Load += new System.EventHandler(this.Form1_Load);
+//this.Load += new System.EventHandler(this.Form1_Load);
             this.rightPanel.ResumeLayout(false);
             this.rightPanel.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -471,6 +473,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.booksGrid)).EndInit();
             this.leftPanel.ResumeLayout(false);
             this.leftPanel.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

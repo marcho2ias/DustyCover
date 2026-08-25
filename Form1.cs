@@ -72,7 +72,9 @@ namespace DustyCover
                     string email = data[1].Trim();
                     string password = data[2].Trim();
 
-                    userNameLabel.Text = username;
+                    // Display user information
+                    userNameLabel.Text =
+                        "@" + username;
 
                     welcomeLabel.Text =
                         "Welcome," + username +
@@ -189,7 +191,5 @@ namespace DustyCover
         {
 
         }
-        private void panel4_Paint(object sender, PaintEventArgs e){}
-        private void Form1_Load(object sender, EventArgs e){}
     }
 }
