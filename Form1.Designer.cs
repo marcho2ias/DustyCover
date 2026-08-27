@@ -15,7 +15,7 @@
         {
             if (disposing && (components != null))
             {
-                components.Dispose(); //sample test
+                components.Dispose();
             }
             base.Dispose(disposing);
         }
