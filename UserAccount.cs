@@ -5,12 +5,12 @@ using System.Windows.Forms;
 
 namespace DustyCover
 {
-    public partial class Form1 : Form
+    public partial class UserAccount : Form
     {
         private string loggedInUsername;
         private string csvFile;
 
-        public Form1(string username)
+        public UserAccount(string username)
         {
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.Sizable;
@@ -73,16 +73,15 @@ namespace DustyCover
                     string password = data[2].Trim();
 
                     // Display user information
-                    userNameLabel.Text =
-                        "@" + username;
+                    userNameLabel.Text =username;
 
                     welcomeLabel.Text =
                         "Welcome," + username +
                         " to your user account page!";
 
-                    emailTextBox.Text = email;
+                    emailtextBox1.Text = email;
 
-                    psswdTextBox.Text = password;
+                    passwdBox1.Text = password;
 
                     return;
                 }
@@ -143,11 +142,10 @@ namespace DustyCover
 
                 "Currently Borrowed:\n\n" +
 
-                "• The Alchemist - Due 25 Aug 2026\n" +
-                "• Atomic Habits - Due 28 Aug 2026\n" +
-                "• The 5 AM Club - Due 02 Sep 2026\n" +
-                "• Rich Dad Poor Dad - Due 05 Sep 2026\n" +
-                "• Think and Grow Rich - Due 08 Sep 2026\n\n" +
+                "• Fantcy - Due 25 Aug 2026\n" +
+                "• Anime - Due 28 Aug 2026\n" +
+                "• Mathematics - Due 02 Sep 2026\n" +
+                "• Dictionary - Due 05 Sep 2026\n" +
 
                 "Total Borrowed: 07\n" +
                 "Total Reads: 24";
