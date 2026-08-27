@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace DustyCover
 {
@@ -16,7 +17,7 @@ namespace DustyCover
         public SignupForm()
         {
             InitializeComponent();
-           
+
             lblError.Visible = false;
 
         }
@@ -53,10 +54,13 @@ namespace DustyCover
 
         private void btnSignUp_Click(object sender, EventArgs e)
         {
+
             string fullName = txtName.Text.Trim();
             string email = txtEmail.Text.Trim();
             string password = txtPassword.Text;
             string confirmPassword = txtCP.Text;
+
+            string filePath = "D:\\Studio-2\\users.csv";
 
             if (fullName == "" || email == "" || password == "" || confirmPassword == "")
             {
@@ -72,17 +76,36 @@ namespace DustyCover
                 return;
             }
 
-            // Demo check - no real database yet, just a hardcoded test case
-            if (email == "test@dustycover.com")
+            // Create the file with a header row if it doesn't exist yet
+            if (!System.IO.File.Exists(filePath))
             {
-                lblError.Text = "An account with this email already exists";
-                lblError.Visible = true;
-                return;
+                System.IO.File.WriteAllText(filePath, "Name,Email,Password" + Environment.NewLine);
             }
 
-            // If we get here, signup "succeeded" for demo purposes
-            lblError.Visible = false;
-            MessageBox.Show("Account created for " + fullName + "! (Demo only - not saved anywhere yet)");
+            // Read all existing lines so we can check if the email is already registered
+            string[] existingLines = System.IO.File.ReadAllLines(filePath);
+
+            for (int i = 1; i < existingLines.Length; i++)   // start at 1 to skip the header row
+            {
+                string[] fields = existingLines[i].Split(',');
+                if (fields.Length >= 2 && fields[1] == email)
+                {
+                    lblError.Text = "An account with this email already exists !!";
+                    lblError.Visible = true;
+                    return;
+                }
+            }
+
+            // Build the new row and add it to the file
+            string newLine = fullName + "," + email + "," + password;
+            System.IO.File.AppendAllText(filePath, newLine + Environment.NewLine);
+
+            MessageBox.Show("Account created successfully!");
+
+            // Go back to the login form
+            //LoginForm loginForm = new LoginForm();
+            //loginForm.Show();
+            this.Hide();
         }
     }
 }
