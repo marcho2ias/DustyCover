@@ -15,20 +15,37 @@ namespace DustyCover
     internal class UserController
     {
         private List<User> users;
+        private string filePath = "D:\\Studio-2\\users.csv";
 
         public UserController()
         {
             users = new List<User>();
-            LoadHardcodedUsers();
+            LoadUsersFromCsv();
         }
 
-        // Sample accounts - swap for real registration/CSV loading later
-        private void LoadHardcodedUsers()
+        // Loads every signed-up account from users.csv into the users list
+        private void LoadUsersFromCsv()
         {
-            users.Add(new User("dhruv@email.com", "password123", "Dhruv"));
-            users.Add(new User("jeet@email.com", "password123", "Jeet"));               // example data
-            users.Add(new User("krupa@email.com", "password123", "Krupa"));
-            users.Add(new User("kit@email.com", "password123", "Kit"));
+            if (!System.IO.File.Exists(filePath))
+            {
+                return; // no one has signed up yet, so leave the list empty
+            }
+
+            string[] existingLines = System.IO.File.ReadAllLines(filePath);
+
+            for (int i = 1; i < existingLines.Length; i++)   // start at 1 to skip the header row
+            {
+                string[] fields = existingLines[i].Split(',');
+
+                if (fields.Length >= 3)
+                {
+                    string name = fields[0];
+                    string email = fields[1];
+                    string password = fields[2];
+
+                    users.Add(new User(email, password, name));
+                }
+            }
         }
 
         // Checks the email/password against every stored account.
