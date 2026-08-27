@@ -169,6 +169,7 @@
             // Panel_Genre
             // 
             this.Panel_Genre.BackgroundImage = global::BookStoreProj.Properties.Resources.download__2_;
+            this.Panel_Genre.Controls.Add(this.panel_cart);
             this.Panel_Genre.Controls.Add(this.Panel_faitytale);
             this.Panel_Genre.Controls.Add(this.pictureBox6);
             this.Panel_Genre.Controls.Add(this.pictureBox5);
@@ -197,7 +198,6 @@
             // Panel_faitytale
             // 
             this.Panel_faitytale.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(228)))), ((int)(((byte)(210)))));
-            this.Panel_faitytale.Controls.Add(this.panel_cart);
             this.Panel_faitytale.Controls.Add(this.button16);
             this.Panel_faitytale.Controls.Add(this.button15);
             this.Panel_faitytale.Controls.Add(this.button14);
@@ -229,7 +229,7 @@
             this.Panel_faitytale.Controls.Add(this.btn_buy1);
             this.Panel_faitytale.Controls.Add(this.button2);
             this.Panel_faitytale.Controls.Add(this.label1_Library);
-            this.Panel_faitytale.Location = new System.Drawing.Point(196, 6);
+            this.Panel_faitytale.Location = new System.Drawing.Point(212, 21);
             this.Panel_faitytale.Name = "Panel_faitytale";
             this.Panel_faitytale.Size = new System.Drawing.Size(1059, 838);
             this.Panel_faitytale.TabIndex = 3;
@@ -238,7 +238,7 @@
             // 
             this.panel_cart.BackColor = System.Drawing.Color.White;
             this.panel_cart.Controls.Add(this.listBox_cart);
-            this.panel_cart.Location = new System.Drawing.Point(623, 4);
+            this.panel_cart.Location = new System.Drawing.Point(59, 54);
             this.panel_cart.Name = "panel_cart";
             this.panel_cart.Size = new System.Drawing.Size(518, 458);
             this.panel_cart.TabIndex = 4;
@@ -345,50 +345,50 @@
             // label6_price
             // 
             this.label6_price.AutoSize = true;
-            this.label6_price.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6_price.Location = new System.Drawing.Point(667, 684);
+            this.label6_price.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
+            this.label6_price.Location = new System.Drawing.Point(712, 684);
             this.label6_price.Name = "label6_price";
-            this.label6_price.Size = new System.Drawing.Size(246, 25);
+            this.label6_price.Size = new System.Drawing.Size(218, 21);
             this.label6_price.TabIndex = 29;
             this.label6_price.Text = "Price: Buy $25 Rent $15";
             // 
             // label5_price
             // 
             this.label5_price.AutoSize = true;
-            this.label5_price.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5_price.Location = new System.Drawing.Point(343, 669);
+            this.label5_price.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
+            this.label5_price.Location = new System.Drawing.Point(358, 675);
             this.label5_price.Name = "label5_price";
-            this.label5_price.Size = new System.Drawing.Size(246, 25);
+            this.label5_price.Size = new System.Drawing.Size(218, 21);
             this.label5_price.TabIndex = 28;
             this.label5_price.Text = "Price: Buy $25 Rent $15";
             // 
             // label4_price
             // 
             this.label4_price.AutoSize = true;
-            this.label4_price.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4_price.Location = new System.Drawing.Point(20, 684);
+            this.label4_price.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
+            this.label4_price.Location = new System.Drawing.Point(21, 684);
             this.label4_price.Name = "label4_price";
-            this.label4_price.Size = new System.Drawing.Size(246, 25);
+            this.label4_price.Size = new System.Drawing.Size(218, 21);
             this.label4_price.TabIndex = 27;
             this.label4_price.Text = "Price: Buy $25 Rent $15";
             // 
             // label3_price
             // 
             this.label3_price.AutoSize = true;
-            this.label3_price.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3_price.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
             this.label3_price.Location = new System.Drawing.Point(667, 311);
             this.label3_price.Name = "label3_price";
-            this.label3_price.Size = new System.Drawing.Size(246, 25);
+            this.label3_price.Size = new System.Drawing.Size(218, 21);
             this.label3_price.TabIndex = 26;
             this.label3_price.Text = "Price: Buy $25 Rent $15";
             // 
             // label2_price
             // 
             this.label2_price.AutoSize = true;
-            this.label2_price.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2_price.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
             this.label2_price.Location = new System.Drawing.Point(371, 311);
             this.label2_price.Name = "label2_price";
-            this.label2_price.Size = new System.Drawing.Size(246, 25);
+            this.label2_price.Size = new System.Drawing.Size(218, 21);
             this.label2_price.TabIndex = 25;
             this.label2_price.Text = "Price: Buy $25 Rent $15";
             // 
@@ -396,7 +396,8 @@
             // 
             this.label6_Library.AutoSize = true;
             this.label6_Library.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6_Library.Location = new System.Drawing.Point(749, 649);
+            this.label6_Library.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label6_Library.Location = new System.Drawing.Point(723, 649);
             this.label6_Library.Name = "label6_Library";
             this.label6_Library.Size = new System.Drawing.Size(115, 20);
             this.label6_Library.TabIndex = 24;
@@ -406,7 +407,8 @@
             // 
             this.label5_Library.AutoSize = true;
             this.label5_Library.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5_Library.Location = new System.Drawing.Point(419, 649);
+            this.label5_Library.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label5_Library.Location = new System.Drawing.Point(371, 640);
             this.label5_Library.Name = "label5_Library";
             this.label5_Library.Size = new System.Drawing.Size(115, 20);
             this.label5_Library.TabIndex = 23;
@@ -416,7 +418,8 @@
             // 
             this.label4_Library.AutoSize = true;
             this.label4_Library.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4_Library.Location = new System.Drawing.Point(73, 649);
+            this.label4_Library.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label4_Library.Location = new System.Drawing.Point(47, 649);
             this.label4_Library.Name = "label4_Library";
             this.label4_Library.Size = new System.Drawing.Size(115, 20);
             this.label4_Library.TabIndex = 22;
@@ -426,7 +429,8 @@
             // 
             this.label3_Library.AutoSize = true;
             this.label3_Library.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3_Library.Location = new System.Drawing.Point(735, 280);
+            this.label3_Library.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label3_Library.Location = new System.Drawing.Point(703, 280);
             this.label3_Library.Name = "label3_Library";
             this.label3_Library.Size = new System.Drawing.Size(115, 20);
             this.label3_Library.TabIndex = 21;
@@ -436,7 +440,8 @@
             // 
             this.label2_Library.AutoSize = true;
             this.label2_Library.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2_Library.Location = new System.Drawing.Point(419, 280);
+            this.label2_Library.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label2_Library.Location = new System.Drawing.Point(382, 280);
             this.label2_Library.Name = "label2_Library";
             this.label2_Library.Size = new System.Drawing.Size(115, 20);
             this.label2_Library.TabIndex = 20;
@@ -565,7 +570,7 @@
             // 
             this.label1_Library.AutoSize = true;
             this.label1_Library.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1_Library.ForeColor = System.Drawing.Color.DarkRed;
+            this.label1_Library.ForeColor = System.Drawing.Color.DodgerBlue;
             this.label1_Library.Location = new System.Drawing.Point(86, 280);
             this.label1_Library.Name = "label1_Library";
             this.label1_Library.Size = new System.Drawing.Size(115, 20);
@@ -640,6 +645,7 @@
             this.button10.TabIndex = 20;
             this.button10.Text = "Mix Genres";
             this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button9
             // 
@@ -653,6 +659,7 @@
             this.button9.TabIndex = 19;
             this.button9.Text = "Psychology";
             this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button8
             // 
@@ -666,6 +673,7 @@
             this.button8.TabIndex = 18;
             this.button8.Text = "Dictionary";
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button7
             // 

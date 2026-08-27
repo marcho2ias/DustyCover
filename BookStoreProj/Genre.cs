@@ -452,16 +452,192 @@ namespace BookStoreProj
             label6_price.Text = "Buy Price:" + books[5].BuyPrice.ToString() + " Rent Price :" + books[5].RentPrice.ToString();
 
 
-            pictubebox1_library.Image = Image.FromFile("Resources\\DemonSlayer.jpg");
-            pictubebox2_library.Image = Image.FromFile("Resources\\BloomIntoYou.jpg");
-            pictubebox3_library.Image = Image.FromFile("Resources\\attackontitan.jpg");
-            pictubebox4_library.Image = Image.FromFile("Resources\\Ajin.jpg");
-            pictubebox5_library.Image = Image.FromFile("Resources\\Blame.jpg");
-            pictubebox6_library.Image = Image.FromFile("Resources\\AgirlonShore.jpg");
+            pictubebox1_library.Image = Image.FromFile("Resources\\Fermats.jpg");
+            pictubebox2_library.Image = Image.FromFile("Resources\\infinity.jpg");
+            pictubebox3_library.Image = Image.FromFile("Resources\\Eternal.jpg");
+            pictubebox4_library.Image = Image.FromFile("Resources\\solved.jpg");
+            pictubebox5_library.Image = Image.FromFile("Resources\\MathIdea.jpg");
+            pictubebox6_library.Image = Image.FromFile("Resources\\ColosalMath.jpg");
 
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Panel_Genre.Visible = true;
+            Panel_faitytale.Visible = true;
+            panel_cart.Visible = false;
+
+
+            books.Clear();
+
+
+
+            string filePath = "Resources\\Dictionary.csv";
+
+            string[] lines = File.ReadAllLines(filePath);
+
+
+
+            for (int i = 0; i < lines.Length; i++)
+            {
+                string[] data = lines[i].Split(',');
+
+                //if (data.Length < 6)
+                //    continue; // skip malformed/incomplete lines
+
+                Book book = new Book();
+                book.BookID = data[0].Trim();
+                book.Tittle = data[1].Trim();
+                book.Description = data[2].Trim();
+                book.BuyPrice = Convert.ToDouble(data[4].Trim());
+                book.RentPrice = Convert.ToDouble(data[5].Trim());
+
+                books.Add(book);
+            }
+
+
+            label1_Library.Text = books[0].Tittle;
+            label2_Library.Text = books[1].Tittle;
+            label3_Library.Text = books[2].Tittle;
+            label4_Library.Text = books[3].Tittle;
+            label6_Library.Text = books[4].Tittle;
+            label5_Library.Text = books[5].Tittle;
+
+            label1_price.Text = "Buy Price:" + books[0].BuyPrice.ToString() + " Rent Price :" + books[0].RentPrice.ToString();
+            label2_price.Text = "Buy Price:" + books[1].BuyPrice.ToString() + " Rent Price :" + books[1].RentPrice.ToString();
+            label3_price.Text = "Buy Price:" + books[2].BuyPrice.ToString() + " Rent Price :" + books[2].RentPrice.ToString();
+            label4_price.Text = "Buy Price:" + books[3].BuyPrice.ToString() + " Rent Price :" + books[3].RentPrice.ToString();
+            label5_price.Text = "Buy Price:" + books[4].BuyPrice.ToString() + " Rent Price :" + books[4].RentPrice.ToString();
+            label6_price.Text = "Buy Price:" + books[5].BuyPrice.ToString() + " Rent Price :" + books[5].RentPrice.ToString();
+
+
+            pictubebox1_library.Image = Image.FromFile("Resources\\Collegiate.jpg");
+            pictubebox2_library.Image = Image.FromFile("Resources\\Americanheritage.jpg");
+            pictubebox3_library.Image = Image.FromFile("Resources\\oxford.jpg");
+            pictubebox4_library.Image = Image.FromFile("Resources\\chambers.jpg");
+            pictubebox5_library.Image = Image.FromFile("Resources\\Longman.jpg");
+            pictubebox6_library.Image = Image.FromFile("Resources\\Collins.jpg");
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+
+            Panel_Genre.Visible = true;
+            Panel_faitytale.Visible = true;
+            panel_cart.Visible = false;
+
+
+            books.Clear();
+
+
+
+            string filePath = "Resources\\Psychology.csv";
+
+            string[] lines = File.ReadAllLines(filePath);
+
+
+
+            for (int i = 0; i < lines.Length; i++)
+            {
+                string[] data = lines[i].Split(',');
+
+                //if (data.Length < 6)
+                //    continue; // skip malformed/incomplete lines
+
+                Book book = new Book();
+                book.BookID = data[0].Trim();
+                book.Tittle = data[1].Trim();
+                book.Description = data[2].Trim();
+                book.BuyPrice = Convert.ToDouble(data[4].Trim());
+                book.RentPrice = Convert.ToDouble(data[5].Trim());
+
+                books.Add(book);
+            }
+
+
+            label1_Library.Text = books[0].Tittle;
+            label2_Library.Text = books[1].Tittle;
+            label3_Library.Text = books[2].Tittle;
+            label4_Library.Text = books[3].Tittle;
+            label6_Library.Text = books[4].Tittle;
+            label5_Library.Text = books[5].Tittle;
+
+            label1_price.Text = "Buy Price:" + books[0].BuyPrice.ToString() + " Rent Price :" + books[0].RentPrice.ToString();
+            label2_price.Text = "Buy Price:" + books[1].BuyPrice.ToString() + " Rent Price :" + books[1].RentPrice.ToString();
+            label3_price.Text = "Buy Price:" + books[2].BuyPrice.ToString() + " Rent Price :" + books[2].RentPrice.ToString();
+            label4_price.Text = "Buy Price:" + books[3].BuyPrice.ToString() + " Rent Price :" + books[3].RentPrice.ToString();
+            label5_price.Text = "Buy Price:" + books[4].BuyPrice.ToString() + " Rent Price :" + books[4].RentPrice.ToString();
+            label6_price.Text = "Buy Price:" + books[5].BuyPrice.ToString() + " Rent Price :" + books[5].RentPrice.ToString();
+
+
+            pictubebox1_library.Image = Image.FromFile("Resources\\Thinking.jpg");
+            pictubebox2_library.Image = Image.FromFile("Resources\\Influence.jpg");
+            pictubebox3_library.Image = Image.FromFile("Resources\\Meaning.jpg");
+            pictubebox4_library.Image = Image.FromFile("Resources\\Emotional.jpg");
+            pictubebox5_library.Image = Image.FromFile("Resources\\Mindset.jpg");
+            pictubebox6_library.Image = Image.FromFile("Resources\\Quiet.jpg");
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            Panel_Genre.Visible = true;
+            Panel_faitytale.Visible = true;
+            panel_cart.Visible = false;
+
+
+            books.Clear();
+
+
+
+            string filePath = "Resources\\Mix.csv";
+
+            string[] lines = File.ReadAllLines(filePath);
+
+
+
+            for (int i = 0; i < lines.Length; i++)
+            {
+                string[] data = lines[i].Split(',');
+
+                //if (data.Length < 6)
+                //    continue; // skip malformed/incomplete lines
+
+                Book book = new Book();
+                book.BookID = data[0].Trim();
+                book.Tittle = data[1].Trim();
+                book.Description = data[2].Trim();
+                book.BuyPrice = Convert.ToDouble(data[4].Trim());
+                book.RentPrice = Convert.ToDouble(data[5].Trim());
+
+                books.Add(book);
+            }
+
+
+            label1_Library.Text = books[0].Tittle;
+            label2_Library.Text = books[1].Tittle;
+            label3_Library.Text = books[2].Tittle;
+            label4_Library.Text = books[3].Tittle;
+            label6_Library.Text = books[4].Tittle;
+            label5_Library.Text = books[5].Tittle;
+
+            label1_price.Text = "Buy Price:" + books[0].BuyPrice.ToString() + " Rent Price :" + books[0].RentPrice.ToString();
+            label2_price.Text = "Buy Price:" + books[1].BuyPrice.ToString() + " Rent Price :" + books[1].RentPrice.ToString();
+            label3_price.Text = "Buy Price:" + books[2].BuyPrice.ToString() + " Rent Price :" + books[2].RentPrice.ToString();
+            label4_price.Text = "Buy Price:" + books[3].BuyPrice.ToString() + " Rent Price :" + books[3].RentPrice.ToString();
+            label5_price.Text = "Buy Price:" + books[4].BuyPrice.ToString() + " Rent Price :" + books[4].RentPrice.ToString();
+            label6_price.Text = "Buy Price:" + books[5].BuyPrice.ToString() + " Rent Price :" + books[5].RentPrice.ToString();
+
+
+            pictubebox1_library.Image = Image.FromFile("Resources\\afterr.jpg");
+            pictubebox2_library.Image = Image.FromFile("Resources\\Project.jpg");
+            pictubebox3_library.Image = Image.FromFile("Resources\\Before.jpg");
+            pictubebox4_library.Image = Image.FromFile("Resources\\Panic.jpg");
+            pictubebox5_library.Image = Image.FromFile("Resources\\IfIstay.jpg");
+            pictubebox6_library.Image = Image.FromFile("Resources\\PaperTown.jpg");
         }
     }
     }
+    
     
 
 
