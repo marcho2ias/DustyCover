@@ -125,8 +125,8 @@ namespace DustyCover
             object sender,
             EventArgs e)
         {
-            Form2 editForm =
-                new Form2(loggedInUsername);
+            Edit editForm =
+                new Edit(loggedInUsername);
 
             editForm.ShowDialog();
 

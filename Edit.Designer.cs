@@ -1,6 +1,6 @@
 ﻿namespace DustyCover
 {
-    partial class Form2
+    partial class Edit
     {
         private System.ComponentModel.IContainer components = null;
 
