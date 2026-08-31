@@ -65,8 +65,9 @@
     <Compile Include="SignupForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SignupForm.Designer.cs">
-      <DependentUpon>SignupForm.cs</DependentUpon>
+	  <Compile Include="SignupForm.Designer.cs">
+		  <DependentUpon>SignupForm.cs</DependentUpon>
+	  </Compile>
     <Compile Include="UserAccount.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,17 +90,16 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="LoginForm.resx">
-      <DependentUpon>LoginForm.cs</DependentUpon>
+	  <EmbeddedResource Include="LoginForm.resx">
+		  <DependentUpon>LoginForm.cs</DependentUpon>
+	  </EmbeddedResource>
     <EmbeddedResource Include="UserAccount.resx">
       <DependentUpon>UserAccount.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Edit.resx">
       <DependentUpon>Edit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form3.resx">
-      <DependentUpon>Form3.cs</DependentUpon>
-    </EmbeddedResource>
+   
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
@@ -114,21 +114,20 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-<<<<<<< HEAD
+
     <EmbeddedResource Include="SignupForm.resx">
       <DependentUpon>SignupForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WelcomePage.resx">
       <DependentUpon>WelcomePage.cs</DependentUpon>
     </EmbeddedResource>
-=======
+
     <Content Include="fonts\fontawesome-webfont.eot" />
     <Content Include="fonts\fontawesome-webfont.ttf" />
     <Content Include="fonts\fontawesome-webfont.woff" />
     <Content Include="fonts\fontawesome-webfont.woff2" />
     <Content Include="fonts\FontAwesome.otf" />
     <None Include="packages.config" />
->>>>>>> UserAccount
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
