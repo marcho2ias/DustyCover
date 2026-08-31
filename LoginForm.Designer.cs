@@ -47,6 +47,7 @@
             this.btnLogin = new System.Windows.Forms.Button();
             this.lblError = new System.Windows.Forms.Label();
             this.lblSignIn = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -263,11 +264,24 @@
             this.lblSignIn.AutoSize = true;
             this.lblSignIn.Font = new System.Drawing.Font("Georgia", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSignIn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(68)))), ((int)(((byte)(35)))));
-            this.lblSignIn.Location = new System.Drawing.Point(472, 435);
+            this.lblSignIn.Location = new System.Drawing.Point(402, 430);
             this.lblSignIn.Name = "lblSignIn";
             this.lblSignIn.Size = new System.Drawing.Size(271, 20);
             this.lblSignIn.TabIndex = 10;
             this.lblSignIn.Text = "New here? Create an account";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(56)))), ((int)(((byte)(32)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(230)))));
+            this.button1.Location = new System.Drawing.Point(679, 419);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(195, 40);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "Log In";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // LoginForm
             // 
@@ -275,6 +289,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(228)))), ((int)(((byte)(210)))));
             this.ClientSize = new System.Drawing.Size(882, 493);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.lblSignIn);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.btnLogin);
@@ -317,6 +332,7 @@
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Label lblError;
         private System.Windows.Forms.Label lblSignIn;
+        private System.Windows.Forms.Button button1;
     }
 }
 
