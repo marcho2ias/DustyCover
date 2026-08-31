@@ -13,12 +13,9 @@ namespace DustyCover
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-<<<<<<< HEAD
-            Application.Run(new WelcomePage());
-=======
 
-            Application.Run(new UserAccount("TestUser"));
->>>>>>> UserAccount
+            Application.Run(new WelcomePage());
+
         }
     }
 }
