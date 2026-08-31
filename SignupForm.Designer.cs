@@ -48,9 +48,9 @@
             this.txtName = new System.Windows.Forms.TextBox();
             this.btnSignUp = new System.Windows.Forms.Button();
             this.lblLoginIn = new System.Windows.Forms.Label();
-            this.lblLoginIn1 = new System.Windows.Forms.Label();
             this.lblRJ = new System.Windows.Forms.Label();
             this.lblError = new System.Windows.Forms.Label();
+            this.btnLogin = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -270,22 +270,11 @@
             this.lblLoginIn.AutoSize = true;
             this.lblLoginIn.Font = new System.Drawing.Font("Georgia", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLoginIn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(68)))), ((int)(((byte)(35)))));
-            this.lblLoginIn.Location = new System.Drawing.Point(465, 401);
+            this.lblLoginIn.Location = new System.Drawing.Point(416, 404);
             this.lblLoginIn.Name = "lblLoginIn";
-            this.lblLoginIn.Size = new System.Drawing.Size(229, 20);
+            this.lblLoginIn.Size = new System.Drawing.Size(128, 40);
             this.lblLoginIn.TabIndex = 13;
-            this.lblLoginIn.Text = "Already have a account?";
-            // 
-            // lblLoginIn1
-            // 
-            this.lblLoginIn1.AutoSize = true;
-            this.lblLoginIn1.Font = new System.Drawing.Font("Georgia", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLoginIn1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(68)))), ((int)(((byte)(35)))));
-            this.lblLoginIn1.Location = new System.Drawing.Point(540, 421);
-            this.lblLoginIn1.Name = "lblLoginIn1";
-            this.lblLoginIn1.Size = new System.Drawing.Size(65, 20);
-            this.lblLoginIn1.TabIndex = 14;
-            this.lblLoginIn1.Text = "Log in";
+            this.lblLoginIn.Text = "Already have\r\n a account?";
             // 
             // lblRJ
             // 
@@ -310,15 +299,29 @@
             this.lblError.Text = "Incorrect email or password !!";
             this.lblError.Visible = false;
             // 
+            // btnLogin
+            // 
+            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(56)))), ((int)(((byte)(32)))));
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogin.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(230)))));
+            this.btnLogin.Location = new System.Drawing.Point(575, 404);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(195, 40);
+            this.btnLogin.TabIndex = 17;
+            this.btnLogin.Text = "Log In";
+            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            // 
             // SignupForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(228)))), ((int)(((byte)(210)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.lblRJ);
-            this.Controls.Add(this.lblLoginIn1);
             this.Controls.Add(this.lblLoginIn);
             this.Controls.Add(this.btnSignUp);
             this.Controls.Add(this.txtName);
@@ -363,9 +366,9 @@
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Button btnSignUp;
         private System.Windows.Forms.Label lblLoginIn;
-        private System.Windows.Forms.Label lblLoginIn1;
         private System.Windows.Forms.Label lblRJ;
         private System.Windows.Forms.Label lblError;
+        private System.Windows.Forms.Button btnLogin;
     }
 }
 

@@ -132,5 +132,12 @@ namespace DustyCover
         {
 
         }
+
+        private void btnSignUp_Click(object sender, EventArgs e)
+        {
+            SignupForm signupForm = new SignupForm();
+            signupForm.ShowDialog();
+
+        }
     }
 }
