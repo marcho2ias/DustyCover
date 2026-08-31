@@ -8,15 +8,17 @@ namespace DustyCover
 {
     internal static class Program
     {
-        /// <summary>
-        /// The main entry point for the application.
-        /// </summary>
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+<<<<<<< HEAD
             Application.Run(new WelcomePage());
+=======
+
+            Application.Run(new UserAccount("TestUser"));
+>>>>>>> UserAccount
         }
     }
 }
