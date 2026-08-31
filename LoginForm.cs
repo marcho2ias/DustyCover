@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace DustyCover
 {
@@ -141,6 +142,18 @@ namespace DustyCover
             SignupForm signupForm = new SignupForm();
             signupForm.ShowDialog();
 
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            if (txtPassword.UseSystemPasswordChar == true)
+            {
+                txtPassword.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                txtPassword.UseSystemPasswordChar = true;
+            }
         }
     }
 }
