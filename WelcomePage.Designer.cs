@@ -1,6 +1,6 @@
 ﻿namespace DustyCover
 {
-    partial class LoginForm
+    partial class WelcomePage
     {
         /// <summary>
         /// Required designer variable.
@@ -39,14 +39,7 @@
             this.lblBadge = new System.Windows.Forms.Label();
             this.lblWelcome = new System.Windows.Forms.Label();
             this.lblManage = new System.Windows.Forms.Label();
-            this.lblEmail = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.lblPassword = new System.Windows.Forms.Label();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.lblFP = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
-            this.lblError = new System.Windows.Forms.Label();
-            this.lblSignIn = new System.Windows.Forms.Label();
             this.btnSignUp = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -62,10 +55,10 @@
             this.panel1.Controls.Add(this.lblStoreName1);
             this.panel1.Controls.Add(this.lblStoreName);
             this.panel1.Controls.Add(this.lblBadge);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(-1, -21);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(396, 493);
-            this.panel1.TabIndex = 0;
+            this.panel1.Size = new System.Drawing.Size(401, 493);
+            this.panel1.TabIndex = 1;
             // 
             // label1
             // 
@@ -161,77 +154,22 @@
             this.lblWelcome.AutoSize = true;
             this.lblWelcome.Font = new System.Drawing.Font("Georgia", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWelcome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(48)))), ((int)(((byte)(24)))));
-            this.lblWelcome.Location = new System.Drawing.Point(451, 36);
+            this.lblWelcome.Location = new System.Drawing.Point(438, 102);
             this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(197, 32);
-            this.lblWelcome.TabIndex = 1;
-            this.lblWelcome.Text = "Welcome Back";
-            this.lblWelcome.Click += new System.EventHandler(this.lblWelcome_Click);
+            this.lblWelcome.Size = new System.Drawing.Size(137, 32);
+            this.lblWelcome.TabIndex = 2;
+            this.lblWelcome.Text = "Welcome ";
             // 
             // lblManage
             // 
             this.lblManage.AutoSize = true;
             this.lblManage.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblManage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(138)))), ((int)(((byte)(107)))));
-            this.lblManage.Location = new System.Drawing.Point(457, 72);
+            this.lblManage.Location = new System.Drawing.Point(440, 144);
             this.lblManage.Name = "lblManage";
-            this.lblManage.Size = new System.Drawing.Size(253, 20);
-            this.lblManage.TabIndex = 2;
-            this.lblManage.Text = "Log in to manage your borrowing";
-            // 
-            // lblEmail
-            // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(68)))), ((int)(((byte)(35)))));
-            this.lblEmail.Location = new System.Drawing.Point(462, 150);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(63, 24);
-            this.lblEmail.TabIndex = 3;
-            this.lblEmail.Text = "Email";
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtEmail.Location = new System.Drawing.Point(461, 197);
-            this.txtEmail.Multiline = true;
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(287, 32);
-            this.txtEmail.TabIndex = 4;
-            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
-            this.txtEmail.Enter += new System.EventHandler(this.txtEmail_Enter);
-            // 
-            // lblPassword
-            // 
-            this.lblPassword.AutoSize = true;
-            this.lblPassword.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(68)))), ((int)(((byte)(35)))));
-            this.lblPassword.Location = new System.Drawing.Point(461, 249);
-            this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(95, 24);
-            this.lblPassword.TabIndex = 5;
-            this.lblPassword.Text = "Password";
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPassword.Location = new System.Drawing.Point(465, 287);
-            this.txtPassword.Multiline = true;
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(287, 32);
-            this.txtPassword.TabIndex = 6;
-            this.txtPassword.Enter += new System.EventHandler(this.txtPassword_Enter);
-            // 
-            // lblFP
-            // 
-            this.lblFP.AutoSize = true;
-            this.lblFP.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(94)))), ((int)(((byte)(60)))));
-            this.lblFP.Location = new System.Drawing.Point(626, 335);
-            this.lblFP.Name = "lblFP";
-            this.lblFP.Size = new System.Drawing.Size(126, 18);
-            this.lblFP.TabIndex = 7;
-            this.lblFP.Text = "Forgot Password?";
+            this.lblManage.Size = new System.Drawing.Size(314, 20);
+            this.lblManage.TabIndex = 3;
+            this.lblManage.Text = "Join or Sign in to manage your borrowing";
             // 
             // btnLogin
             // 
@@ -239,36 +177,13 @@
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(230)))));
-            this.btnLogin.Location = new System.Drawing.Point(461, 367);
+            this.btnLogin.Location = new System.Drawing.Point(458, 214);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(287, 40);
-            this.btnLogin.TabIndex = 8;
+            this.btnLogin.TabIndex = 9;
             this.btnLogin.Text = "Log In";
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
-            // 
-            // lblError
-            // 
-            this.lblError.AutoSize = true;
-            this.lblError.Font = new System.Drawing.Font("Georgia", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblError.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(58)))), ((int)(((byte)(42)))));
-            this.lblError.Location = new System.Drawing.Point(462, 113);
-            this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(281, 20);
-            this.lblError.TabIndex = 9;
-            this.lblError.Text = "Incorrect email or password !!";
-            this.lblError.Visible = false;
-            // 
-            // lblSignIn
-            // 
-            this.lblSignIn.AutoSize = true;
-            this.lblSignIn.Font = new System.Drawing.Font("Georgia", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSignIn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(68)))), ((int)(((byte)(35)))));
-            this.lblSignIn.Location = new System.Drawing.Point(402, 430);
-            this.lblSignIn.Name = "lblSignIn";
-            this.lblSignIn.Size = new System.Drawing.Size(271, 20);
-            this.lblSignIn.TabIndex = 10;
-            this.lblSignIn.Text = "New here? Create an account";
             // 
             // btnSignUp
             // 
@@ -276,35 +191,27 @@
             this.btnSignUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSignUp.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSignUp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(230)))));
-            this.btnSignUp.Location = new System.Drawing.Point(679, 419);
+            this.btnSignUp.Location = new System.Drawing.Point(458, 284);
             this.btnSignUp.Name = "btnSignUp";
-            this.btnSignUp.Size = new System.Drawing.Size(195, 40);
-            this.btnSignUp.TabIndex = 11;
-            this.btnSignUp.Text = "Sign Up";
+            this.btnSignUp.Size = new System.Drawing.Size(287, 40);
+            this.btnSignUp.TabIndex = 10;
+            this.btnSignUp.Text = "Create Account";
             this.btnSignUp.UseVisualStyleBackColor = false;
             this.btnSignUp.Click += new System.EventHandler(this.btnSignUp_Click);
             // 
-            // LoginForm
+            // WelcomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(228)))), ((int)(((byte)(210)))));
-            this.ClientSize = new System.Drawing.Size(882, 493);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnSignUp);
-            this.Controls.Add(this.lblSignIn);
-            this.Controls.Add(this.lblError);
             this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.lblFP);
-            this.Controls.Add(this.txtPassword);
-            this.Controls.Add(this.lblPassword);
-            this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.lblManage);
             this.Controls.Add(this.lblWelcome);
             this.Controls.Add(this.panel1);
-            this.Name = "LoginForm";
-            this.Text = "Login Page";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Name = "WelcomePage";
+            this.Text = "Welcome Page";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -315,24 +222,17 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label lblBadge;
-        private System.Windows.Forms.Label lblStoreName;
-        private System.Windows.Forms.Label lblStoreName2;
-        private System.Windows.Forms.Label lblStoreName1;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblQuote2;
         private System.Windows.Forms.Label lblQuote1;
         private System.Windows.Forms.Label lblQuote;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblStoreName2;
+        private System.Windows.Forms.Label lblStoreName1;
+        private System.Windows.Forms.Label lblStoreName;
+        private System.Windows.Forms.Label lblBadge;
         private System.Windows.Forms.Label lblWelcome;
         private System.Windows.Forms.Label lblManage;
-        private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.Label lblPassword;
-        private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.Label lblFP;
         private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.Label lblError;
-        private System.Windows.Forms.Label lblSignIn;
         private System.Windows.Forms.Button btnSignUp;
     }
 }

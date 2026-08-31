@@ -121,6 +121,9 @@ namespace DustyCover
                 lblError.Text = "Incorrect email or password";
                 lblError.Visible = true;
             }
+
+            txtEmail.Clear();
+            txtPassword.Clear();
         }
 
         private void lblWelcome_Click(object sender, EventArgs e)
@@ -130,6 +133,13 @@ namespace DustyCover
 
         private void txtEmail_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void btnSignUp_Click(object sender, EventArgs e)
+        {
+            SignupForm signupForm = new SignupForm();
+            signupForm.ShowDialog();
 
         }
     }

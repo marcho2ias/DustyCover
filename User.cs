@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 namespace DustyCover
 {
     internal class User
@@ -17,5 +18,6 @@ namespace DustyCover
             Password = password;
             DisplayName = displayName;
         }
+
     }
 }
