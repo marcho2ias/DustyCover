@@ -264,11 +264,11 @@
             this.lblSignIn.AutoSize = true;
             this.lblSignIn.Font = new System.Drawing.Font("Georgia", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSignIn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(68)))), ((int)(((byte)(35)))));
-            this.lblSignIn.Location = new System.Drawing.Point(402, 430);
+            this.lblSignIn.Location = new System.Drawing.Point(462, 425);
             this.lblSignIn.Name = "lblSignIn";
-            this.lblSignIn.Size = new System.Drawing.Size(271, 20);
+            this.lblSignIn.Size = new System.Drawing.Size(173, 40);
             this.lblSignIn.TabIndex = 10;
-            this.lblSignIn.Text = "New here? Create an account";
+            this.lblSignIn.Text = "New here? \r\nCreate an account";
             // 
             // btnSignUp
             // 
