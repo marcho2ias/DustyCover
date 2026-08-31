@@ -144,16 +144,6 @@ namespace DustyCover
 
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            if (txtPassword.UseSystemPasswordChar == true)
-            {
-                txtPassword.UseSystemPasswordChar = false;
-            }
-            else
-            {
-                txtPassword.UseSystemPasswordChar = true;
-            }
-        }
+        
     }
 }
