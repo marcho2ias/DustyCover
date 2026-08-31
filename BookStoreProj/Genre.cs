@@ -11,6 +11,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using BookStoreProj.Properties;
+using System.Reflection.Emit;
+using System.Linq.Expressions;
 
 namespace BookStoreProj
 {
@@ -19,13 +21,14 @@ namespace BookStoreProj
 
 
     {
-       
+
         List<Book> books = new List<Book>();
 
 
 
         int cnt = 0;
-        int total = 0;
+        double total = 0;
+        int cart = 0;
 
 
 
@@ -37,9 +40,11 @@ namespace BookStoreProj
             Panel_faitytale.Visible = false;
             panel_cart.Visible = false;
 
-           
 
-           
+
+
+
+
 
 
         }
@@ -61,7 +66,7 @@ namespace BookStoreProj
             string filePath = "Resources\\Fairytale.csv";
 
             string[] lines = File.ReadAllLines(filePath);
-            
+
 
 
             for (int i = 0; i < lines.Length; i++)
@@ -222,18 +227,18 @@ namespace BookStoreProj
             // Add 1 book
             cnt++;
 
-            // Display book name
+            //Display book name
             //listBox_Cart.Items.Add(book1.Name);
 
             //total = book1.BuyPrice * cnt;
 
-            // Display price of one book
+            //Display price of one book
             //listBox_Cart.Items.Add(book1.BuyPrice.ToString().PadRight(25) + "$" + total);
 
-            // Calculate total price
+            //Calculate total price
 
 
-            // Display total
+            //Display total
 
 
         }
@@ -253,9 +258,12 @@ namespace BookStoreProj
             //panel_cart1.BringToFront();
         }
 
+
+
+
         private void btn_clear_Click(object sender, EventArgs e)
         {
-          /*  listBox_Cart.Items.Clear();*/
+            /*  listBox_Cart.Items.Clear();*/
 
             total = 0;
             cnt = 0;
@@ -269,8 +277,8 @@ namespace BookStoreProj
 
         private void btn_Delete_Click(object sender, EventArgs e)
         {
-            
-            
+
+
 
         }
 
@@ -296,7 +304,7 @@ namespace BookStoreProj
 
         private void listBox_Cart_MouseClick(object sender, MouseEventArgs e)
         {
-           
+
         }
 
         private void panel_cart1_Paint_1(object sender, PaintEventArgs e)
@@ -332,15 +340,37 @@ namespace BookStoreProj
         private void btn_buy1_Click_1(object sender, EventArgs e)
         {
 
-            
-           
+
+            cart++;
+
+            total = books[0].BuyPrice * cart;
+
+
             panel_cart.Visible = false;
 
+
+
+
+
             listBox_cart.Items.Add(
-                label1_Library.Text);
+                label1_Library.Text + "$".PadLeft(5) + books[0].BuyPrice.ToString().PadLeft(6));
+
+            label_total.Text = total.ToString();
+            label_cart.Text = cart.ToString();
+
+
+            if (cart <= 1)
+            {
+                MessageBox.Show("Successfully Added to cart. Please click the cart button below to see all the items on cart", "Sucess", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+
+
+
+
         }
 
-     
+
         private void btn_Anime_Click_1(object sender, EventArgs e)
         {
 
@@ -635,9 +665,355 @@ namespace BookStoreProj
             pictubebox5_library.Image = Image.FromFile("Resources\\IfIstay.jpg");
             pictubebox6_library.Image = Image.FromFile("Resources\\PaperTown.jpg");
         }
+
+        private void cart_btn_Click(object sender, EventArgs e)
+        {
+            Panel_Genre.Visible = true;
+            Panel_faitytale.Visible = true;
+            panel_cart.Visible = false;
+        }
+
+        private void panel_cart_Scroll(object sender, ScrollEventArgs e)
+        {
+
+        }
+
+        private void btn_clrcart_Click(object sender, EventArgs e)
+        {
+            DialogResult = MessageBox.Show("Do you want to clear the cart?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (DialogResult == DialogResult.Yes)
+            {
+                listBox_cart.Items.Clear();
+                cart = 0;
+                total = 0;
+                label_total.Text = total.ToString();
+                label_cart.Text = cart.ToString();
+            }
+        }
+
+        private void listBox_cart_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel_cart_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btn_Rent1_Click(object sender, EventArgs e)
+        {
+
+            cart++;
+
+            total = books[0].BuyPrice * cart;
+
+
+            panel_cart.Visible = false;
+
+
+
+
+
+            listBox_cart.Items.Add(label1_Library.Text + "$".PadLeft(5) + books[0].RentPrice.ToString().PadLeft(6));
+
+            label_total.Text = total.ToString();
+            label_cart.Text = cart.ToString();
+
+
+            if (cart <= 1)
+            {
+                MessageBox.Show("Successfully Added to cart. Please click the cart button below to see all the items on cart", "Sucess", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            cart++;
+
+            total = books[0].BuyPrice * cart;
+
+
+            panel_cart.Visible = false;
+
+
+
+
+
+            listBox_cart.Items.Add(label2_Library.Text + "$".PadLeft(5) + books[0].BuyPrice.ToString().PadLeft(6));
+
+            label_total.Text = total.ToString();
+            label_cart.Text = cart.ToString();
+
+
+            if (cart <= 1)
+            {
+                MessageBox.Show("Successfully Added to cart. Please click the cart button below to see all the items on cart", "Sucess", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            cart++;
+
+            total = books[0].BuyPrice * cart;
+
+
+            panel_cart.Visible = false;
+
+
+
+
+
+            listBox_cart.Items.Add(label1_Library.Text + "$".PadLeft(5) + books[0].RentPrice.ToString().PadLeft(6));
+
+            label_total.Text = total.ToString();
+            label_cart.Text = cart.ToString();
+
+
+            if (cart <= 1)
+            {
+                MessageBox.Show("Successfully Added to cart. Please click the cart button below to see all the items on cart", "Sucess", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+        }
+
+        private void button5_Click_2(object sender, EventArgs e)
+        {
+            cart++;
+
+            total = books[0].BuyPrice * cart;
+
+
+            panel_cart.Visible = false;
+
+
+
+
+
+            listBox_cart.Items.Add(label3_Library.Text + "$".PadLeft(5) + books[0].BuyPrice.ToString().PadLeft(6));
+
+            label_total.Text = total.ToString();
+            label_cart.Text = cart.ToString();
+
+
+            if (cart <= 1)
+            {
+                MessageBox.Show("Successfully Added to cart. Please click the cart button below to see all the items on cart", "Sucess", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+        }
+
+        private void button6_Click_1(object sender, EventArgs e)
+        {
+
+            cart++;
+
+            total = books[0].BuyPrice * cart;
+
+
+            panel_cart.Visible = false;
+
+
+
+
+
+            listBox_cart.Items.Add(label3_Library.Text + "$".PadLeft(5) + books[0].RentPrice.ToString().PadLeft(6));
+
+            label_total.Text = total.ToString();
+            label_cart.Text = cart.ToString();
+
+
+            if (cart <= 1)
+            {
+                MessageBox.Show("Successfully Added to cart. Please click the cart button below to see all the items on cart", "Sucess", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+
+            }
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            cart++;
+
+            total = books[0].BuyPrice * cart;
+
+
+            panel_cart.Visible = false;
+
+
+
+
+
+            listBox_cart.Items.Add(label4_Library.Text + "$".PadLeft(5) + books[0].BuyPrice.ToString().PadLeft(6));
+
+            label_total.Text = total.ToString();
+            label_cart.Text = cart.ToString();
+
+
+            if (cart <= 1)
+            {
+                MessageBox.Show("Successfully Added to cart. Please click the cart button below to see all the items on cart", "Sucess", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            cart++;
+
+            total = books[0].BuyPrice * cart;
+
+
+            panel_cart.Visible = false;
+
+
+
+
+
+            listBox_cart.Items.Add(label4_Library.Text + "$".PadLeft(5) + books[0].RentPrice.ToString().PadLeft(6));
+
+            label_total.Text = total.ToString();
+            label_cart.Text = cart.ToString();
+
+
+            if (cart <= 1)
+            {
+                MessageBox.Show("Successfully Added to cart. Please click the cart button below to see all the items on cart", "Sucess", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            cart++;
+
+            total = books[0].BuyPrice * cart;
+
+
+            panel_cart.Visible = false;
+
+
+
+
+
+            listBox_cart.Items.Add(label5_Library.Text + "$".PadLeft(5) + books[0].BuyPrice.ToString().PadLeft(6));
+
+            label_total.Text = total.ToString();
+            label_cart.Text = cart.ToString();
+
+
+            if (cart <= 1)
+            {
+                MessageBox.Show("Successfully Added to cart. Please click the cart button below to see all the items on cart", "Sucess", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            cart++;
+
+            total = books[0].BuyPrice * cart;
+
+
+            panel_cart.Visible = false;
+
+
+
+
+
+            listBox_cart.Items.Add(label5_Library.Text + "$".PadLeft(5) + books[0].RentPrice.ToString().PadLeft(6));
+
+            label_total.Text = total.ToString();
+            label_cart.Text = cart.ToString();
+
+
+            if (cart <= 1)
+            {
+                MessageBox.Show("Successfully Added to cart. Please click the cart button below to see all the items on cart", "Sucess", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            cart++;
+
+            total = books[0].BuyPrice * cart;
+
+
+            panel_cart.Visible = false;
+
+
+
+
+
+            listBox_cart.Items.Add(label6_Library.Text + "$".PadLeft(5) + books[0].BuyPrice.ToString().PadLeft(6));
+
+            label_total.Text = total.ToString();
+            label_cart.Text = cart.ToString();
+
+
+            if (cart <= 1)
+            {
+                MessageBox.Show("Successfully Added to cart. Please click the cart button below to see all the items on cart", "Sucess", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            cart++;
+
+            total = books[0].BuyPrice * cart;
+
+
+            panel_cart.Visible = false;
+
+
+
+
+
+            listBox_cart.Items.Add(label6_Library.Text + "$".PadLeft(5) + books[0].BuyPrice.ToString().PadLeft(6));
+
+            label_total.Text = total.ToString();
+            label_cart.Text = cart.ToString();
+
+
+            if (cart <= 1)
+            {
+                MessageBox.Show("Successfully Added to cart. Please click the cart button below to see all the items on cart", "Sucess", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+        }
+
+        private void btn_delete_order_Click(object sender, EventArgs e)
+        {
+            if (listBox_cart.SelectedItem != null)
+            {
+                DialogResult = MessageBox.Show("Are you sure you want to delete this order?","Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if ( DialogResult== DialogResult.Yes)
+                {
+                    listBox_cart.Items.Remove(listBox_cart.SelectedItem);
+                }
+                
+            }
+            else
+            {
+                MessageBox.Show("Please select an item to delete.");
+            }
+        }
     }
-    }
-    
-    
+
+
+}
 
 

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Panel panel_f;
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.label_cart = new System.Windows.Forms.Label();
@@ -36,6 +37,10 @@
             this.Panel_Genre = new System.Windows.Forms.Panel();
             this.Panel_faitytale = new System.Windows.Forms.Panel();
             this.panel_cart = new System.Windows.Forms.Panel();
+            this.btn_clrcart = new System.Windows.Forms.Button();
+            this.label_total = new System.Windows.Forms.Label();
+            this.label_Totall = new System.Windows.Forms.Label();
+            this.cart_btn = new System.Windows.Forms.Button();
             this.listBox_cart = new System.Windows.Forms.ListBox();
             this.button16 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
@@ -87,6 +92,9 @@
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.btn_delete_order = new System.Windows.Forms.Button();
+            this.btn_checkout = new System.Windows.Forms.Button();
             panel_f = new System.Windows.Forms.Panel();
             panel_f.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
@@ -169,7 +177,6 @@
             // Panel_Genre
             // 
             this.Panel_Genre.BackgroundImage = global::BookStoreProj.Properties.Resources.download__2_;
-            this.Panel_Genre.Controls.Add(this.panel_cart);
             this.Panel_Genre.Controls.Add(this.Panel_faitytale);
             this.Panel_Genre.Controls.Add(this.pictureBox6);
             this.Panel_Genre.Controls.Add(this.pictureBox5);
@@ -198,6 +205,7 @@
             // Panel_faitytale
             // 
             this.Panel_faitytale.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(228)))), ((int)(((byte)(210)))));
+            this.Panel_faitytale.Controls.Add(this.panel_cart);
             this.Panel_faitytale.Controls.Add(this.button16);
             this.Panel_faitytale.Controls.Add(this.button15);
             this.Panel_faitytale.Controls.Add(this.button14);
@@ -229,28 +237,89 @@
             this.Panel_faitytale.Controls.Add(this.btn_buy1);
             this.Panel_faitytale.Controls.Add(this.button2);
             this.Panel_faitytale.Controls.Add(this.label1_Library);
-            this.Panel_faitytale.Location = new System.Drawing.Point(212, 21);
+            this.Panel_faitytale.Location = new System.Drawing.Point(212, 6);
             this.Panel_faitytale.Name = "Panel_faitytale";
             this.Panel_faitytale.Size = new System.Drawing.Size(1059, 838);
             this.Panel_faitytale.TabIndex = 3;
             // 
             // panel_cart
             // 
-            this.panel_cart.BackColor = System.Drawing.Color.White;
+            this.panel_cart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(66)))), ((int)(((byte)(32)))));
+            this.panel_cart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panel_cart.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel_cart.Controls.Add(this.btn_checkout);
+            this.panel_cart.Controls.Add(this.btn_delete_order);
+            this.panel_cart.Controls.Add(this.btn_clrcart);
+            this.panel_cart.Controls.Add(this.label_total);
+            this.panel_cart.Controls.Add(this.label_Totall);
+            this.panel_cart.Controls.Add(this.cart_btn);
             this.panel_cart.Controls.Add(this.listBox_cart);
-            this.panel_cart.Location = new System.Drawing.Point(59, 54);
+            this.panel_cart.Location = new System.Drawing.Point(371, 3);
             this.panel_cart.Name = "panel_cart";
-            this.panel_cart.Size = new System.Drawing.Size(518, 458);
+            this.panel_cart.Size = new System.Drawing.Size(518, 799);
             this.panel_cart.TabIndex = 4;
+            this.panel_cart.Scroll += new System.Windows.Forms.ScrollEventHandler(this.panel_cart_Scroll);
+            this.panel_cart.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_cart_Paint);
+            // 
+            // btn_clrcart
+            // 
+            this.btn_clrcart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(66)))), ((int)(((byte)(32)))));
+            this.btn_clrcart.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_clrcart.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.btn_clrcart.Location = new System.Drawing.Point(298, 635);
+            this.btn_clrcart.Name = "btn_clrcart";
+            this.btn_clrcart.Size = new System.Drawing.Size(168, 44);
+            this.btn_clrcart.TabIndex = 4;
+            this.btn_clrcart.Text = "Clear Cart";
+            this.btn_clrcart.UseVisualStyleBackColor = false;
+            this.btn_clrcart.Click += new System.EventHandler(this.btn_clrcart_Click);
+            // 
+            // label_total
+            // 
+            this.label_total.AutoSize = true;
+            this.label_total.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_total.ForeColor = System.Drawing.Color.Red;
+            this.label_total.Location = new System.Drawing.Point(339, 584);
+            this.label_total.Name = "label_total";
+            this.label_total.Size = new System.Drawing.Size(35, 37);
+            this.label_total.TabIndex = 9;
+            this.label_total.Text = "0";
+            // 
+            // label_Totall
+            // 
+            this.label_Totall.AutoSize = true;
+            this.label_Totall.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Totall.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label_Totall.Location = new System.Drawing.Point(212, 584);
+            this.label_Totall.Name = "label_Totall";
+            this.label_Totall.Size = new System.Drawing.Size(103, 37);
+            this.label_Totall.TabIndex = 8;
+            this.label_Totall.Text = "Total:";
+            // 
+            // cart_btn
+            // 
+            this.cart_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(66)))), ((int)(((byte)(32)))));
+            this.cart_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cart_btn.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.cart_btn.Location = new System.Drawing.Point(432, -6);
+            this.cart_btn.Name = "cart_btn";
+            this.cart_btn.Size = new System.Drawing.Size(86, 49);
+            this.cart_btn.TabIndex = 4;
+            this.cart_btn.Text = "X";
+            this.cart_btn.UseVisualStyleBackColor = false;
+            this.cart_btn.Click += new System.EventHandler(this.cart_btn_Click);
             // 
             // listBox_cart
             // 
+            this.listBox_cart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(228)))), ((int)(((byte)(210)))));
+            this.listBox_cart.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox_cart.FormattingEnabled = true;
-            this.listBox_cart.ItemHeight = 20;
+            this.listBox_cart.ItemHeight = 19;
             this.listBox_cart.Location = new System.Drawing.Point(82, 55);
             this.listBox_cart.Name = "listBox_cart";
-            this.listBox_cart.Size = new System.Drawing.Size(349, 284);
+            this.listBox_cart.Size = new System.Drawing.Size(349, 498);
             this.listBox_cart.TabIndex = 0;
+            this.listBox_cart.SelectedIndexChanged += new System.EventHandler(this.listBox_cart_SelectedIndexChanged);
             // 
             // button16
             // 
@@ -260,6 +329,7 @@
             this.button16.TabIndex = 39;
             this.button16.Text = "BUY";
             this.button16.UseVisualStyleBackColor = true;
+            this.button16.Click += new System.EventHandler(this.button16_Click);
             // 
             // button15
             // 
@@ -269,6 +339,7 @@
             this.button15.TabIndex = 38;
             this.button15.Text = "RENT";
             this.button15.UseVisualStyleBackColor = true;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
             // button14
             // 
@@ -278,6 +349,7 @@
             this.button14.TabIndex = 37;
             this.button14.Text = "RENT";
             this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
             // button13
             // 
@@ -287,6 +359,7 @@
             this.button13.TabIndex = 36;
             this.button13.Text = "BUY";
             this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // button12
             // 
@@ -296,6 +369,7 @@
             this.button12.TabIndex = 35;
             this.button12.Text = "RENT";
             this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // button11
             // 
@@ -305,6 +379,7 @@
             this.button11.TabIndex = 34;
             this.button11.Text = "BUY";
             this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // button6
             // 
@@ -314,6 +389,7 @@
             this.button6.TabIndex = 33;
             this.button6.Text = "RENT";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click_1);
             // 
             // button5
             // 
@@ -323,6 +399,7 @@
             this.button5.TabIndex = 32;
             this.button5.Text = "BUY";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click_2);
             // 
             // button4
             // 
@@ -332,6 +409,7 @@
             this.button4.TabIndex = 31;
             this.button4.Text = "RENT";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click_1);
             // 
             // button3
             // 
@@ -341,6 +419,7 @@
             this.button3.TabIndex = 30;
             this.button3.Text = "BUY";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label6_price
             // 
@@ -544,6 +623,7 @@
             this.btn_Rent1.TabIndex = 6;
             this.btn_Rent1.Text = "RENT";
             this.btn_Rent1.UseVisualStyleBackColor = true;
+            this.btn_Rent1.Click += new System.EventHandler(this.btn_Rent1_Click);
             // 
             // btn_buy1
             // 
@@ -808,6 +888,37 @@
             this.pictureBox9.TabStop = false;
             this.pictureBox9.Click += new System.EventHandler(this.pictureBox9_Click);
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // btn_delete_order
+            // 
+            this.btn_delete_order.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(66)))), ((int)(((byte)(32)))));
+            this.btn_delete_order.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_delete_order.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.btn_delete_order.Location = new System.Drawing.Point(48, 635);
+            this.btn_delete_order.Name = "btn_delete_order";
+            this.btn_delete_order.Size = new System.Drawing.Size(168, 44);
+            this.btn_delete_order.TabIndex = 10;
+            this.btn_delete_order.Text = "Delete Order";
+            this.btn_delete_order.UseVisualStyleBackColor = false;
+            this.btn_delete_order.Click += new System.EventHandler(this.btn_delete_order_Click);
+            // 
+            // btn_checkout
+            // 
+            this.btn_checkout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(66)))), ((int)(((byte)(32)))));
+            this.btn_checkout.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_checkout.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.btn_checkout.Location = new System.Drawing.Point(143, 710);
+            this.btn_checkout.Name = "btn_checkout";
+            this.btn_checkout.Size = new System.Drawing.Size(210, 62);
+            this.btn_checkout.TabIndex = 11;
+            this.btn_checkout.Text = "Check out";
+            this.btn_checkout.UseVisualStyleBackColor = false;
+            // 
             // Genre
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -825,6 +936,7 @@
             this.Panel_faitytale.ResumeLayout(false);
             this.Panel_faitytale.PerformLayout();
             this.panel_cart.ResumeLayout(false);
+            this.panel_cart.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictubebox6_library)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictubebox5_library)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictubebox3_library)).EndInit();
@@ -904,6 +1016,13 @@
         private System.Windows.Forms.Label label5_price;
         private System.Windows.Forms.Panel panel_cart;
         private System.Windows.Forms.ListBox listBox_cart;
+        private System.Windows.Forms.Button cart_btn;
+        private System.Windows.Forms.Label label_Totall;
+        private System.Windows.Forms.Label label_total;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.Button btn_clrcart;
+        private System.Windows.Forms.Button btn_checkout;
+        private System.Windows.Forms.Button btn_delete_order;
     }
 }
 
