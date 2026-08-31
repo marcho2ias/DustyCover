@@ -199,5 +199,15 @@ namespace DustyCover
         {
 
         }
+
+        private void emailLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iconButton2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
