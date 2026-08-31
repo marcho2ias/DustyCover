@@ -121,6 +121,9 @@ namespace DustyCover
                 lblError.Text = "Incorrect email or password";
                 lblError.Visible = true;
             }
+
+            txtEmail.Clear();
+            txtPassword.Clear();
         }
 
         private void lblWelcome_Click(object sender, EventArgs e)
