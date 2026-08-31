@@ -37,6 +37,8 @@
             this.Panel_Genre = new System.Windows.Forms.Panel();
             this.Panel_faitytale = new System.Windows.Forms.Panel();
             this.panel_cart = new System.Windows.Forms.Panel();
+            this.btn_checkout = new System.Windows.Forms.Button();
+            this.btn_delete_order = new System.Windows.Forms.Button();
             this.btn_clrcart = new System.Windows.Forms.Button();
             this.label_total = new System.Windows.Forms.Label();
             this.label_Totall = new System.Windows.Forms.Label();
@@ -93,8 +95,6 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.btn_delete_order = new System.Windows.Forms.Button();
-            this.btn_checkout = new System.Windows.Forms.Button();
             panel_f = new System.Windows.Forms.Panel();
             panel_f.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
@@ -260,6 +260,31 @@
             this.panel_cart.TabIndex = 4;
             this.panel_cart.Scroll += new System.Windows.Forms.ScrollEventHandler(this.panel_cart_Scroll);
             this.panel_cart.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_cart_Paint);
+            // 
+            // btn_checkout
+            // 
+            this.btn_checkout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(66)))), ((int)(((byte)(32)))));
+            this.btn_checkout.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_checkout.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.btn_checkout.Location = new System.Drawing.Point(143, 710);
+            this.btn_checkout.Name = "btn_checkout";
+            this.btn_checkout.Size = new System.Drawing.Size(210, 62);
+            this.btn_checkout.TabIndex = 11;
+            this.btn_checkout.Text = "Check out";
+            this.btn_checkout.UseVisualStyleBackColor = false;
+            // 
+            // btn_delete_order
+            // 
+            this.btn_delete_order.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(66)))), ((int)(((byte)(32)))));
+            this.btn_delete_order.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_delete_order.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.btn_delete_order.Location = new System.Drawing.Point(48, 635);
+            this.btn_delete_order.Name = "btn_delete_order";
+            this.btn_delete_order.Size = new System.Drawing.Size(168, 44);
+            this.btn_delete_order.TabIndex = 10;
+            this.btn_delete_order.Text = "Delete Order";
+            this.btn_delete_order.UseVisualStyleBackColor = false;
+            this.btn_delete_order.Click += new System.EventHandler(this.btn_delete_order_Click);
             // 
             // btn_clrcart
             // 
@@ -894,31 +919,6 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // btn_delete_order
-            // 
-            this.btn_delete_order.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(66)))), ((int)(((byte)(32)))));
-            this.btn_delete_order.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_delete_order.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btn_delete_order.Location = new System.Drawing.Point(48, 635);
-            this.btn_delete_order.Name = "btn_delete_order";
-            this.btn_delete_order.Size = new System.Drawing.Size(168, 44);
-            this.btn_delete_order.TabIndex = 10;
-            this.btn_delete_order.Text = "Delete Order";
-            this.btn_delete_order.UseVisualStyleBackColor = false;
-            this.btn_delete_order.Click += new System.EventHandler(this.btn_delete_order_Click);
-            // 
-            // btn_checkout
-            // 
-            this.btn_checkout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(66)))), ((int)(((byte)(32)))));
-            this.btn_checkout.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_checkout.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btn_checkout.Location = new System.Drawing.Point(143, 710);
-            this.btn_checkout.Name = "btn_checkout";
-            this.btn_checkout.Size = new System.Drawing.Size(210, 62);
-            this.btn_checkout.TabIndex = 11;
-            this.btn_checkout.Text = "Check out";
-            this.btn_checkout.UseVisualStyleBackColor = false;
-            // 
             // Genre
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -927,7 +927,7 @@
             this.Controls.Add(panel_f);
             this.Controls.Add(this.Panel_Genre);
             this.Name = "Genre";
-            this.Text = "Form1";
+            this.Text = "Genre";
             panel_f.ResumeLayout(false);
             panel_f.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
