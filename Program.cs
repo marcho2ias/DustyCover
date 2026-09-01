@@ -14,7 +14,7 @@ namespace DustyCover
             Application.SetCompatibleTextRenderingDefault(false);
 
             // Launch the Welcome page on startup
-            Application.Run(new Dashboard());
+            Application.Run(new Dashboardv2());
         }
     }
 }

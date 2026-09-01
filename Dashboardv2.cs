@@ -4,9 +4,9 @@ using System.Windows.Forms;
 
 namespace DustyCover
 {
-    public partial class Dashboard : Form
+    public partial class Dashboardv2 : Form
     {
-        public Dashboard()
+        public Dashboardv2()
         {
             InitializeComponent();
         }

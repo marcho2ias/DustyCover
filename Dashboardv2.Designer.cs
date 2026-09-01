@@ -1,6 +1,6 @@
 ﻿namespace DustyCover
 {
-    partial class Dashboard
+    partial class Dashboardv2
     {
         private System.ComponentModel.IContainer components = null;
 
@@ -17,7 +17,7 @@
 
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboardv2));
             this.sidebarPanel = new System.Windows.Forms.Panel();
             this.btnCart = new System.Windows.Forms.Button();
             this.btnBookGenre = new System.Windows.Forms.Button();
