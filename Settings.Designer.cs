@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BookStoreProj.Properties
+namespace DustyCover.Properties
 {
 
 

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
+using System.Windows.Controls;
 using System.Windows.Forms;
 
 namespace DustyCover
@@ -63,7 +64,11 @@ namespace DustyCover
                         data[1].Trim();
 
                     PasswordBox.Text =
+
                         data[2].Trim();
+
+                        data[3].Trim();
+
 
                     usernameTextBox.ReadOnly = true;
 
@@ -152,9 +157,9 @@ namespace DustyCover
                         data[3].Trim();
 
                     lines[i] =
-                        username + "," +
+       
                         newEmail + "," +
-                        newPhone + "," +
+                        
                         password;
 
                     break;
@@ -186,6 +191,11 @@ namespace DustyCover
         private void Form2_Load(object sender, EventArgs e){}
         private void button1_Click(object sender, EventArgs e){}
         private void phoneLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }

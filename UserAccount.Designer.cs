@@ -149,7 +149,7 @@
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.passwdBox1);
             this.panel2.Controls.Add(this.iconButton2);
-            this.panel2.Location = new System.Drawing.Point(41, 394);
+            this.panel2.Location = new System.Drawing.Point(35, 374);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(377, 35);
@@ -192,6 +192,7 @@
             this.userNameLabel.Size = new System.Drawing.Size(181, 38);
             this.userNameLabel.TabIndex = 0;
             this.userNameLabel.Text = "User Name";
+            this.userNameLabel.Click += new System.EventHandler(this.userNameLabel_Click);
             // 
             // welcomeLabel
             // 
@@ -240,7 +241,7 @@
             this.phoneLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
             this.phoneLabel.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.phoneLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.phoneLabel.Location = new System.Drawing.Point(35, 348);
+            this.phoneLabel.Location = new System.Drawing.Point(35, 325);
             this.phoneLabel.Name = "phoneLabel";
             this.phoneLabel.Size = new System.Drawing.Size(130, 31);
             this.phoneLabel.TabIndex = 6;
@@ -252,7 +253,7 @@
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.emailtextBox1);
             this.panel1.Controls.Add(this.iconButton1);
-            this.panel1.Location = new System.Drawing.Point(41, 247);
+            this.panel1.Location = new System.Drawing.Point(31, 245);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(375, 35);
