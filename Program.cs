@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,6 +15,18 @@ namespace DustyCover
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+
+
+            // Launch the Welcome page on startup
+            Application.Run(new Dashboardv2());
+
+
+            Application.Run(new WelcomePage());
+
+            Application.Run(new UserAccount("TestUser"));
+
+
             Application.Run(new SignupForm());
         }
     }
