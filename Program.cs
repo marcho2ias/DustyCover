@@ -19,13 +19,13 @@ namespace DustyCover
 
 
             // Launch the Welcome page on startup
-            Application.Run(new Dashboardv2());
-
+            
 
             Application.Run(new WelcomePage());
 
-            Application.Run(new UserAccount("TestUser"));
+            Application.Run(new Dashboardv2());
 
+            Application.Run(new UserAccount("TestUser"));
 
             Application.Run(new SignupForm());
         }
