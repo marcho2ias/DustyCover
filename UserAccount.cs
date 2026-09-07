@@ -209,5 +209,10 @@ namespace DustyCover
         {
 
         }
+
+        private void userNameLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
