@@ -5,12 +5,8 @@
         private System.ComponentModel.IContainer components = null;
 
         private System.Windows.Forms.Label titleLabel;
-
-        private System.Windows.Forms.Label usernameLabel;
         private System.Windows.Forms.Label emailLabel;
         private System.Windows.Forms.Label passwdLabel;
-
-        private System.Windows.Forms.TextBox usernameTextBox;
         private System.Windows.Forms.TextBox emailTextBox;
         private System.Windows.Forms.TextBox phoneTextBox;
         private System.Windows.Forms.Button cancelButton;
@@ -32,10 +28,8 @@
         private void InitializeComponent()
         {
             this.titleLabel = new System.Windows.Forms.Label();
-            this.usernameLabel = new System.Windows.Forms.Label();
             this.emailLabel = new System.Windows.Forms.Label();
             this.passwdLabel = new System.Windows.Forms.Label();
-            this.usernameTextBox = new System.Windows.Forms.TextBox();
             this.emailTextBox = new System.Windows.Forms.TextBox();
             this.phoneTextBox = new System.Windows.Forms.TextBox();
             this.cancelButton = new System.Windows.Forms.Button();
@@ -57,23 +51,12 @@
             this.titleLabel.TabIndex = 0;
             this.titleLabel.Text = "Edit Profile";
             // 
-            // usernameLabel
-            // 
-            this.usernameLabel.AutoSize = true;
-            this.usernameLabel.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold);
-            this.usernameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(39)))), ((int)(((byte)(18)))));
-            this.usernameLabel.Location = new System.Drawing.Point(45, 90);
-            this.usernameLabel.Name = "usernameLabel";
-            this.usernameLabel.Size = new System.Drawing.Size(115, 24);
-            this.usernameLabel.TabIndex = 1;
-            this.usernameLabel.Text = "Username";
-            // 
             // emailLabel
             // 
             this.emailLabel.AutoSize = true;
             this.emailLabel.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold);
             this.emailLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(39)))), ((int)(((byte)(18)))));
-            this.emailLabel.Location = new System.Drawing.Point(45, 160);
+            this.emailLabel.Location = new System.Drawing.Point(55, 98);
             this.emailLabel.Name = "emailLabel";
             this.emailLabel.Size = new System.Drawing.Size(78, 24);
             this.emailLabel.TabIndex = 3;
@@ -84,29 +67,18 @@
             this.passwdLabel.AutoSize = true;
             this.passwdLabel.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold);
             this.passwdLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(39)))), ((int)(((byte)(18)))));
-            this.passwdLabel.Location = new System.Drawing.Point(45, 230);
+            this.passwdLabel.Location = new System.Drawing.Point(45, 210);
             this.passwdLabel.Name = "passwdLabel";
             this.passwdLabel.Size = new System.Drawing.Size(109, 24);
             this.passwdLabel.TabIndex = 5;
             this.passwdLabel.Text = "Password";
             this.passwdLabel.Click += new System.EventHandler(this.phoneLabel_Click);
             // 
-            // usernameTextBox
-            // 
-            this.usernameTextBox.BackColor = System.Drawing.Color.White;
-            this.usernameTextBox.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.usernameTextBox.Location = new System.Drawing.Point(45, 114);
-            this.usernameTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.usernameTextBox.Name = "usernameTextBox";
-            this.usernameTextBox.ReadOnly = true;
-            this.usernameTextBox.Size = new System.Drawing.Size(400, 32);
-            this.usernameTextBox.TabIndex = 2;
-            // 
             // emailTextBox
             // 
             this.emailTextBox.BackColor = System.Drawing.Color.White;
             this.emailTextBox.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.emailTextBox.Location = new System.Drawing.Point(45, 185);
+            this.emailTextBox.Location = new System.Drawing.Point(49, 138);
             this.emailTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Size = new System.Drawing.Size(400, 32);
@@ -116,7 +88,7 @@
             // 
             this.phoneTextBox.BackColor = System.Drawing.Color.White;
             this.phoneTextBox.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.phoneTextBox.Location = new System.Drawing.Point(45, 255);
+            this.phoneTextBox.Location = new System.Drawing.Point(49, 248);
             this.phoneTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.phoneTextBox.Name = "phoneTextBox";
             this.phoneTextBox.Size = new System.Drawing.Size(400, 32);
@@ -174,7 +146,7 @@
             this.panel2.Size = new System.Drawing.Size(131, 46);
             this.panel2.TabIndex = 11;
             // 
-            // Form2
+            // Edit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -182,8 +154,6 @@
             this.ClientSize = new System.Drawing.Size(487, 413);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.titleLabel);
-            this.Controls.Add(this.usernameLabel);
-            this.Controls.Add(this.usernameTextBox);
             this.Controls.Add(this.emailLabel);
             this.Controls.Add(this.emailTextBox);
             this.Controls.Add(this.passwdLabel);
@@ -193,7 +163,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Form2";
+            this.Name = "Edit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "DustyCover - Edit Profile";
             this.Load += new System.EventHandler(this.Form2_Load);
