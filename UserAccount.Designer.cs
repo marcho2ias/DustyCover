@@ -510,7 +510,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(235)))), ((int)(((byte)(220)))));
-            this.ClientSize = new System.Drawing.Size(992, 651);
+            this.ClientSize = new System.Drawing.Size(992, 633);
             this.Controls.Add(this.leftPanel);
             this.Controls.Add(this.rightPanel);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
