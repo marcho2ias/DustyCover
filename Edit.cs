@@ -59,10 +59,10 @@ namespace DustyCover
                     usernameTextBox.Text =
                         data[0].Trim();
 
-                    emailTextBox.Text =
+                    textBox1.Text =
                         data[1].Trim();
 
-                    phoneTextBox.Text =
+                    PasswordBox.Text =
                         data[2].Trim();
 
                     usernameTextBox.ReadOnly = true;
