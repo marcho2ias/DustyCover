@@ -31,6 +31,7 @@
 
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserAccount));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.rightPanel = new System.Windows.Forms.Panel();
@@ -73,6 +74,8 @@
             // rightPanel
             // 
             this.rightPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(56)))), ((int)(((byte)(32)))));
+            this.rightPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("rightPanel.BackgroundImage")));
+            this.rightPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.rightPanel.Controls.Add(this.editButton);
             this.rightPanel.Controls.Add(this.historyButton);
             this.rightPanel.Controls.Add(this.iconButton6);
@@ -98,10 +101,10 @@
             this.editButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.editButton.Font = new System.Drawing.Font("Georgia", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.editButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(39)))), ((int)(((byte)(18)))));
-            this.editButton.Location = new System.Drawing.Point(316, 560);
+            this.editButton.Location = new System.Drawing.Point(285, 560);
             this.editButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.editButton.Name = "editButton";
-            this.editButton.Size = new System.Drawing.Size(156, 39);
+            this.editButton.Size = new System.Drawing.Size(133, 39);
             this.editButton.TabIndex = 10;
             this.editButton.Text = "Edit";
             this.editButton.UseVisualStyleBackColor = false;
@@ -115,10 +118,10 @@
             this.historyButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.historyButton.Font = new System.Drawing.Font("Georgia", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.historyButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(39)))), ((int)(((byte)(18)))));
-            this.historyButton.Location = new System.Drawing.Point(8, 560);
+            this.historyButton.Location = new System.Drawing.Point(41, 560);
             this.historyButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.historyButton.Name = "historyButton";
-            this.historyButton.Size = new System.Drawing.Size(288, 39);
+            this.historyButton.Size = new System.Drawing.Size(238, 39);
             this.historyButton.TabIndex = 9;
             this.historyButton.Text = "Borrowing / History";
             this.historyButton.UseVisualStyleBackColor = false;
@@ -133,7 +136,7 @@
             this.iconButton6.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.iconButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton6.IconSize = 35;
-            this.iconButton6.Location = new System.Drawing.Point(16, 73);
+            this.iconButton6.Location = new System.Drawing.Point(13, 54);
             this.iconButton6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.iconButton6.Name = "iconButton6";
             this.iconButton6.Size = new System.Drawing.Size(53, 47);
@@ -184,7 +187,7 @@
             this.userNameLabel.AutoSize = true;
             this.userNameLabel.Font = new System.Drawing.Font("Georgia", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.userNameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.userNameLabel.Location = new System.Drawing.Point(72, 73);
+            this.userNameLabel.Location = new System.Drawing.Point(72, 63);
             this.userNameLabel.Name = "userNameLabel";
             this.userNameLabel.Size = new System.Drawing.Size(181, 38);
             this.userNameLabel.TabIndex = 0;
@@ -221,6 +224,7 @@
             // emailLabel
             // 
             this.emailLabel.AutoSize = true;
+            this.emailLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
             this.emailLabel.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.emailLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.emailLabel.Location = new System.Drawing.Point(35, 196);
@@ -233,6 +237,7 @@
             // phoneLabel
             // 
             this.phoneLabel.AutoSize = true;
+            this.phoneLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))), ((int)(((byte)(130)))));
             this.phoneLabel.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.phoneLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.phoneLabel.Location = new System.Drawing.Point(35, 348);
