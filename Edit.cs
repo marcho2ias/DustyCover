@@ -64,7 +64,11 @@ namespace DustyCover
                         data[1].Trim();
 
                     PasswordBox.Text =
+
+                        data[2].Trim();
+
                         data[3].Trim();
+
 
                     usernameTextBox.ReadOnly = true;
 
