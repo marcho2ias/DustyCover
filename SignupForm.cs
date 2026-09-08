@@ -86,26 +86,22 @@ namespace DustyCover
                 );
             }
 
-            string[] existingLines =
-                System.IO.File.ReadAllLines(filePath);
+            string[] existingLines = System.IO.File.ReadAllLines(filePath);
 
             for (int i = 1; i < existingLines.Length; i++)
             {
+                if (string.IsNullOrWhiteSpace(existingLines[i])) continue;
+
                 string[] fields = existingLines[i].Split(',');
 
                 if (fields.Length >= 2 &&
-                    fields[1].Trim().Equals(
-                        email,
-                        StringComparison.OrdinalIgnoreCase))
+                    fields[1].Trim().Equals(email, StringComparison.OrdinalIgnoreCase))
                 {
-                    lblError.Text =
-                        "An account with this email already exists !!";
-
+                    lblError.Text = "An account with this email already exists !!";
                     lblError.Visible = true;
                     return;
                 }
             }
-
             string newLine =
                 fullName + "," +
                 email + "," +
@@ -118,9 +114,6 @@ namespace DustyCover
 
             MessageBox.Show("Account created successfully!");
 
-            LoginForm loginForm = new LoginForm();
-            loginForm.Show();
-            this.Hide();
         }
 
         private void btnLogin_Click(object sender, EventArgs e)

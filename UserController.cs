@@ -57,12 +57,15 @@ namespace DustyCover
             // Reload so newly created accounts are included
             LoadUsersFromCsv();
 
+            string cleanemail = email.Trim();
+            string cleanpassword = password.Trim(); 
+
             foreach (User user in users)
             {
                 if (user.Email.Equals(
-                        email.Trim(),
+                        cleanemail,
                         StringComparison.OrdinalIgnoreCase)
-                    && user.Password == password)
+                    && user.Password == cleanpassword)
                 {
                     return user;
                 }

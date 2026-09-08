@@ -2,15 +2,16 @@
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace DustyCover
 {
     public partial class UserAccount : Form
     {
-        private string loggedInUsername;
+        private string loggedInEmail;
         private string csvFile;
 
-        public UserAccount(string username)
+        public UserAccount(string email)
         {
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.Sizable;
@@ -18,13 +19,14 @@ namespace DustyCover
             this.MinimizeBox = true;
             this.StartPosition = FormStartPosition.CenterScreen;
 
-            loggedInUsername = username;
+            loggedInEmail = email;
 
-            csvFile = Path.Combine(Application.StartupPath, "users.csv");
+            csvFile = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "users.csv");
 
             LoadUserData();
             LoadBorrowedBooks();
         }
+
         private void LoadUserData()
         {
             if (!File.Exists(csvFile))
@@ -35,7 +37,6 @@ namespace DustyCover
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error
                 );
-
                 return;
             }
 
@@ -49,10 +50,9 @@ namespace DustyCover
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Warning
                 );
-
                 return;
             }
-           
+
             foreach (string line in lines.Skip(1))
             {
                 if (string.IsNullOrWhiteSpace(line))
@@ -60,30 +60,26 @@ namespace DustyCover
 
                 string[] data = line.Split(',');
 
-                if (data.Length < 4)
+                if (data.Length < 3)
                     continue;
 
-                string username = data[0].Trim();
+                string name = data[0].Trim();
+                string email = data[1].Trim();
+                string password = data[2].Trim();
 
-                if (username.Equals(
-                    loggedInUsername,
-                    StringComparison.OrdinalIgnoreCase))
+                if (email.Equals(loggedInEmail?.Trim(), StringComparison.OrdinalIgnoreCase))
                 {
-                    string email = data[1].Trim();
-                    string password = data[2].Trim();
-
-                    // Display user information
-                    userNameLabel.Text =username;
+                    
+                    userNameLabel.Text = name;
 
                     welcomeLabel.Text =
-                        "Welcome," + username +
+                        "Welcome, " + name +
                         " to your user account page!";
 
                     emailtextBox1.Text = email;
-
                     passwdBox1.Text = password;
 
-                    return;
+                    return; 
                 }
             }
 
@@ -100,7 +96,7 @@ namespace DustyCover
             booksGrid.Rows.Clear();
 
             booksGrid.Rows.Add(
-                "Fantacy",
+                "Fantasy",
                 "25 Aug 2026"
             );
 
@@ -118,16 +114,13 @@ namespace DustyCover
                 "Dictionary",
                 "05 Sep 2026"
             );
-
         }
 
         private void editButton_Click(
             object sender,
             EventArgs e)
         {
-            Edit editForm =
-                new Edit(loggedInUsername);
-
+            Edit editForm = new Edit(loggedInEmail);
             editForm.ShowDialog();
 
             LoadUserData();
@@ -139,14 +132,11 @@ namespace DustyCover
         {
             string history =
                 "BORROWING HISTORY\n\n" +
-
                 "Currently Borrowed:\n\n" +
-
-                "• Fantcy - Due 25 Aug 2026\n" +
+                "• Fantasy - Due 25 Aug 2026\n" +
                 "• Anime - Due 28 Aug 2026\n" +
                 "• Mathematics - Due 02 Sep 2026\n" +
-                "• Dictionary - Due 05 Sep 2026\n" +
-
+                "• Dictionary - Due 05 Sep 2026\n\n" +
                 "Total Borrowed: 07\n" +
                 "Total Reads: 24";
 
@@ -161,44 +151,45 @@ namespace DustyCover
         private void logoutButton_Click(
             object sender,
             EventArgs e)
-
         {
             this.Hide();
             Dashboardv2 dashboardv2 = new Dashboardv2();
             dashboardv2.Show();
         }
 
-        private void borrowingValue_Click(object sender, EventArgs e){}
-        private void booksGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void borrowingValue_Click(object sender, EventArgs e) 
         {
 
         }
-
-        private void rightPanel_Paint(object sender, PaintEventArgs e)
+        private void booksGrid_CellContentClick(object sender, DataGridViewCellEventArgs e) 
         {
 
         }
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void rightPanel_Paint(object sender, PaintEventArgs e) 
         {
 
         }
-
-        private void emaitextBox1_TextChanged(object sender, EventArgs e)
+        private void panel1_Paint(object sender, PaintEventArgs e) 
         {
 
         }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void emaitextBox1_TextChanged(object sender, EventArgs e) 
         {
 
         }
-
-        private void emailLabel_Click(object sender, EventArgs e)
+        private void textBox1_TextChanged(object sender, EventArgs e) 
         {
 
         }
+        private void emailLabel_Click(object sender, EventArgs e) 
+        {
 
-        private void iconButton2_Click(object sender, EventArgs e)
+        }
+        private void iconButton2_Click(object sender, EventArgs e) 
+        {
+
+        }
+        private void UserAccount_Load(object sender, EventArgs e) 
         {
 
         }
