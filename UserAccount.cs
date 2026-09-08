@@ -161,20 +161,13 @@ namespace DustyCover
         private void logoutButton_Click(
             object sender,
             EventArgs e)
-        {
-            DialogResult result =
-                MessageBox.Show(
-                    "Are you sure you want to log out?",
-                    "Log Out",
-                    MessageBoxButtons.YesNo,
-                    MessageBoxIcon.Question
-                );
 
-            if (result == DialogResult.Yes)
-            {
-                this.Close();
-            }
+        {
+            this.Hide();
+            Dashboardv2 dashboardv2 = new Dashboardv2();
+            dashboardv2.Show();
         }
+
         private void borrowingValue_Click(object sender, EventArgs e){}
         private void booksGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {

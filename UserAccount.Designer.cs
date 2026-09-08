@@ -75,7 +75,7 @@
             // 
             this.rightPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(56)))), ((int)(((byte)(32)))));
             this.rightPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("rightPanel.BackgroundImage")));
-            this.rightPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.rightPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.rightPanel.Controls.Add(this.editButton);
             this.rightPanel.Controls.Add(this.historyButton);
             this.rightPanel.Controls.Add(this.iconButton6);
@@ -95,7 +95,7 @@
             // 
             // editButton
             // 
-            this.editButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(248)))), ((int)(((byte)(238)))));
+            this.editButton.BackColor = System.Drawing.Color.Transparent;
             this.editButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.editButton.FlatAppearance.BorderSize = 0;
             this.editButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
@@ -129,14 +129,15 @@
             // 
             // iconButton6
             // 
-            this.iconButton6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(56)))), ((int)(((byte)(32)))));
+            this.iconButton6.BackColor = System.Drawing.Color.Transparent;
+            this.iconButton6.FlatAppearance.BorderSize = 0;
             this.iconButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(56)))), ((int)(((byte)(32)))));
             this.iconButton6.IconChar = FontAwesome.Sharp.IconChar.User;
             this.iconButton6.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.iconButton6.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton6.IconSize = 35;
-            this.iconButton6.Location = new System.Drawing.Point(13, 54);
+            this.iconButton6.Location = new System.Drawing.Point(12, 44);
             this.iconButton6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.iconButton6.Name = "iconButton6";
             this.iconButton6.Size = new System.Drawing.Size(53, 47);
@@ -185,9 +186,10 @@
             // userNameLabel
             // 
             this.userNameLabel.AutoSize = true;
+            this.userNameLabel.BackColor = System.Drawing.Color.Transparent;
             this.userNameLabel.Font = new System.Drawing.Font("Georgia", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.userNameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.userNameLabel.Location = new System.Drawing.Point(72, 63);
+            this.userNameLabel.Location = new System.Drawing.Point(60, 44);
             this.userNameLabel.Name = "userNameLabel";
             this.userNameLabel.Size = new System.Drawing.Size(181, 38);
             this.userNameLabel.TabIndex = 0;
@@ -196,9 +198,10 @@
             // welcomeLabel
             // 
             this.welcomeLabel.AutoSize = true;
+            this.welcomeLabel.BackColor = System.Drawing.Color.Transparent;
             this.welcomeLabel.Font = new System.Drawing.Font("Georgia", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.welcomeLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(238)))), ((int)(((byte)(226)))));
-            this.welcomeLabel.Location = new System.Drawing.Point(75, 111);
+            this.welcomeLabel.Location = new System.Drawing.Point(8, 91);
             this.welcomeLabel.Name = "welcomeLabel";
             this.welcomeLabel.Size = new System.Drawing.Size(360, 21);
             this.welcomeLabel.TabIndex = 1;
@@ -206,18 +209,18 @@
             // 
             // logoutButton
             // 
-            this.logoutButton.BackColor = System.Drawing.Color.Transparent;
+            this.logoutButton.BackColor = System.Drawing.Color.White;
             this.logoutButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.logoutButton.FlatAppearance.BorderSize = 0;
             this.logoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.logoutButton.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logoutButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.logoutButton.Location = new System.Drawing.Point(366, 11);
+            this.logoutButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(56)))), ((int)(((byte)(32)))));
+            this.logoutButton.Location = new System.Drawing.Point(275, 11);
             this.logoutButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.logoutButton.Name = "logoutButton";
-            this.logoutButton.Size = new System.Drawing.Size(120, 36);
-            this.logoutButton.TabIndex = 2;
-            this.logoutButton.Text = "↪ Log Out";
+            this.logoutButton.Size = new System.Drawing.Size(201, 36);
+            this.logoutButton.TabIndex = 10;
+            this.logoutButton.Text = "Back to dashboard";
             this.logoutButton.UseVisualStyleBackColor = false;
             this.logoutButton.Click += new System.EventHandler(this.logoutButton_Click);
             // 

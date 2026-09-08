@@ -212,6 +212,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "WelcomePage";
             this.Text = "Welcome Page";
+            this.Load += new System.EventHandler(this.WelcomePage_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

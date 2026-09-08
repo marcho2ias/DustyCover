@@ -56,7 +56,7 @@ namespace DustyCover
                     loggedInUsername,
                     StringComparison.OrdinalIgnoreCase))
                 {
-                    usernameTextBox.Text =
+                    //usernameTextBox.Text =
                         data[0].Trim();
 
                     emailTextBox.Text =
@@ -65,7 +65,7 @@ namespace DustyCover
                     phoneTextBox.Text =
                         data[2].Trim();
 
-                    usernameTextBox.ReadOnly = true;
+                    //usernameTextBox.ReadOnly = true;
 
                     return;
                 }
