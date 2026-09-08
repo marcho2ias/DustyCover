@@ -153,7 +153,7 @@ namespace DustyCover
             EventArgs e)
         {
             this.Hide();
-            Dashboardv2 dashboardv2 = new Dashboardv2();
+            Dashboardv2 dashboardv2 = new Dashboardv2(CurrentUser.LoggedInUser?.DisplayName ?? "Guest");
             dashboardv2.Show();
         }
 

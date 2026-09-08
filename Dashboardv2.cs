@@ -6,21 +6,28 @@ namespace DustyCover
 {
     public partial class Dashboardv2 : Form
     {
-        public Dashboardv2()
+        public string LoggedInUsername;
+
+        public Dashboardv2(string username)
         {
             InitializeComponent();
+            LoggedInUsername = username;
         }
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
             try
             {
-                this.BackgroundImage = Image.FromFile(@"C:\path\to\your\image.jpg");
-                this.BackgroundImageLayout = ImageLayout.Stretch;
+                this.BackgroundImage =
+                    Image.FromFile(@"C:\path\to\your\image.jpg");
+
+                this.BackgroundImageLayout =
+                    ImageLayout.Stretch;
             }
             catch
             {
-                this.BackColor = Color.FromArgb(247, 238, 226);
+                this.BackColor =
+                    Color.FromArgb(247, 238, 226);
             }
         }
 

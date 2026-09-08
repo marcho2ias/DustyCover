@@ -116,7 +116,7 @@ namespace DustyCover
                 // TODO: open the borrowing history page once it's rebuilt.
                 // For now, just confirm login worked.
                 MessageBox.Show("Login successful! Welcome, " + matchedUser.DisplayName);
-                Dashboardv2 dashboardv2 = new Dashboardv2();
+                Dashboardv2 dashboardv2 = new Dashboardv2(matchedUser.DisplayName);
                 this.Hide();
                 dashboardv2.Show();
             }

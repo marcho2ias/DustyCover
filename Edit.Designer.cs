@@ -8,7 +8,7 @@
         private System.Windows.Forms.Label emailLabel;
         private System.Windows.Forms.Label passwdLabel;
         private System.Windows.Forms.TextBox emailTextBox;
-        private System.Windows.Forms.TextBox phoneTextBox;
+        private System.Windows.Forms.TextBox PasswordTextBox;
         private System.Windows.Forms.Button cancelButton;
 
 
@@ -31,7 +31,7 @@
             this.emailLabel = new System.Windows.Forms.Label();
             this.passwdLabel = new System.Windows.Forms.Label();
             this.emailTextBox = new System.Windows.Forms.TextBox();
-            this.phoneTextBox = new System.Windows.Forms.TextBox();
+            this.PasswordTextBox = new System.Windows.Forms.TextBox();
             this.cancelButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
@@ -84,15 +84,16 @@
             this.emailTextBox.Size = new System.Drawing.Size(400, 32);
             this.emailTextBox.TabIndex = 4;
             // 
-            // phoneTextBox
+            // PasswordTextBox
             // 
-            this.phoneTextBox.BackColor = System.Drawing.Color.White;
-            this.phoneTextBox.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.phoneTextBox.Location = new System.Drawing.Point(49, 248);
-            this.phoneTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.phoneTextBox.Name = "phoneTextBox";
-            this.phoneTextBox.Size = new System.Drawing.Size(400, 32);
-            this.phoneTextBox.TabIndex = 6;
+            this.PasswordTextBox.BackColor = System.Drawing.Color.White;
+            this.PasswordTextBox.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.PasswordTextBox.Location = new System.Drawing.Point(49, 248);
+            this.PasswordTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.PasswordTextBox.Name = "PasswordTextBox";
+            this.PasswordTextBox.Size = new System.Drawing.Size(400, 32);
+            this.PasswordTextBox.TabIndex = 6;
+            this.PasswordTextBox.TextChanged += new System.EventHandler(this.phoneTextBox_TextChanged);
             // 
             // cancelButton
             // 
@@ -151,13 +152,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(228)))), ((int)(((byte)(210)))));
-            this.ClientSize = new System.Drawing.Size(487, 413);
+            this.ClientSize = new System.Drawing.Size(535, 413);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.titleLabel);
             this.Controls.Add(this.emailLabel);
             this.Controls.Add(this.emailTextBox);
             this.Controls.Add(this.passwdLabel);
-            this.Controls.Add(this.phoneTextBox);
+            this.Controls.Add(this.PasswordTextBox);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

@@ -62,7 +62,7 @@ namespace DustyCover
                     emailTextBox.Text =
                         data[1].Trim();
 
-                    phoneTextBox.Text =
+                    PasswordTextBox.Text =
                         data[2].Trim();
 
                     //usernameTextBox.ReadOnly = true;
@@ -79,7 +79,7 @@ namespace DustyCover
                 emailTextBox.Text.Trim();
 
             string newPhone =
-                phoneTextBox.Text.Trim();
+                PasswordTextBox.Text.Trim();
 
             if (string.IsNullOrWhiteSpace(newEmail))
             {
@@ -120,13 +120,15 @@ namespace DustyCover
                     MessageBoxIcon.Warning
                 );
 
-                phoneTextBox.Focus();
+                PasswordTextBox.Focus();
 
                 return;
             }
 
             string[] lines =
                 File.ReadAllLines(csvFile);
+
+            MessageBox.Show("Looking for: [" + loggedInUsername + "]");
 
             for (int i = 1; i < lines.Length; i++)
             {
@@ -184,8 +186,146 @@ namespace DustyCover
         }
 
         private void Form2_Load(object sender, EventArgs e){}
-        private void button1_Click(object sender, EventArgs e){}
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string newEmail = emailTextBox.Text.Trim();
+            string newPassword = PasswordTextBox.Text.Trim();
+
+            //
+            // New email Validation
+            if (string.IsNullOrWhiteSpace(newEmail))
+            {
+                MessageBox.Show(
+                    "Please enter your email.",
+                    "Missing Email",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+
+                emailTextBox.Focus();
+                return;
+            }
+
+            if (!newEmail.Contains("@") || !newEmail.Contains("."))
+            {
+                MessageBox.Show(
+                    "Please enter a valid email address.",
+                    "Invalid Email",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+
+                emailTextBox.Focus();
+                return;
+            }
+
+            // New Password Validation
+            if (string.IsNullOrWhiteSpace(newPassword))
+            {
+                MessageBox.Show(
+                    "Please enter your password.",
+                    "Missing Password",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+
+                PasswordTextBox.Focus();
+                return;
+            }
+
+            try
+            {
+                //
+                // Checking the existence of the CSV file
+                if (!File.Exists(csvFile))
+                {
+                    MessageBox.Show(
+                        "users.csv could not be found.",
+                        "File Error",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error
+                    );
+
+                    return;
+                }
+
+                // Read CSV lines
+                string[] lines = File.ReadAllLines(csvFile);
+
+                bool userFound = false;
+
+               
+                for (int i = 1; i < lines.Length; i++)
+                {
+                    if (string.IsNullOrWhiteSpace(lines[i]))
+                        continue;
+
+                    string[] data = lines[i].Split(',');
+
+                    
+                    if (data.Length < 3)
+                        continue;
+
+                    // Locate the current user by username and update their email and password
+                    if (data[0].Trim().Equals(
+                        loggedInUsername,
+                        StringComparison.OrdinalIgnoreCase))
+                    {
+                        string username = data[0].Trim();
+
+                        // Replace old email and password with new values
+                        lines[i] = username + "," + newEmail + "," + newPassword;
+
+                        userFound = true;
+                        break;
+                    }
+                }
+
+                //If the user was not found in the CSV, show an error message
+                if (!userFound)
+                {
+                    MessageBox.Show(
+                        "User could not be found in users.csv.",
+                        "Update Failed",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning
+                    );
+
+                    return;
+                }
+
+                // Save the updated data for user information back to the CSV file
+                File.WriteAllLines(csvFile, lines);
+
+                MessageBox.Show(
+                    "Your information has been updated successfully!",
+                    "Update Successful",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information
+                );
+
+                Dashboardv2 dashboard = new Dashboardv2(loggedInUsername);
+                dashboard.Show();
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(
+                    "An error occurred while updating your information:\n\n" +
+                    ex.Message,
+                    "Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error
+                );
+            }
+        }
+
         private void phoneLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void phoneTextBox_TextChanged(object sender, EventArgs e)
         {
 
         }
