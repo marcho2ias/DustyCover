@@ -120,7 +120,7 @@ namespace DustyCover
             object sender,
             EventArgs e)
         {
-            Edit editForm = new Edit(loggedInEmail);
+            Edit editForm = new Edit(LoggedInUsername);
             editForm.ShowDialog();
 
             LoadUserData();

@@ -72,7 +72,7 @@
             this.passwdLabel.Size = new System.Drawing.Size(109, 24);
             this.passwdLabel.TabIndex = 5;
             this.passwdLabel.Text = "Password";
-            this.passwdLabel.Click += new System.EventHandler(this.phoneLabel_Click);
+            this.passwdLabel.Click += new System.EventHandler(this.passwdLabel_Click);
             // 
             // emailTextBox
             // 
@@ -93,7 +93,7 @@
             this.PasswordTextBox.Name = "PasswordTextBox";
             this.PasswordTextBox.Size = new System.Drawing.Size(400, 32);
             this.PasswordTextBox.TabIndex = 6;
-            this.PasswordTextBox.TextChanged += new System.EventHandler(this.phoneTextBox_TextChanged);
+            this.PasswordTextBox.TextChanged += new System.EventHandler(this.PasswordTextBox_TextChanged);
             // 
             // cancelButton
             // 

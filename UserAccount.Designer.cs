@@ -220,7 +220,7 @@
             this.logoutButton.Name = "logoutButton";
             this.logoutButton.Size = new System.Drawing.Size(201, 36);
             this.logoutButton.TabIndex = 10;
-            this.logoutButton.Text = "Back to dashboard";
+            this.logoutButton.Text = "Back ";
             this.logoutButton.UseVisualStyleBackColor = false;
             this.logoutButton.Click += new System.EventHandler(this.logoutButton_Click);
             // 

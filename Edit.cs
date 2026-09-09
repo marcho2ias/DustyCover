@@ -24,6 +24,7 @@ namespace DustyCover
 
             LoadUserData();
         }
+
         private void LoadUserData()
         {
             if (!File.Exists(csvFile))
@@ -38,161 +39,35 @@ namespace DustyCover
                 return;
             }
 
-            string[] lines =
-                File.ReadAllLines(csvFile);
+            string[] lines = File.ReadAllLines(csvFile);
 
             foreach (string line in lines.Skip(1))
             {
                 if (string.IsNullOrWhiteSpace(line))
                     continue;
 
-                string[] data =
-                    line.Split(',');
+                string[] data = line.Split(',');
 
-                if (data.Length < 4)
+                if (data.Length < 3)
                     continue;
 
                 if (data[0].Trim().Equals(
                     loggedInUsername,
                     StringComparison.OrdinalIgnoreCase))
                 {
-                    //usernameTextBox.Text =
-                        data[0].Trim();
-
-                    emailTextBox.Text =
-                        data[1].Trim();
-
-                    PasswordTextBox.Text =
-                        data[2].Trim();
-
-                    //usernameTextBox.ReadOnly = true;
-
+                    emailTextBox.Text = data[1].Trim();
+                    PasswordTextBox.Text = data[2].Trim();
                     return;
                 }
             }
         }
-        private void saveButton_Click(
-            object sender,
-            EventArgs e)
-        {
-            string newEmail =
-                emailTextBox.Text.Trim();
 
-            string newPhone =
-                PasswordTextBox.Text.Trim();
-
-            if (string.IsNullOrWhiteSpace(newEmail))
-            {
-                MessageBox.Show(
-                    "Please enter your email.",
-                    "Missing Email",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning
-                );
-
-                emailTextBox.Focus();
-
-                return;
-            }
-
-
-            if (!newEmail.Contains("@"))
-            {
-                MessageBox.Show(
-                    "Please enter a valid email address.",
-                    "Invalid Email",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning
-                );
-
-                emailTextBox.Focus();
-
-                return;
-            }
-
-
-            if (string.IsNullOrWhiteSpace(newPhone))
-            {
-                MessageBox.Show(
-                    "Please enter your phone number.",
-                    "Missing Phone",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning
-                );
-
-                PasswordTextBox.Focus();
-
-                return;
-            }
-
-            string[] lines =
-                File.ReadAllLines(csvFile);
-
-            MessageBox.Show("Looking for: [" + loggedInUsername + "]");
-
-            for (int i = 1; i < lines.Length; i++)
-            {
-                if (string.IsNullOrWhiteSpace(lines[i]))
-                    continue;
-
-                string[] data =
-                    lines[i].Split(',');
-
-                if (data.Length < 4)
-                    continue;
-
-
-                if (data[0].Trim().Equals(
-                    loggedInUsername,
-                    StringComparison.OrdinalIgnoreCase))
-                {
-                   
-                    string username =
-                        data[0].Trim();
-
-                    string password =
-                        data[3].Trim();
-
-                    lines[i] =
-                        username + "," +
-                        newEmail + "," +
-                        newPhone + "," +
-                        password;
-
-                    break;
-                }
-            }
-
-            File.WriteAllLines(
-                csvFile,
-                lines
-            );
-
-
-            MessageBox.Show(
-                "Your information has been updated successfully!",
-                "Update Successful",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Information
-            );
-
-            this.Close();
-        }
-        private void cancelButton_Click(
-            object sender,
-            EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void Form2_Load(object sender, EventArgs e){}
         private void button1_Click(object sender, EventArgs e)
         {
             string newEmail = emailTextBox.Text.Trim();
             string newPassword = PasswordTextBox.Text.Trim();
 
-            //
-            // New email Validation
+            // Email validation
             if (string.IsNullOrWhiteSpace(newEmail))
             {
                 MessageBox.Show(
@@ -201,7 +76,6 @@ namespace DustyCover
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Warning
                 );
-
                 emailTextBox.Focus();
                 return;
             }
@@ -214,12 +88,11 @@ namespace DustyCover
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Warning
                 );
-
                 emailTextBox.Focus();
                 return;
             }
 
-            // New Password Validation
+            // Password validation
             if (string.IsNullOrWhiteSpace(newPassword))
             {
                 MessageBox.Show(
@@ -228,15 +101,12 @@ namespace DustyCover
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Warning
                 );
-
                 PasswordTextBox.Focus();
                 return;
             }
 
             try
             {
-                //
-                // Checking the existence of the CSV file
                 if (!File.Exists(csvFile))
                 {
                     MessageBox.Show(
@@ -245,16 +115,12 @@ namespace DustyCover
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Error
                     );
-
                     return;
                 }
 
-                // Read CSV lines
                 string[] lines = File.ReadAllLines(csvFile);
-
                 bool userFound = false;
 
-               
                 for (int i = 1; i < lines.Length; i++)
                 {
                     if (string.IsNullOrWhiteSpace(lines[i]))
@@ -262,18 +128,15 @@ namespace DustyCover
 
                     string[] data = lines[i].Split(',');
 
-                    
                     if (data.Length < 3)
                         continue;
 
-                    // Locate the current user by username and update their email and password
                     if (data[0].Trim().Equals(
                         loggedInUsername,
                         StringComparison.OrdinalIgnoreCase))
                     {
                         string username = data[0].Trim();
 
-                        // Replace old email and password with new values
                         lines[i] = username + "," + newEmail + "," + newPassword;
 
                         userFound = true;
@@ -281,7 +144,6 @@ namespace DustyCover
                     }
                 }
 
-                //If the user was not found in the CSV, show an error message
                 if (!userFound)
                 {
                     MessageBox.Show(
@@ -290,11 +152,9 @@ namespace DustyCover
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Warning
                     );
-
                     return;
                 }
 
-                // Save the updated data for user information back to the CSV file
                 File.WriteAllLines(csvFile, lines);
 
                 MessageBox.Show(
@@ -311,8 +171,7 @@ namespace DustyCover
             catch (Exception ex)
             {
                 MessageBox.Show(
-                    "An error occurred while updating your information:\n\n" +
-                    ex.Message,
+                    "An error occurred while updating your information:\n\n" + ex.Message,
                     "Error",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error
@@ -320,12 +179,22 @@ namespace DustyCover
             }
         }
 
-        private void phoneLabel_Click(object sender, EventArgs e)
+        private void cancelButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Form2_Load(object sender, EventArgs e) 
         {
 
         }
 
-        private void phoneTextBox_TextChanged(object sender, EventArgs e)
+        private void passwdLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PasswordTextBox_TextChanged(object sender, EventArgs e)
         {
 
         }
