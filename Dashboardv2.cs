@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BookStoreProj;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -65,7 +66,10 @@ namespace DustyCover
 
         private void btnBookGenre_Click(object sender, EventArgs e)
         {
-           
+            Genre genre = new Genre();
+
+            genre.ShowDialog();
+            this.Hide();
         }
 
         private void btnCart_Click(object sender, EventArgs e)

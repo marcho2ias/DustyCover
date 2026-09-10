@@ -116,11 +116,9 @@ namespace DustyCover
             );
         }
 
-        private void editButton_Click(
-            object sender,
-            EventArgs e)
+        private void editButton_Click(object sender, EventArgs e)
         {
-            Edit editForm = new Edit(LoggedInUsername);
+            Edit editForm = new Edit(loggedInEmail); // Uses the field passed into UserAccount constructor
             editForm.ShowDialog();
 
             LoadUserData();
