@@ -46,7 +46,7 @@
     
     mimetype: application/x-microsoft.net.object.binary.base64
     value   : The object must be serialized with 
-            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
             : and then encoded with base64 encoding.
     
     mimetype: application/x-microsoft.net.object.soap.base64
@@ -60,6 +60,7 @@
             : and then encoded with base64 encoding.
     -->
   <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
         <xsd:choice maxOccurs="unbounded">
@@ -68,9 +69,10 @@
               <xsd:sequence>
                 <xsd:element name="value" type="xsd:string" minOccurs="0" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="name" use="required" type="xsd:string" />
               <xsd:attribute name="type" type="xsd:string" />
               <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="assembly">
@@ -85,9 +87,10 @@
                 <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
                 <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
               <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
               <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="resheader">
@@ -109,9 +112,202 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="22_ The books of earthsea" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Kit_Studio2\BookStoreProj\Properties\..\Resources\22_ The books of earthsea.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="22_ The books of earthsea1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Kit_Studio2\BookStoreProj\Properties\..\Resources\22_ The books of earthsea.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="aded1af65adc72f0dfeb9d6d84d2fb01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\BookStoreProj\Resources\aded1af65adc72f0dfeb9d6d84d2fb01.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="afterr" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\BookStoreProj\Resources\afterr.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AgirlonShore" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\BookStoreProj\Resources\AgirlonShore.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ajin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\BookStoreProj\Resources\Ajin.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Americanheritage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\BookStoreProj\Resources\Americanheritage.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Anime" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\BookStoreProj\Resources\Anime.csv;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Anime - Copy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\BookStoreProj\Resources\Anime - Copy.csv;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="attackontitan" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\BookStoreProj\Resources\attackontitan.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Before" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\BookStoreProj\Resources\Before.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Blame" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\BookStoreProj\Resources\Blame.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BloomIntoYou" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\BookStoreProj\Resources\BloomIntoYou.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="book" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\BookStoreProj\Resources\book.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Callofthemaze" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\BookStoreProj\Resources\Callofthemaze.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="chambers" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\BookStoreProj\Resources\chambers.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Collegiate" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\BookStoreProj\Resources\Collegiate.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Collins" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\BookStoreProj\Resources\Collins.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ColosalMath" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\BookStoreProj\Resources\ColosalMath.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DemonSlayer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\BookStoreProj\Resources\DemonSlayer.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Dictionary" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\BookStoreProj\Resources\Dictionary.csv;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="download (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\BookStoreProj\Resources\download (2).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="download (4)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\BookStoreProj\Resources\download (4).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="download (5)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\BookStoreProj\Resources\download (5).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="download (6)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\BookStoreProj\Resources\download (6).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="download (8)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\BookStoreProj\Resources\download (8).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="download (8)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\BookStoreProj\Resources\download (8)1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Emotional" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\BookStoreProj\Resources\Emotional.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Eternal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\BookStoreProj\Resources\Eternal.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Fairytale" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\BookStoreProj\Resources\Fairytale.csv;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Fermats" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\BookStoreProj\Resources\Fermats.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gamesofthrone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\BookStoreProj\Resources\gamesofthrone.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="George Martin game of thrones book" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\BookStoreProj\Resources\George Martin game of thrones book.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IfIstay" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\BookStoreProj\Resources\IfIstay.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="images" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\BookStoreProj\Resources\images.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="images (7)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\BookStoreProj\Resources\images (7).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="infinity" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\BookStoreProj\Resources\infinity.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Influence" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\BookStoreProj\Resources\Influence.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Jonathan" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\BookStoreProj\Resources\Jonathan.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Lofi BGM - winter library lofi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\BookStoreProj\Resources\Lofi BGM - winter library lofi.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Longman" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\BookStoreProj\Resources\Longman.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Lordoftherings" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\BookStoreProj\Resources\Lordoftherings.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Math" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\BookStoreProj\Resources\Math.csv;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="MathIdea" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\BookStoreProj\Resources\MathIdea.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Meaning" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\BookStoreProj\Resources\Meaning.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Mindset" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\BookStoreProj\Resources\Mindset.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Mix" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\BookStoreProj\Resources\Mix.csv;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="optimized_product_thumb_stage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\BookStoreProj\Resources\optimized_product_thumb_stage.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="oxford" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\BookStoreProj\Resources\oxford.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Panic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\BookStoreProj\Resources\Panic.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PaperTown" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\BookStoreProj\Resources\PaperTown.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="photo_2026-08-04_09-35-56" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\BookStoreProj\Resources\photo_2026-08-04_09-35-56.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="photo_2026-08-09_20-37-46" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\BookStoreProj\Resources\photo_2026-08-09_20-37-46.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pngtree-shopping-cart-convenient-icon-image_1287807" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\BookStoreProj\Resources\pngtree-shopping-cart-convenient-icon-image_1287807.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pngtree-shopping-cart-convenient-icon-image_12878071" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\BookStoreProj\Resources\pngtree-shopping-cart-convenient-icon-image_12878071.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Project" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\BookStoreProj\Resources\Project.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Psychology" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\BookStoreProj\Resources\Psychology.csv;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Quiet" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\BookStoreProj\Resources\Quiet.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="solved" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\BookStoreProj\Resources\solved.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="The Dark Tower I_ The Gunslinger - Paperback By King, Stephen - Good" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\BookStoreProj\Resources\The Dark Tower I_ The Gunslinger - Paperback By King, Stephen - Good.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TheEarthseaQuartet" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\BookStoreProj\Resources\TheEarthseaQuartet.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TheGunslinger" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\BookStoreProj\Resources\TheGunslinger.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Thinking" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\BookStoreProj\Resources\Thinking.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WhatsApp Image 2026-08-20 at 1.25.45 PM" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\BookStoreProj\Resources\WhatsApp Image 2026-08-20 at 1.25.45 PM.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
