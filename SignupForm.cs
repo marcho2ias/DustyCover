@@ -60,7 +60,7 @@ namespace DustyCover
             string password = txtPassword.Text;
             string confirmPassword = txtCP.Text;
 
-            string filePath = "D:\\Studio-2\\users.csv";
+            string filePath = System.IO.Path.Combine(Application.StartupPath, "users.csv");
 
             if (fullName == "" || email == "" || password == "" || confirmPassword == "")
             {

@@ -3,19 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace DustyCover
 {
     internal class UserController
     {
         private List<User> users;
-        private string filePath = "D:\\Studio-2\\users.csv";
+        private string filePath = System.IO.Path.Combine(Application.StartupPath, "users.csv");
 
         public UserController()
         {
